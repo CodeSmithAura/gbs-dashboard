@@ -1,0 +1,41 @@
+version: "3.9"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# docker-compose.customer.yml  —  CUSTOMER (offline) overrides
+#
+# Usage:
+#   docker compose -f docker-compose.yml -f docker-compose.customer.yml up
+#
+# Prerequisites (done once by customer — see Installation Guide):
+#   1. Load the pre-built images:
+#        docker load -i gbs-backend.tar
+#        docker load -i gbs-frontend.tar
+#   2. Create the data volume and load the CSV:
+#        docker volume create gbs_data
+#        docker run --rm \
+#          -v gbs_data:/data \
+#          -v "$(pwd)/data":/src \
+#          alpine cp /src/aruba_health_7day.csv /data/aruba_health.csv
+#
+# To update the CSV without restarting:
+#   docker run --rm -v gbs_data:/data -v "$(pwd)":/src alpine \
+#     cp /src/new_aruba_health.csv /data/aruba_health.csv
+#   curl -X POST http://localhost:8000/api/v1/wireless/ingest/trigger
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+
+  backend:
+    image: gbs-backend:1.0        # pre-built image loaded via docker load
+    volumes:
+      - gbs_data:/app/data        # named volume — customer manages CSV here
+    environment:
+      POLL_INTERVAL_SECONDS: 60
+
+  frontend:
+    image: gbs-frontend:1.0       # pre-built image loaded via docker load
+
+volumes:
+  pgdata:
+  gbs_data:
+    external: true                # must be created before first run (see above)

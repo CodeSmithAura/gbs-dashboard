@@ -1,0 +1,66 @@
+version: "3.9"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# docker-compose.yml  —  BASE (shared across all environments)
+#
+# Do NOT run this file directly. Use the environment-specific override:
+#
+#   Developer  →  docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+#   Customer   →  docker compose -f docker-compose.yml -f docker-compose.customer.yml up
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+
+  # ── PostgreSQL + TimescaleDB ────────────────────────────────────────────────
+  db:
+    image: timescale/timescaledb:latest-pg15
+    container_name: gbs_db
+    environment:
+      POSTGRES_DB: gbs_health
+      POSTGRES_USER: gbs_user
+      POSTGRES_PASSWORD: gbs_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./infra/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gbs_user -d gbs_health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # ── FastAPI Backend ─────────────────────────────────────────────────────────
+  backend:
+    container_name: gbs_backend
+    environment:
+      DATABASE_URL: postgresql://gbs_user:gbs_pass@db:5432/gbs_health
+      DATA_SOURCE_TYPE: file
+      DATA_SOURCE_FORMAT: csv
+      DATA_SOURCE_PATH: /app/data/aruba_health.csv
+      POLL_INTERVAL_SECONDS: 60
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # ── React Frontend ──────────────────────────────────────────────────────────
+  frontend:
+    container_name: gbs_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  pgdata:

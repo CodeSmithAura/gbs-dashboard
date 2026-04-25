@@ -1,0 +1,34 @@
+version: "3.9"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# docker-compose.dev.yml  —  DEVELOPER overrides
+#
+# Usage:
+#   docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+#
+# What this adds over base:
+#   - Builds images from local source (not pre-built)
+#   - Bind-mounts source code → hot reload (uvicorn + Vite HMR)
+#   - Bind-mounts ./data → edit CSV freely on host, no volume commands
+#   - Faster poll interval (10s) for quick feedback
+#   - Exposes psql port for direct DB access from host tools
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/app          # hot reload — uvicorn --reload picks up .py changes
+      - ./data:/app/data        # bind mount — edit CSV on host, visible instantly
+    environment:
+      POLL_INTERVAL_SECONDS: 10 # fast feedback during development
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend/src:/app/src  # Vite HMR — edits to .jsx reflect instantly

@@ -1,0 +1,13 @@
+site_id,site_name,timestamp,site_health_score,ap_total,ap_online,ap_offline,client_count,auth_failures_1h,active_alerts,alert_severity,alert_description,ssid_count,uplink_quality
+SITE-HQ-01,Bangkok HQ — Floor 1,2026-04-16T07:00:00Z,88,24,24,0,187,2,0,none,,4,good
+SITE-HQ-02,Bangkok HQ — Floor 2,2026-04-16T07:00:00Z,91,24,23,1,214,1,1,warning,AP AP-2F-08 offline — investigating,4,good
+SITE-HQ-03,Bangkok HQ — Floor 3,2026-04-16T07:00:00Z,84,24,24,0,196,3,0,none,,4,good
+SITE-HQ-04,Bangkok HQ — Floor 4,2026-04-16T07:00:00Z,76,20,18,2,143,8,1,warning,High auth failures on CORP-WIFI SSID,4,fair
+SITE-DC-01,Data Centre — Wing A,2026-04-16T07:00:00Z,95,12,12,0,8,0,0,none,,2,good
+SITE-DC-02,Data Centre — Wing B,2026-04-16T07:00:00Z,93,12,12,0,6,0,0,none,,2,good
+SITE-BR-01,Branch — Sukhumvit,2026-04-16T07:00:00Z,62,16,14,2,98,12,1,warning,Uplink degraded — failover active,3,fair
+SITE-BR-02,Branch — Silom,2026-04-16T07:00:00Z,55,16,12,4,67,18,1,critical,Multiple APs offline — possible power issue,3,poor
+SITE-BR-03,Branch — Chatuchak,2026-04-16T07:00:00Z,82,12,12,0,74,4,0,none,,3,good
+SITE-BR-04,Branch — Ladprao,2026-04-16T07:00:00Z,79,12,11,1,81,6,1,warning,AP AP-LPR-04 offline,3,good
+SITE-WH-01,Warehouse — Lat Krabang,2026-04-16T07:00:00Z,88,8,8,0,34,1,0,none,,2,good
+SITE-WH-02,Warehouse — Bang Na,2026-04-16T07:00:00Z,71,8,7,1,28,5,1,warning,AP offline in cold storage zone,2,good
