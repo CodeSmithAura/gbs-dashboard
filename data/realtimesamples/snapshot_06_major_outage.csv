@@ -1,0 +1,13 @@
+site_id,site_name,timestamp,site_health_score,ap_total,ap_online,ap_offline,client_count,auth_failures_1h,active_alerts,alert_severity,alert_description,ssid_count,uplink_quality
+SITE-HQ-01,Bangkok HQ — Floor 1,2026-05-07T11:20:00Z,95,24,24,0,237,1,0,none,,4,good
+SITE-HQ-02,Bangkok HQ — Floor 2,2026-05-07T11:20:00Z,95,24,24,0,237,0,0,none,,4,good
+SITE-HQ-03,Bangkok HQ — Floor 3,2026-05-07T11:20:00Z,71,24,23,1,156,5,1,warning,HQ Floor 3 degraded,4,fair
+SITE-HQ-04,Bangkok HQ — Floor 4,2026-05-07T11:20:00Z,53,20,18,2,73,16,1,critical,HQ Floor 4 critical,4,fair
+SITE-DC-01,Data Centre — Wing A,2026-05-07T11:20:00Z,78,12,11,1,80,11,1,warning,DC Wing A elevated load,2,fair
+SITE-DC-02,Data Centre — Wing B,2026-05-07T11:20:00Z,99,12,12,0,118,2,0,none,,2,good
+SITE-BR-01,Branch — Sukhumvit,2026-05-07T11:20:00Z,27,16,11,5,19,52,1,critical,OFFLINE — recovery team dispatched,3,down
+SITE-BR-02,Branch — Silom,2026-05-07T11:20:00Z,20,16,10,6,17,37,1,critical,OFFLINE — recovery team on-site,3,down
+SITE-BR-03,Branch — Chatuchak,2026-05-07T11:20:00Z,41,12,8,4,11,50,1,critical,Critical — failover active,3,poor
+SITE-BR-04,Branch — Ladprao,2026-05-07T11:20:00Z,46,12,9,3,44,23,1,critical,Critical — failover active,3,poor
+SITE-WH-01,Warehouse — Lat Krabang,2026-05-07T11:20:00Z,91,8,8,0,81,3,0,none,,2,good
+SITE-WH-02,Warehouse — Bang Na,2026-05-07T11:20:00Z,83,8,8,0,78,1,0,none,,2,good

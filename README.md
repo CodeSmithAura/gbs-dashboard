@@ -284,12 +284,3 @@ Then implement `ArubaAPIConnector.fetch()` in `backend/app/services/ingestion.py
 React dashboard are all unchanged.
 
 ---
-
-## Related Documents
-
-| Document | File |
-|---|---|
-| GBS Service Health Dashboard — Initial Analysis | `GBS_Service_Health_Dashboard_Initial_Analysis_v0.1.docx` |
-| GBS SOW — Wireless POC | `GBS_SOW_Wireless_POC_v1.0.docx` |
-| Customer Installation Guide | `GBS_Installation_Guide_v1.0.docx` |
-| Infra Dashboard HLD | `infra_dashboard_hld_v1_2.docx` |

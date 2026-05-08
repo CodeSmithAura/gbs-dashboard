@@ -1,0 +1,13 @@
+site_id,site_name,timestamp,site_health_score,ap_total,ap_online,ap_offline,client_count,auth_failures_1h,active_alerts,alert_severity,alert_description,ssid_count,uplink_quality
+SITE-HQ-01,Bangkok HQ — Floor 1,2026-05-07T11:30:00Z,95,24,24,0,239,0,0,none,,4,good
+SITE-HQ-02,Bangkok HQ — Floor 2,2026-05-07T11:30:00Z,73,24,23,1,157,7,1,warning,HQ Floor 2 — elevated errors,4,fair
+SITE-HQ-03,Bangkok HQ — Floor 3,2026-05-07T11:30:00Z,64,24,22,2,82,4,1,warning,HQ Floor 3 — impact from DC,4,fair
+SITE-HQ-04,Bangkok HQ — Floor 4,2026-05-07T11:30:00Z,47,20,18,2,72,13,1,critical,HQ Floor 4 — cascading failure,4,poor
+SITE-DC-01,Data Centre — Wing A,2026-05-07T11:30:00Z,63,12,10,2,39,13,1,critical,Data Centre Wing A — capacity alert,2,fair
+SITE-DC-02,Data Centre — Wing B,2026-05-07T11:30:00Z,78,12,11,1,75,12,1,warning,Data Centre Wing B — degraded,2,fair
+SITE-BR-01,Branch — Sukhumvit,2026-05-07T11:30:00Z,19,16,10,6,15,56,1,critical,OFFLINE — physical repair in progress,3,down
+SITE-BR-02,Branch — Silom,2026-05-07T11:30:00Z,15,16,9,7,17,33,1,critical,OFFLINE — physical repair in progress,3,down
+SITE-BR-03,Branch — Chatuchak,2026-05-07T11:30:00Z,35,12,8,4,13,55,1,critical,Critical — extended outage,3,down
+SITE-BR-04,Branch — Ladprao,2026-05-07T11:30:00Z,38,12,9,3,15,55,1,critical,Critical — failover at capacity,3,poor
+SITE-WH-01,Warehouse — Lat Krabang,2026-05-07T11:30:00Z,76,8,8,0,50,5,1,warning,Warehouse — connectivity degraded,2,good
+SITE-WH-02,Warehouse — Bang Na,2026-05-07T11:30:00Z,65,8,7,1,54,10,1,warning,Warehouse — connectivity degraded,2,good

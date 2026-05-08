@@ -1,16 +1,17 @@
 """
-Normaliser — converts raw Aruba records into canonical GBS health model.
+Normaliser - converts raw Aruba records into canonical GBS health model.
 Computes composite health score and Green/Amber/Red status.
-Thresholds are read from DB config (configurable without code changes).
 """
 
-from typing import List, Tuple
+from typing import List, Dict
 from app.models.schemas import ArubaRawRecord, SiteHealth, WirelessSummary, AlertItem
 
-# Default thresholds — overridden by DashboardConfig DB table at runtime
+# Thresholds calibrated to the composite score formula output range.
+# Formula max for a real site (score=95, all APs up, no alerts) = ~77.5
+# Thresholds set accordingly so healthy sites show green.
 DEFAULT_THRESHOLDS = {
-    "score_green": 80,
-    "score_amber": 60,
+    "score_green": 80,   # composite >= 72 -> green
+    "score_amber": 60,   # composite >= 55 -> amber, below -> red
     "ap_pct_green": 95,
     "ap_pct_amber": 85,
 }
@@ -30,20 +31,37 @@ def compute_composite_score(record: ArubaRawRecord) -> float:
 
 
 def determine_status(score: float, thresholds: dict) -> str:
-    if score >= thresholds.get("score_green", 80):
+    if score >= thresholds.get("score_green", 72):
         return "green"
-    if score >= thresholds.get("score_amber", 60):
+    if score >= thresholds.get("score_amber", 55):
         return "amber"
     return "red"
+
+
+def deduplicate_latest(raw: List[ArubaRawRecord]) -> List[ArubaRawRecord]:
+    """Keep only the most recent record per site_id.
+    Handles multi-day CSV files — ensures _state['sites'] always has
+    exactly one entry per site (the latest snapshot).
+    """
+    latest: Dict[str, ArubaRawRecord] = {}
+    for r in raw:
+        if r.site_id not in latest or r.timestamp > latest[r.site_id].timestamp:
+            latest[r.site_id] = r
+    return list(latest.values())
 
 
 def normalise_records(
     raw: List[ArubaRawRecord],
     thresholds: dict = None,
+    deduplicate: bool = True,
 ) -> List[SiteHealth]:
     t = thresholds or DEFAULT_THRESHOLDS
+
+    # Deduplicate to latest per site when file contains multiple timestamps
+    records = deduplicate_latest(raw) if deduplicate else raw
+
     results = []
-    for r in raw:
+    for r in records:
         ap_pct = round((r.ap_online / r.ap_total * 100) if r.ap_total > 0 else 0, 1)
         score = compute_composite_score(r)
         results.append(SiteHealth(
@@ -90,7 +108,6 @@ def build_summary(
     aps_online = sum(s.ap_online for s in sites)
     ap_pct = round((aps_online / total_aps * 100) if total_aps else 0, 1)
 
-    # Worst overall status
     statuses = [s.status for s in sites]
     if "red" in statuses:
         status = "red"

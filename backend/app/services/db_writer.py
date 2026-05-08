@@ -58,16 +58,22 @@ def get_latest_snapshot(db: Session) -> List[WirelessMetric]:
 
 
 def get_trend(db: Session, hours: int = 168) -> list:
-    """Return hourly average scores for the last N hours (default 7 days)."""
+    """
+    Return hourly average scores for the last N hours.
+
+    Groups by data_timestamp (the time in the CSV/API record) rather than
+    ingested_at. This means a 7-day CSV loaded in a single ingest cycle
+    correctly produces 168 hourly data points instead of 1.
+    """
     from sqlalchemy import text
     result = db.execute(text(f"""
         SELECT
-            date_trunc('hour', ingested_at) AS bucket,
+            date_trunc('hour', data_timestamp) AS bucket,
             ROUND(AVG(composite_score)::numeric, 1) AS score,
-            ROUND(AVG(ap_online_pct)::numeric, 1) AS ap_online_pct,
-            SUM(client_count) AS client_count
+            ROUND(AVG(ap_online_pct)::numeric, 1)   AS ap_online_pct,
+            SUM(client_count)                        AS client_count
         FROM wireless_metrics
-        WHERE ingested_at >= NOW() - INTERVAL '{hours} hours'
+        WHERE data_timestamp >= NOW() - INTERVAL '{hours} hours'
         GROUP BY bucket
         ORDER BY bucket ASC
     """))
