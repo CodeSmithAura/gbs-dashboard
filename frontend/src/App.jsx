@@ -7,19 +7,34 @@ import { useDashboard } from './hooks/useDashboard'
 import { api } from './utils/api'
 
 export default function App() {
-  const { summary, sites, alerts, trend, loading, error, lastRefresh, refresh } = useDashboard(30000)
+  const {
+    summary, sites, alerts, trend,
+    loading, error, lastRefresh,
+    demoState,
+    refresh, refreshDemo,
+  } = useDashboard(30000)
 
   const handleTrigger = async () => {
     await api.trigger()
     setTimeout(refresh, 1500)
   }
 
+  // After demo start/stop, immediately refresh both data and demo state
+  const handleDemoChange = () => {
+    setTimeout(() => { refresh(); refreshDemo() }, 800)
+  }
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <PocBanner summary={summary} />
+
+      <PocBanner
+        summary={summary}
+        demoState={demoState}
+        onDemoChange={handleDemoChange}
+      />
+
       <Header lastRefresh={lastRefresh} onRefresh={refresh} loading={loading} />
 
-      {/* Error state */}
       {error && (
         <div style={{
           background: 'var(--red-100)', color: 'var(--red-600)',
@@ -27,11 +42,10 @@ export default function App() {
           borderBottom: '1px solid #fca5a5',
           display: 'flex', alignItems: 'center', gap: 8,
         }}>
-          ⚠️ API error: {error} — backend may still be starting up. Retrying…
+          API error: {error} -- retrying...
         </div>
       )}
 
-      {/* Main content */}
       <main style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'auto' }}>
         <Dashboard
           summary={summary}
@@ -42,7 +56,11 @@ export default function App() {
         />
       </main>
 
-      <DashboardFooter summary={summary} lastRefresh={lastRefresh} onTrigger={handleTrigger} />
+      <DashboardFooter
+        summary={summary}
+        lastRefresh={lastRefresh}
+        onTrigger={handleTrigger}
+      />
     </div>
   )
 }

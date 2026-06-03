@@ -23,6 +23,10 @@ class Settings(BaseSettings):
     # Polling
     POLL_INTERVAL_SECONDS: int = 60
 
+    # Demo mode — cycles through snapshots in DEMO_SAMPLES_PATH
+    DEMO_SAMPLES_PATH: str = "/app/data/realtimesamples"
+    DEMO_INTERVAL_SECONDS: int = 30
+
     # App
     APP_NAME: str = "GBS Service Health Dashboard"
     APP_VERSION: str = "0.1.0-poc"

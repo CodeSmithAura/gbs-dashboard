@@ -10,8 +10,8 @@ from app.models.schemas import ArubaRawRecord, SiteHealth, WirelessSummary, Aler
 # Formula max for a real site (score=95, all APs up, no alerts) = ~77.5
 # Thresholds set accordingly so healthy sites show green.
 DEFAULT_THRESHOLDS = {
-    "score_green": 80,   # composite >= 72 -> green
-    "score_amber": 60,   # composite >= 55 -> amber, below -> red
+    "score_green": 80,   # composite >= 80 -> green
+    "score_amber": 60,   # composite >= 60 -> amber, below -> red
     "ap_pct_green": 95,
     "ap_pct_amber": 85,
 }

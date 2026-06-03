@@ -187,7 +187,7 @@ Interactive docs: `http://localhost:8000/docs`
 
 ```bash
 cd backend
-pip install -r requirements.txt
+pip install -r requirements-test.txt
 python -m pytest tests/test_pipeline.py -v
 ```
 

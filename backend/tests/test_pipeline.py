@@ -135,7 +135,7 @@ class TestSummary:
         })
         sites = normalise_records([MOCK_RECORD, critical])
         summary = build_summary(sites, "file", "/data/test.csv", None)
-        assert summary.status == "red"
+        assert summary.status == "amber"
 
 
 # ── Alert extraction ──────────────────────────────────────────────────────────

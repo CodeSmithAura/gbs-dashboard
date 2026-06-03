@@ -59,21 +59,47 @@ def get_latest_snapshot(db: Session) -> List[WirelessMetric]:
 
 def get_trend(db: Session, hours: int = 168) -> list:
     """
-    Return hourly average scores for the last N hours.
+    Return hourly trend data for the last N hours.
 
-    Groups by data_timestamp (the time in the CSV/API record) rather than
-    ingested_at. This means a 7-day CSV loaded in a single ingest cycle
-    correctly produces 168 hourly data points instead of 1.
+    The 7-day CSV may have been generated days or weeks ago so its
+    data_timestamp values are stale. We filter by ingested_at (always
+    recent) but preserve the relative shape from data_timestamp by
+    computing an hour offset from the earliest data_timestamp in each
+    ingest batch — then rebasing those offsets onto NOW() so the chart
+    always shows a rolling window ending at the current time.
     """
     from sqlalchemy import text
     result = db.execute(text(f"""
+        WITH ranked AS (
+            -- Get all rows from the most recent ingest batch
+            -- (identified by the latest ingested_at value)
+            SELECT *,
+                   MAX(ingested_at) OVER () AS latest_ingest
+            FROM wireless_metrics
+            WHERE ingested_at >= (
+                SELECT MAX(ingested_at) - INTERVAL '5 minutes'
+                FROM wireless_metrics
+            )
+        ),
+        rebased AS (
+            -- Rebase data_timestamp so that the latest data point
+            -- aligns with NOW(), preserving the relative hourly shape
+            SELECT
+                date_trunc('hour',
+                    NOW() - (MAX(data_timestamp) OVER () - data_timestamp)
+                ) AS bucket,
+                composite_score,
+                ap_online_pct,
+                client_count
+            FROM ranked
+        )
         SELECT
-            date_trunc('hour', data_timestamp) AS bucket,
+            bucket,
             ROUND(AVG(composite_score)::numeric, 1) AS score,
             ROUND(AVG(ap_online_pct)::numeric, 1)   AS ap_online_pct,
             SUM(client_count)                        AS client_count
-        FROM wireless_metrics
-        WHERE data_timestamp >= NOW() - INTERVAL '{hours} hours'
+        FROM rebased
+        WHERE bucket >= NOW() - INTERVAL '{hours} hours'
         GROUP BY bucket
         ORDER BY bucket ASC
     """))

@@ -21,6 +21,7 @@ frontend/.vite/
 
 # Docker
 *.log
+*.tar
 
 # OS
 .DS_Store

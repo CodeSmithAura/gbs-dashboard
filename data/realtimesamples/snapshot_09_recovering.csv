@@ -1,13 +1,13 @@
-site_id,site_name,timestamp,site_health_score,ap_total,ap_online,ap_offline,client_count,auth_failures_1h,active_alerts,alert_severity,alert_description,ssid_count,uplink_quality
-SITE-HQ-01,Bangkok HQ — Floor 1,2026-05-07T11:50:00Z,96,24,24,0,238,3,0,none,,4,good
-SITE-HQ-02,Bangkok HQ — Floor 2,2026-05-07T11:50:00Z,93,24,24,0,238,3,0,none,,4,good
-SITE-HQ-03,Bangkok HQ — Floor 3,2026-05-07T11:50:00Z,94,24,24,0,240,2,0,none,,4,good
-SITE-HQ-04,Bangkok HQ — Floor 4,2026-05-07T11:50:00Z,90,20,20,0,199,3,0,none,,4,good
-SITE-DC-01,Data Centre — Wing A,2026-05-07T11:50:00Z,99,12,12,0,122,3,0,none,,2,good
-SITE-DC-02,Data Centre — Wing B,2026-05-07T11:50:00Z,97,12,12,0,118,2,0,none,,2,good
-SITE-BR-01,Branch — Sukhumvit,2026-05-07T11:50:00Z,82,16,16,0,157,0,1,info,Recovered — post-incident monitoring,3,good
-SITE-BR-02,Branch — Silom,2026-05-07T11:50:00Z,67,16,15,1,103,4,1,warning,Almost recovered — 1 AP pending,3,fair
-SITE-BR-03,Branch — Chatuchak,2026-05-07T11:50:00Z,91,12,12,0,121,3,0,none,,3,good
-SITE-BR-04,Branch — Ladprao,2026-05-07T11:50:00Z,88,12,12,0,123,1,0,none,,3,good
-SITE-WH-01,Warehouse — Lat Krabang,2026-05-07T11:50:00Z,90,8,8,0,81,0,0,none,,2,good
-SITE-WH-02,Warehouse — Bang Na,2026-05-07T11:50:00Z,83,8,8,0,77,0,0,none,,2,good
+active_alerts,alert_description,alert_severity,ap_offline,ap_online,ap_total,auth_failures_1h,client_count,site_health_score,site_id,site_name,ssid_count,timestamp,uplink_quality
+0,,none,0,24,24,3,238,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-22T14:25:51Z,good
+0,,none,0,24,24,3,238,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-22T14:25:51Z,good
+0,,none,0,24,24,2,240,94,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-22T14:25:51Z,good
+0,,none,0,20,20,3,199,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-22T14:25:51Z,good
+0,,none,0,12,12,3,122,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-22T14:25:51Z,good
+0,,none,0,12,12,2,118,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-22T14:25:51Z,good
+1,Recovered — post-incident monitoring,info,0,16,16,0,157,82,SITE-BR-01,Branch — Sukhumvit,3,2026-05-22T14:25:51Z,good
+1,Almost recovered — 1 AP pending,warning,1,15,16,4,103,67,SITE-BR-02,Branch — Silom,3,2026-05-22T14:25:51Z,fair
+0,,none,0,12,12,3,121,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-22T14:25:51Z,good
+0,,none,0,12,12,1,123,88,SITE-BR-04,Branch — Ladprao,3,2026-05-22T14:25:51Z,good
+0,,none,0,8,8,0,81,90,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-22T14:25:51Z,good
+0,,none,0,8,8,0,77,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-22T14:25:51Z,good

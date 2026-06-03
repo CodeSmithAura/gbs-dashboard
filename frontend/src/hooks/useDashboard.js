@@ -1,11 +1,13 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { api } from '../utils/api'
 
-export function useDashboard(intervalMs = 30000) {
-  const [data, setData]       = useState({ summary: null, sites: [], alerts: [], trend: [] })
-  const [loading, setLoading] = useState(true)
-  const [error, setError]     = useState(null)
-  const [lastRefresh, setLastRefresh] = useState(null)
+export function useDashboard(baseIntervalMs = 30000) {
+  const [data, setData]           = useState({ summary: null, sites: [], alerts: [], trend: [] })
+  const [loading, setLoading]     = useState(true)
+  const [error, setError]         = useState(null)
+  const [lastRefresh, setRefresh] = useState(null)
+  const [demoState, setDemoState] = useState(null)
+  const intervalRef               = useRef(null)
 
   const fetchAll = useCallback(async () => {
     try {
@@ -14,7 +16,7 @@ export function useDashboard(intervalMs = 30000) {
       ])
       setData({ summary, sites, alerts, trend })
       setError(null)
-      setLastRefresh(new Date())
+      setRefresh(new Date())
     } catch (e) {
       setError(e.message)
     } finally {
@@ -22,11 +24,43 @@ export function useDashboard(intervalMs = 30000) {
     }
   }, [])
 
+  const fetchDemoState = useCallback(async () => {
+    try {
+      const ds = await api.demoStatus()
+      setDemoState(ds)
+    } catch {
+      // demo endpoint may not be available -- ignore silently
+    }
+  }, [])
+
+  // Restart the polling interval -- called when demo state changes
+  const resetInterval = useCallback((ms) => {
+    if (intervalRef.current) clearInterval(intervalRef.current)
+    intervalRef.current = setInterval(() => {
+      fetchAll()
+      fetchDemoState()
+    }, ms)
+  }, [fetchAll, fetchDemoState])
+
   useEffect(() => {
     fetchAll()
-    const id = setInterval(fetchAll, intervalMs)
-    return () => clearInterval(id)
-  }, [fetchAll, intervalMs])
+    fetchDemoState()
 
-  return { ...data, loading, error, lastRefresh, refresh: fetchAll }
+    // When demo is running, poll every 3s so UI reflects each snapshot quickly.
+    // When idle, fall back to baseIntervalMs (30s).
+    const isRunning = demoState?.running
+    resetInterval(isRunning ? 3000 : baseIntervalMs)
+
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current) }
+  }, [fetchAll, fetchDemoState, resetInterval, baseIntervalMs, demoState?.running])
+
+  return {
+    ...data,
+    loading,
+    error,
+    lastRefresh,
+    demoState,
+    refresh: fetchAll,
+    refreshDemo: fetchDemoState,
+  }
 }

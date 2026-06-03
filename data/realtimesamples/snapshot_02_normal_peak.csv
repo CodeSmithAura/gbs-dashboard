@@ -1,13 +1,13 @@
-site_id,site_name,timestamp,site_health_score,ap_total,ap_online,ap_offline,client_count,auth_failures_1h,active_alerts,alert_severity,alert_description,ssid_count,uplink_quality
-SITE-HQ-01,Bangkok HQ — Floor 1,2026-05-07T10:40:00Z,96,24,24,0,309,0,0,none,,4,good
-SITE-HQ-02,Bangkok HQ — Floor 2,2026-05-07T10:40:00Z,94,24,24,0,309,2,0,none,,4,good
-SITE-HQ-03,Bangkok HQ — Floor 3,2026-05-07T10:40:00Z,95,24,24,0,313,2,0,none,,4,good
-SITE-HQ-04,Bangkok HQ — Floor 4,2026-05-07T10:40:00Z,89,20,20,0,262,3,0,none,,4,good
-SITE-DC-01,Data Centre — Wing A,2026-05-07T10:40:00Z,99,12,12,0,153,3,0,none,,2,good
-SITE-DC-02,Data Centre — Wing B,2026-05-07T10:40:00Z,97,12,12,0,157,2,0,none,,2,good
-SITE-BR-01,Branch — Sukhumvit,2026-05-07T10:40:00Z,89,16,16,0,209,2,0,none,,3,good
-SITE-BR-02,Branch — Silom,2026-05-07T10:40:00Z,87,16,16,0,206,0,0,none,,3,good
-SITE-BR-03,Branch — Chatuchak,2026-05-07T10:40:00Z,91,12,12,0,158,1,0,none,,3,good
-SITE-BR-04,Branch — Ladprao,2026-05-07T10:40:00Z,87,12,12,0,153,1,0,none,,3,good
-SITE-WH-01,Warehouse — Lat Krabang,2026-05-07T10:40:00Z,90,8,8,0,104,2,0,none,,2,good
-SITE-WH-02,Warehouse — Bang Na,2026-05-07T10:40:00Z,84,8,8,0,106,2,0,none,,2,good
+active_alerts,alert_description,alert_severity,ap_offline,ap_online,ap_total,auth_failures_1h,client_count,site_health_score,site_id,site_name,ssid_count,timestamp,uplink_quality
+0,,none,0,24,24,0,309,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-22T13:15:51Z,good
+0,,none,0,24,24,2,309,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-22T13:15:51Z,good
+0,,none,0,24,24,2,313,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-22T13:15:51Z,good
+0,,none,0,20,20,3,262,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-22T13:15:51Z,good
+0,,none,0,12,12,3,153,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-22T13:15:51Z,good
+0,,none,0,12,12,2,157,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-22T13:15:51Z,good
+0,,none,0,16,16,2,209,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-22T13:15:51Z,good
+0,,none,0,16,16,0,206,87,SITE-BR-02,Branch — Silom,3,2026-05-22T13:15:51Z,good
+0,,none,0,12,12,1,158,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-22T13:15:51Z,good
+0,,none,0,12,12,1,153,87,SITE-BR-04,Branch — Ladprao,3,2026-05-22T13:15:51Z,good
+0,,none,0,8,8,2,104,90,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-22T13:15:51Z,good
+0,,none,0,8,8,2,106,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-22T13:15:51Z,good

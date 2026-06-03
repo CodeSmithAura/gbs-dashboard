@@ -1,0 +1,147 @@
+GBS SERVICE HEALTH DASHBOARD
+Proof of Concept — Capability Overview
+=======================================
+Prepared by: BMI Technology | Infrastructure Architecture Team
+Version: Phase 1 POC | April 2026
+
+
+WHAT THIS IS
+------------
+A working, real-time health monitoring dashboard for the Global Business
+Service (GBS) — the platform that delivers HR and Finance functions across
+your organisation. Built and running today on a standard laptop inside
+Docker. No cloud subscription. No infrastructure changes. No agents
+installed on any of your systems.
+
+
+WHAT YOU WILL SEE IN THIS DEMO
+-------------------------------
+A live web dashboard at http://localhost:3000 showing:
+
+  - An overall GBS Wireless Health Score (0-100) with Green / Amber / Red
+    status — one number that tells leadership whether GBS is healthy
+    right now.
+
+  - Real-time AP health across all 12 sites — online count, offline count,
+    AP availability percentage per site.
+
+  - Connected client counts — how many users are on the network at this
+    moment, trending over 7 days.
+
+  - An active alerts feed — every site issue surfaced in one place,
+    sorted by severity, with plain-English descriptions.
+
+  - A 7-day trend chart — showing health score and AP availability over
+    the past week, including visible dips during incidents and recovery
+    patterns.
+
+  - A sortable site health table — drill down to any of the 12 sites,
+    see composite score, AP ratio, auth failures, uplink quality, and
+    alert status at a glance.
+
+  - Auto-refresh every 30 seconds — the dashboard stays current without
+    the user doing anything.
+
+
+LIVE DEMO CAPABILITY
+--------------------
+This POC includes a built-in simulation mode that plays back a scripted
+10-step outage scenario in real time — directly from the dashboard UI.
+
+  Step 1-2  : All sites healthy. Green across the board.
+  Step 3    : First warning appears — Branch Silom AP offline.
+  Step 4    : Silom critical. Sukhumvit degrades. Alert feed activates.
+  Step 5-6  : Outage spreads to 5 sites. Dashboard turns RED.
+  Step 7    : Data centre impact. Worst point — 8 sites affected.
+  Step 8-9  : ISP upstream restored. Partial then full recovery.
+  Step 10   : All sites green. Full recovery confirmed.
+
+The interval between steps is configurable — 10 seconds for a fast demo,
+60 seconds for a realistic walkthrough. One button starts it, one button
+stops it. No command line required during the presentation.
+
+
+SALIENT FEATURES
+----------------
+1. SINGLE PANE OF GLASS
+   Support teams and leadership see the full GBS wireless picture in one
+   screen. No logging into HPE Aruba Central. No manual status checks.
+
+2. REAL DATA MODEL — ZERO REWORK FOR PRODUCTION
+   Every field name, data type, and validation rule is aligned to the
+   actual HPE Aruba Central REST API. Moving from file-based demo to live
+   API is a one-line configuration change — the entire pipeline,
+   database, and dashboard are unchanged.
+
+3. HEALTH SCORING ENGINE
+   Composite score computed from three inputs: Aruba AI Insights site
+   score, AP online ratio, and active alert severity — weighted and
+   calibrated so Green/Amber/Red reflect genuine operational risk, not
+   arbitrary thresholds.
+
+4. 7-DAY TREND HISTORY
+   TimescaleDB stores every ingest cycle. The trend chart shows health
+   trajectory over 7 days — enabling the team to spot patterns, recurring
+   degradations, and confirm recovery after incidents.
+
+5. FULLY OFFLINE
+   Runs entirely on the customer machine. No internet dependency during
+   operation. Delivered as Docker images on a USB drive. Three containers,
+   one command to start.
+
+6. PRODUCTION-GRADE ARCHITECTURE UNDER THE HOOD
+   The codebase is not a prototype. It is a production skeleton:
+   - Python FastAPI backend with Pydantic validation
+   - TimescaleDB time-series database with 90-day retention
+   - React frontend with live polling and error handling
+   - Pluggable connector pattern — swap one class for live API
+   - 21 automated tests covering the full data pipeline
+   - Developer and customer Docker environments separated by
+     compose override files
+
+
+WHAT THIS POC PROVES
+--------------------
+Before committing to the full programme, this POC answers the questions
+that matter:
+
+  Can we ingest and normalise Aruba data reliably?        YES
+  Does the health scoring model reflect reality?          YES
+  Can the frontend display live KPIs cleanly?             YES
+  Is the Phase 2 live API upgrade genuinely low-risk?     YES
+  Can a non-technical user operate the demo?              YES
+  Does it run without any customer infrastructure?        YES
+
+
+WHAT COMES NEXT (Phase 2 and beyond)
+-------------------------------------
+Phase 2  Connect to the live HPE Aruba Central API.
+         One config change. All other code unchanged.
+
+Phase 3  Add Azure Virtual Desktop (AVD) health pillar.
+
+Phase 4  Add SAP S/4HANA, ECC, and M3 application availability.
+
+Phase 5  Add Printing Services via Zabbix.
+
+Phase 6  Automated PDF reports, alerting integration, HA/DR,
+         role-based access control, and operations handover.
+
+Each phase is a standalone deliverable with its own SOW. You commit one
+phase at a time based on what you see working.
+
+
+DOCUMENTS AVAILABLE
+--------------------
+  - Initial Analysis        (GBS_Service_Health_Dashboard_Initial_Analysis_v0.1)
+  - Statement of Work       (GBS_SOW_Wireless_POC_v1.0)
+  - Low Level Design        (GBS_LLD_v1.0)
+  - Installation Guide      (GBS_Installation_Guide_v1.0)
+  - Phase 2 Upgrade Runbook (GBS_RUNBOOK_PHASE2_v1.0)
+  - File Schema Spec        (GBS_SCHEMA_v1.0)
+
+
+-----------------------------------------------------------------------
+"We did not build a demo. We built the first increment of your
+ production system — and then showed it to you."
+-----------------------------------------------------------------------

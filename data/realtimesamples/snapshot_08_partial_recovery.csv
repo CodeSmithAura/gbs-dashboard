@@ -1,13 +1,13 @@
-site_id,site_name,timestamp,site_health_score,ap_total,ap_online,ap_offline,client_count,auth_failures_1h,active_alerts,alert_severity,alert_description,ssid_count,uplink_quality
-SITE-HQ-01,Bangkok HQ — Floor 1,2026-05-07T11:40:00Z,96,24,24,0,240,3,0,none,,4,good
-SITE-HQ-02,Bangkok HQ — Floor 2,2026-05-07T11:40:00Z,94,24,24,0,243,0,0,none,,4,good
-SITE-HQ-03,Bangkok HQ — Floor 3,2026-05-07T11:40:00Z,91,24,24,0,242,0,1,info,HQ Floor 3 recovering,4,good
-SITE-HQ-04,Bangkok HQ — Floor 4,2026-05-07T11:40:00Z,79,20,20,0,200,2,1,info,HQ Floor 4 recovering,4,good
-SITE-DC-01,Data Centre — Wing A,2026-05-07T11:40:00Z,88,12,12,0,118,1,1,info,DC Wing A — load normalising,2,good
-SITE-DC-02,Data Centre — Wing B,2026-05-07T11:40:00Z,97,12,12,0,121,3,0,none,,2,good
-SITE-BR-01,Branch — Sukhumvit,2026-05-07T11:40:00Z,57,16,14,2,56,6,1,warning,Recovering — uplink restored,3,fair
-SITE-BR-02,Branch — Silom,2026-05-07T11:40:00Z,41,16,13,3,56,19,1,critical,Partially restored — 3 APs back online,3,poor
-SITE-BR-03,Branch — Chatuchak,2026-05-07T11:40:00Z,71,12,11,1,78,12,1,warning,Recovering — monitoring,3,fair
-SITE-BR-04,Branch — Ladprao,2026-05-07T11:40:00Z,74,12,12,0,75,0,1,info,Recovery in progress,3,good
-SITE-WH-01,Warehouse — Lat Krabang,2026-05-07T11:40:00Z,90,8,8,0,83,1,0,none,,2,good
-SITE-WH-02,Warehouse — Bang Na,2026-05-07T11:40:00Z,83,8,8,0,80,3,0,none,,2,good
+active_alerts,alert_description,alert_severity,ap_offline,ap_online,ap_total,auth_failures_1h,client_count,site_health_score,site_id,site_name,ssid_count,timestamp,uplink_quality
+0,,none,0,24,24,3,240,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-22T14:15:51Z,good
+0,,none,0,24,24,0,243,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-22T14:15:51Z,good
+1,HQ Floor 3 recovering,info,0,24,24,0,242,91,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-22T14:15:51Z,good
+1,HQ Floor 4 recovering,info,0,20,20,2,200,79,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-22T14:15:51Z,good
+1,DC Wing A — load normalising,info,0,12,12,1,118,88,SITE-DC-01,Data Centre — Wing A,2,2026-05-22T14:15:51Z,good
+0,,none,0,12,12,3,121,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-22T14:15:51Z,good
+1,Recovering — uplink restored,warning,2,14,16,6,56,57,SITE-BR-01,Branch — Sukhumvit,3,2026-05-22T14:15:51Z,fair
+1,Partially restored — 3 APs back online,critical,3,13,16,19,56,41,SITE-BR-02,Branch — Silom,3,2026-05-22T14:15:51Z,poor
+1,Recovering — monitoring,warning,1,11,12,12,78,71,SITE-BR-03,Branch — Chatuchak,3,2026-05-22T14:15:51Z,fair
+1,Recovery in progress,info,0,12,12,0,75,74,SITE-BR-04,Branch — Ladprao,3,2026-05-22T14:15:51Z,good
+0,,none,0,8,8,1,83,90,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-22T14:15:51Z,good
+0,,none,0,8,8,3,80,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-22T14:15:51Z,good

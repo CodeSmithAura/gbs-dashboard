@@ -9,6 +9,7 @@ from app.core.config import settings
 from app.core.database import check_db_connection, engine
 from app.models.orm import Base
 from app.api.wireless import router as wireless_router
+from app.api.demo import router as demo_router
 from app.workers.scheduler import polling_loop, get_state
 
 logging.basicConfig(
@@ -21,15 +22,10 @@ logger = logging.getLogger(__name__)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logger.info(f"Starting {settings.APP_NAME} v{settings.APP_VERSION}")
-
     Base.metadata.create_all(bind=engine)
     logger.info("Database tables ready.")
-
-    # Start asyncio polling loop as a background task
     task = asyncio.create_task(polling_loop())
-
     yield
-
     task.cancel()
     try:
         await task
@@ -54,6 +50,7 @@ app.add_middleware(
 )
 
 app.include_router(wireless_router)
+app.include_router(demo_router)
 
 
 @app.get("/health")

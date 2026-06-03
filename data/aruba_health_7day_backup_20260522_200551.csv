@@ -1,0 +1,2017 @@
+active_alerts,alert_description,alert_severity,ap_offline,ap_online,ap_total,auth_failures_1h,client_count,site_health_score,site_id,site_name,ssid_count,timestamp,uplink_quality
+0,,none,0,16,16,0,161,86,SITE-BR-01,Branch — Sukhumvit,3,2026-05-12T12:00:00Z,good
+0,,none,0,16,16,2,157,87,SITE-BR-02,Branch — Silom,3,2026-05-12T12:00:00Z,good
+0,,none,1,11,12,2,118,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-12T12:00:00Z,good
+0,,none,0,12,12,1,121,89,SITE-BR-04,Branch — Ladprao,3,2026-05-12T12:00:00Z,good
+0,,none,0,12,12,1,123,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-12T12:00:00Z,good
+0,,none,0,12,12,2,118,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-12T12:00:00Z,good
+0,,none,0,24,24,1,241,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-12T12:00:00Z,good
+0,,none,0,24,24,0,243,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-12T12:00:00Z,good
+0,,none,0,24,24,0,241,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-12T12:00:00Z,good
+0,,none,0,20,20,1,200,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-12T12:00:00Z,good
+0,,none,0,8,8,2,77,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-12T12:00:00Z,good
+0,,none,0,8,8,1,82,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-12T12:00:00Z,good
+0,,none,0,16,16,1,163,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-12T13:00:00Z,good
+0,,none,0,16,16,0,160,86,SITE-BR-02,Branch — Silom,3,2026-05-12T13:00:00Z,good
+0,,none,0,12,12,1,122,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-12T13:00:00Z,good
+0,,none,0,12,12,0,117,89,SITE-BR-04,Branch — Ladprao,3,2026-05-12T13:00:00Z,good
+0,,none,0,12,12,1,120,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-12T13:00:00Z,good
+0,,none,0,12,12,2,120,96,SITE-DC-02,Data Centre — Wing B,2,2026-05-12T13:00:00Z,good
+0,,none,0,24,24,1,238,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-12T13:00:00Z,good
+0,,none,0,24,24,3,238,92,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-12T13:00:00Z,good
+0,,none,0,24,24,0,240,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-12T13:00:00Z,good
+0,,none,0,20,20,3,197,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-12T13:00:00Z,good
+0,,none,0,8,8,1,78,89,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-12T13:00:00Z,good
+0,,none,0,8,8,2,78,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-12T13:00:00Z,good
+0,,none,0,16,16,2,158,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-12T14:00:00Z,good
+0,,none,0,16,16,0,159,85,SITE-BR-02,Branch — Silom,3,2026-05-12T14:00:00Z,good
+0,,none,0,12,12,1,123,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-12T14:00:00Z,good
+0,,none,0,12,12,0,123,88,SITE-BR-04,Branch — Ladprao,3,2026-05-12T14:00:00Z,good
+0,,none,0,12,12,2,123,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-12T14:00:00Z,good
+0,,none,0,12,12,2,117,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-12T14:00:00Z,good
+0,,none,0,24,24,2,243,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-12T14:00:00Z,good
+0,,none,0,24,24,1,239,92,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-12T14:00:00Z,good
+0,,none,0,24,24,0,237,93,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-12T14:00:00Z,good
+0,,none,0,20,20,2,200,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-12T14:00:00Z,good
+0,,none,0,8,8,0,79,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-12T14:00:00Z,good
+0,,none,0,8,8,2,82,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-12T14:00:00Z,good
+0,,none,0,16,16,1,162,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-12T15:00:00Z,good
+0,,none,0,16,16,3,159,87,SITE-BR-02,Branch — Silom,3,2026-05-12T15:00:00Z,good
+0,,none,0,12,12,1,121,90,SITE-BR-03,Branch — Chatuchak,3,2026-05-12T15:00:00Z,good
+0,,none,0,12,12,1,122,85,SITE-BR-04,Branch — Ladprao,3,2026-05-12T15:00:00Z,good
+0,,none,0,12,12,2,122,97,SITE-DC-01,Data Centre — Wing A,2,2026-05-12T15:00:00Z,good
+0,,none,0,12,12,1,122,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-12T15:00:00Z,good
+0,,none,0,24,24,3,239,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-12T15:00:00Z,good
+0,,none,0,24,24,1,242,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-12T15:00:00Z,good
+0,,none,0,24,24,3,242,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-12T15:00:00Z,good
+0,,none,0,20,20,2,198,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-12T15:00:00Z,good
+0,,none,0,8,8,1,80,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-12T15:00:00Z,good
+0,,none,0,8,8,3,82,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-12T15:00:00Z,good
+0,,none,0,16,16,3,158,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-12T16:00:00Z,good
+0,,none,0,16,16,1,162,87,SITE-BR-02,Branch — Silom,3,2026-05-12T16:00:00Z,good
+0,,none,0,12,12,3,119,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-12T16:00:00Z,good
+0,,none,0,12,12,3,122,89,SITE-BR-04,Branch — Ladprao,3,2026-05-12T16:00:00Z,good
+0,,none,0,12,12,3,123,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-12T16:00:00Z,good
+0,,none,0,12,12,3,119,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-12T16:00:00Z,good
+0,,none,0,24,24,2,242,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-12T16:00:00Z,good
+0,,none,0,24,24,2,237,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-12T16:00:00Z,good
+0,,none,0,24,24,3,237,93,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-12T16:00:00Z,good
+0,,none,0,20,20,2,201,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-12T16:00:00Z,good
+0,,none,0,8,8,3,80,90,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-12T16:00:00Z,good
+0,,none,0,8,8,1,81,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-12T16:00:00Z,good
+0,,none,0,16,16,3,94,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-12T17:00:00Z,good
+0,,none,0,16,16,1,96,84,SITE-BR-02,Branch — Silom,3,2026-05-12T17:00:00Z,good
+0,,none,0,12,12,2,70,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-12T17:00:00Z,good
+0,,none,0,12,12,1,69,87,SITE-BR-04,Branch — Ladprao,3,2026-05-12T17:00:00Z,good
+0,,none,0,12,12,3,69,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-12T17:00:00Z,good
+0,,none,0,12,12,1,73,96,SITE-DC-02,Data Centre — Wing B,2,2026-05-12T17:00:00Z,good
+0,,none,0,24,24,2,141,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-12T17:00:00Z,good
+0,,none,0,24,24,0,146,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-12T17:00:00Z,good
+0,,none,0,24,24,0,143,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-12T17:00:00Z,good
+0,,none,0,20,20,1,119,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-12T17:00:00Z,good
+0,,none,0,8,8,0,47,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-12T17:00:00Z,good
+0,,none,0,8,8,1,51,82,SITE-WH-02,Warehouse — Bang Na,2,2026-05-12T17:00:00Z,good
+0,,none,0,16,16,0,98,87,SITE-BR-01,Branch — Sukhumvit,3,2026-05-12T18:00:00Z,good
+0,,none,0,16,16,0,98,85,SITE-BR-02,Branch — Silom,3,2026-05-12T18:00:00Z,good
+0,,none,0,12,12,1,75,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-12T18:00:00Z,good
+0,,none,0,12,12,0,71,88,SITE-BR-04,Branch — Ladprao,3,2026-05-12T18:00:00Z,good
+0,,none,0,12,12,0,74,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-12T18:00:00Z,good
+0,,none,0,12,12,0,73,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-12T18:00:00Z,good
+0,,none,0,24,24,3,141,95,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-12T18:00:00Z,good
+0,,none,0,24,24,1,147,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-12T18:00:00Z,good
+0,,none,0,24,24,1,145,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-12T18:00:00Z,good
+0,,none,0,20,20,3,119,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-12T18:00:00Z,good
+0,,none,0,8,8,1,47,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-12T18:00:00Z,good
+0,,none,0,8,8,2,47,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-12T18:00:00Z,good
+0,,none,0,16,16,1,5,87,SITE-BR-01,Branch — Sukhumvit,3,2026-05-12T19:00:00Z,good
+0,,none,0,16,16,0,6,85,SITE-BR-02,Branch — Silom,3,2026-05-12T19:00:00Z,good
+0,,none,1,11,12,1,3,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-12T19:00:00Z,good
+0,,none,0,12,12,2,4,86,SITE-BR-04,Branch — Ladprao,3,2026-05-12T19:00:00Z,good
+0,,none,0,12,12,0,8,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-12T19:00:00Z,good
+0,,none,0,12,12,1,6,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-12T19:00:00Z,good
+0,,none,0,24,24,0,12,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-12T19:00:00Z,good
+0,,none,0,24,24,2,13,92,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-12T19:00:00Z,good
+0,,none,0,24,24,0,15,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-12T19:00:00Z,good
+0,,none,0,20,20,1,11,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-12T19:00:00Z,good
+0,,none,0,8,8,1,3,89,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-12T19:00:00Z,good
+0,,none,0,8,8,0,2,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-12T19:00:00Z,good
+0,,none,0,16,16,1,6,87,SITE-BR-01,Branch — Sukhumvit,3,2026-05-12T20:00:00Z,good
+0,,none,0,16,16,0,9,86,SITE-BR-02,Branch — Silom,3,2026-05-12T20:00:00Z,good
+0,,none,0,12,12,3,4,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-12T20:00:00Z,good
+0,,none,0,12,12,1,3,88,SITE-BR-04,Branch — Ladprao,3,2026-05-12T20:00:00Z,good
+0,,none,0,12,12,3,3,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-12T20:00:00Z,good
+0,,none,0,12,12,1,9,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-12T20:00:00Z,good
+0,,none,0,24,24,0,12,94,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-12T20:00:00Z,good
+0,,none,0,24,24,3,11,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-12T20:00:00Z,good
+0,,none,0,24,24,0,13,94,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-12T20:00:00Z,good
+0,,none,0,20,20,3,8,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-12T20:00:00Z,good
+0,,none,0,8,8,2,5,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-12T20:00:00Z,good
+0,,none,0,8,8,0,7,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-12T20:00:00Z,good
+0,,none,0,16,16,0,6,86,SITE-BR-01,Branch — Sukhumvit,3,2026-05-12T21:00:00Z,good
+0,,none,1,15,16,3,7,87,SITE-BR-02,Branch — Silom,3,2026-05-12T21:00:00Z,good
+0,,none,0,12,12,0,9,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-12T21:00:00Z,good
+0,,none,1,11,12,1,4,85,SITE-BR-04,Branch — Ladprao,3,2026-05-12T21:00:00Z,good
+0,,none,0,12,12,2,8,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-12T21:00:00Z,good
+0,,none,0,12,12,0,6,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-12T21:00:00Z,good
+0,,none,0,24,24,1,11,94,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-12T21:00:00Z,good
+0,,none,0,24,24,2,10,92,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-12T21:00:00Z,good
+0,,none,1,23,24,2,13,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-12T21:00:00Z,good
+0,,none,0,20,20,1,7,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-12T21:00:00Z,good
+0,,none,0,8,8,0,7,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-12T21:00:00Z,good
+0,,none,0,8,8,3,6,82,SITE-WH-02,Warehouse — Bang Na,2,2026-05-12T21:00:00Z,good
+0,,none,0,16,16,0,8,87,SITE-BR-01,Branch — Sukhumvit,3,2026-05-12T22:00:00Z,good
+0,,none,0,16,16,3,5,88,SITE-BR-02,Branch — Silom,3,2026-05-12T22:00:00Z,good
+0,,none,0,12,12,3,5,90,SITE-BR-03,Branch — Chatuchak,3,2026-05-12T22:00:00Z,good
+0,,none,0,12,12,2,9,88,SITE-BR-04,Branch — Ladprao,3,2026-05-12T22:00:00Z,good
+0,,none,0,12,12,0,7,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-12T22:00:00Z,good
+0,,none,0,12,12,1,7,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-12T22:00:00Z,good
+0,,none,0,24,24,2,14,94,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-12T22:00:00Z,good
+0,,none,0,24,24,2,12,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-12T22:00:00Z,good
+0,,none,0,24,24,0,15,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-12T22:00:00Z,good
+0,,none,0,20,20,0,7,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-12T22:00:00Z,good
+0,,none,0,8,8,0,5,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-12T22:00:00Z,good
+0,,none,0,8,8,0,2,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-12T22:00:00Z,good
+0,,none,0,16,16,1,7,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-12T23:00:00Z,good
+0,,none,0,16,16,2,10,85,SITE-BR-02,Branch — Silom,3,2026-05-12T23:00:00Z,good
+0,,none,0,12,12,2,3,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-12T23:00:00Z,good
+0,,none,0,12,12,0,6,86,SITE-BR-04,Branch — Ladprao,3,2026-05-12T23:00:00Z,good
+0,,none,0,12,12,1,5,97,SITE-DC-01,Data Centre — Wing A,2,2026-05-12T23:00:00Z,good
+0,,none,0,12,12,0,3,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-12T23:00:00Z,good
+0,,none,0,24,24,3,12,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-12T23:00:00Z,good
+0,,none,0,24,24,0,9,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-12T23:00:00Z,good
+0,,none,0,24,24,1,14,93,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-12T23:00:00Z,good
+0,,none,0,20,20,0,12,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-12T23:00:00Z,good
+0,,none,0,8,8,2,5,89,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-12T23:00:00Z,good
+0,,none,0,8,8,1,6,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-12T23:00:00Z,good
+0,,none,0,16,16,0,9,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T00:00:00Z,good
+0,,none,0,16,16,1,11,85,SITE-BR-02,Branch — Silom,3,2026-05-13T00:00:00Z,good
+0,,none,1,11,12,3,8,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T00:00:00Z,good
+0,,none,0,12,12,3,3,89,SITE-BR-04,Branch — Ladprao,3,2026-05-13T00:00:00Z,good
+0,,none,0,12,12,2,4,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T00:00:00Z,good
+0,,none,0,12,12,1,7,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T00:00:00Z,good
+0,,none,0,24,24,0,9,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T00:00:00Z,good
+0,,none,0,24,24,2,10,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T00:00:00Z,good
+0,,none,0,24,24,2,15,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T00:00:00Z,good
+0,,none,0,20,20,1,9,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T00:00:00Z,good
+0,,none,0,8,8,0,1,89,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T00:00:00Z,good
+0,,none,0,8,8,1,1,82,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T00:00:00Z,good
+0,,none,0,16,16,1,7,87,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T01:00:00Z,good
+0,,none,0,16,16,3,10,85,SITE-BR-02,Branch — Silom,3,2026-05-13T01:00:00Z,good
+0,,none,0,12,12,2,7,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T01:00:00Z,good
+0,,none,0,12,12,2,7,89,SITE-BR-04,Branch — Ladprao,3,2026-05-13T01:00:00Z,good
+0,,none,0,12,12,3,5,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T01:00:00Z,good
+0,,none,0,12,12,2,4,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T01:00:00Z,good
+0,,none,0,24,24,2,10,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T01:00:00Z,good
+0,,none,0,24,24,1,13,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T01:00:00Z,good
+0,,none,0,24,24,0,11,93,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T01:00:00Z,good
+0,,none,0,20,20,0,9,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T01:00:00Z,good
+0,,none,1,7,8,2,5,89,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T01:00:00Z,good
+0,,none,0,8,8,0,1,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T01:00:00Z,good
+0,,none,0,16,16,3,11,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T02:00:00Z,good
+0,,none,0,16,16,2,6,86,SITE-BR-02,Branch — Silom,3,2026-05-13T02:00:00Z,good
+0,,none,0,12,12,0,8,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T02:00:00Z,good
+0,,none,0,12,12,1,5,85,SITE-BR-04,Branch — Ladprao,3,2026-05-13T02:00:00Z,good
+0,,none,0,12,12,3,6,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T02:00:00Z,good
+0,,none,0,12,12,3,7,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T02:00:00Z,good
+0,,none,0,24,24,2,14,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T02:00:00Z,good
+0,,none,0,24,24,0,11,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T02:00:00Z,good
+0,,none,0,24,24,2,14,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T02:00:00Z,good
+0,,none,0,20,20,0,8,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T02:00:00Z,good
+0,,none,0,8,8,2,6,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T02:00:00Z,good
+0,,none,0,8,8,1,2,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T02:00:00Z,good
+0,,none,0,16,16,0,6,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T03:00:00Z,good
+0,,none,0,16,16,0,11,85,SITE-BR-02,Branch — Silom,3,2026-05-13T03:00:00Z,good
+0,,none,0,12,12,2,4,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T03:00:00Z,good
+0,,none,0,12,12,0,3,89,SITE-BR-04,Branch — Ladprao,3,2026-05-13T03:00:00Z,good
+0,,none,0,12,12,0,5,97,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T03:00:00Z,good
+0,,none,0,12,12,0,8,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T03:00:00Z,good
+0,,none,0,24,24,0,14,95,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T03:00:00Z,good
+0,,none,0,24,24,1,11,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T03:00:00Z,good
+0,,none,0,24,24,1,13,94,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T03:00:00Z,good
+0,,none,0,20,20,3,12,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T03:00:00Z,good
+0,,none,0,8,8,3,1,90,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T03:00:00Z,good
+0,,none,0,8,8,3,7,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T03:00:00Z,good
+0,,none,0,16,16,1,7,87,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T04:00:00Z,good
+0,,none,0,16,16,2,9,84,SITE-BR-02,Branch — Silom,3,2026-05-13T04:00:00Z,good
+0,,none,0,12,12,3,8,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T04:00:00Z,good
+0,,none,0,12,12,3,5,87,SITE-BR-04,Branch — Ladprao,3,2026-05-13T04:00:00Z,good
+0,,none,0,12,12,1,3,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T04:00:00Z,good
+0,,none,0,12,12,3,5,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T04:00:00Z,good
+0,,none,0,24,24,1,9,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T04:00:00Z,good
+0,,none,0,24,24,3,10,92,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T04:00:00Z,good
+0,,none,0,24,24,3,15,94,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T04:00:00Z,good
+0,,none,0,20,20,0,7,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T04:00:00Z,good
+0,,none,0,8,8,2,4,89,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T04:00:00Z,good
+0,,none,0,8,8,1,1,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T04:00:00Z,good
+1,Network degradation — upstream ISP issue,warning,2,14,16,36,35,67,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T05:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,14,16,30,35,65,SITE-BR-02,Branch — Silom,3,2026-05-13T05:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,10,12,14,26,69,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T05:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,11,12,22,26,67,SITE-BR-04,Branch — Ladprao,3,2026-05-13T05:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,10,12,15,28,77,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T05:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,11,12,24,26,74,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T05:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,3,21,24,15,48,72,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T05:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,22,24,37,51,70,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T05:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,3,21,24,20,49,72,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T05:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,18,20,15,42,69,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T05:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,7,8,40,19,71,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T05:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,7,8,13,17,63,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T05:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,14,16,16,56,64,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T06:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,14,16,26,55,64,SITE-BR-02,Branch — Silom,3,2026-05-13T06:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,11,12,27,44,68,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T06:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,10,12,18,41,66,SITE-BR-04,Branch — Ladprao,3,2026-05-13T06:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,11,12,12,41,78,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T06:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,11,12,11,44,75,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T06:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,3,21,24,23,87,75,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T06:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,3,21,24,16,83,74,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T06:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,23,24,30,82,71,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T06:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,18,20,17,68,67,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T06:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,7,8,28,28,68,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T06:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,7,8,24,28,62,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T06:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,15,16,16,58,67,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T07:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,15,16,23,57,64,SITE-BR-02,Branch — Silom,3,2026-05-13T07:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,11,12,14,39,73,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T07:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,11,12,40,40,68,SITE-BR-04,Branch — Ladprao,3,2026-05-13T07:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,11,12,21,39,79,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T07:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,11,12,23,42,78,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T07:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,22,24,31,84,76,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T07:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,4,20,24,29,85,75,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T07:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,4,20,24,24,85,74,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T07:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,18,20,40,67,67,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T07:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,7,8,21,25,69,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T07:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,7,8,16,31,61,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T07:00:00Z,fair
+0,,none,0,16,16,2,159,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T08:00:00Z,good
+0,,none,0,16,16,3,162,87,SITE-BR-02,Branch — Silom,3,2026-05-13T08:00:00Z,good
+0,,none,0,12,12,3,123,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T08:00:00Z,good
+0,,none,1,11,12,2,117,89,SITE-BR-04,Branch — Ladprao,3,2026-05-13T08:00:00Z,good
+0,,none,1,11,12,0,120,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T08:00:00Z,good
+0,,none,0,12,12,1,117,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T08:00:00Z,good
+0,,none,0,24,24,1,241,95,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T08:00:00Z,good
+0,,none,0,24,24,1,237,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T08:00:00Z,good
+0,,none,0,24,24,2,239,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T08:00:00Z,good
+0,,none,0,20,20,1,199,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T08:00:00Z,good
+0,,none,0,8,8,0,79,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T08:00:00Z,good
+0,,none,0,8,8,2,82,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T08:00:00Z,good
+0,,none,0,16,16,1,157,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T09:00:00Z,good
+0,,none,0,16,16,3,161,89,SITE-BR-02,Branch — Silom,3,2026-05-13T09:00:00Z,good
+0,,none,0,12,12,2,117,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T09:00:00Z,good
+0,,none,0,12,12,3,119,88,SITE-BR-04,Branch — Ladprao,3,2026-05-13T09:00:00Z,good
+0,,none,0,12,12,0,117,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T09:00:00Z,good
+0,,none,0,12,12,2,120,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T09:00:00Z,good
+0,,none,0,24,24,2,239,95,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T09:00:00Z,good
+0,,none,0,24,24,2,239,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T09:00:00Z,good
+0,,none,0,24,24,1,241,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T09:00:00Z,good
+0,,none,0,20,20,0,201,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T09:00:00Z,good
+0,,none,0,8,8,0,82,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T09:00:00Z,good
+0,,none,0,8,8,2,79,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T09:00:00Z,good
+0,,none,0,16,16,1,163,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T10:00:00Z,good
+0,,none,0,16,16,3,163,86,SITE-BR-02,Branch — Silom,3,2026-05-13T10:00:00Z,good
+0,,none,0,12,12,1,123,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T10:00:00Z,good
+0,,none,0,12,12,2,123,89,SITE-BR-04,Branch — Ladprao,3,2026-05-13T10:00:00Z,good
+0,,none,0,12,12,1,122,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T10:00:00Z,good
+0,,none,0,12,12,1,119,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T10:00:00Z,good
+0,,none,0,24,24,2,238,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T10:00:00Z,good
+0,,none,0,24,24,2,238,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T10:00:00Z,good
+0,,none,0,24,24,3,239,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T10:00:00Z,good
+0,,none,0,20,20,1,197,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T10:00:00Z,good
+0,,none,1,7,8,2,78,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T10:00:00Z,good
+0,,none,0,8,8,0,78,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T10:00:00Z,good
+0,,none,0,16,16,1,160,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T11:00:00Z,good
+0,,none,0,16,16,2,160,88,SITE-BR-02,Branch — Silom,3,2026-05-13T11:00:00Z,good
+0,,none,0,12,12,2,122,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T11:00:00Z,good
+0,,none,0,12,12,1,122,88,SITE-BR-04,Branch — Ladprao,3,2026-05-13T11:00:00Z,good
+0,,none,1,11,12,2,123,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T11:00:00Z,good
+0,,none,0,12,12,3,118,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T11:00:00Z,good
+0,,none,0,24,24,1,237,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T11:00:00Z,good
+0,,none,0,24,24,3,239,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T11:00:00Z,good
+0,,none,0,24,24,0,238,94,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T11:00:00Z,good
+0,,none,0,20,20,0,197,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T11:00:00Z,good
+0,,none,0,8,8,2,81,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T11:00:00Z,good
+0,,none,0,8,8,2,77,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T11:00:00Z,good
+0,,none,0,16,16,2,161,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T12:00:00Z,good
+0,,none,0,16,16,3,161,89,SITE-BR-02,Branch — Silom,3,2026-05-13T12:00:00Z,good
+0,,none,0,12,12,3,123,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T12:00:00Z,good
+0,,none,0,12,12,0,121,87,SITE-BR-04,Branch — Ladprao,3,2026-05-13T12:00:00Z,good
+0,,none,0,12,12,0,118,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T12:00:00Z,good
+0,,none,0,12,12,3,121,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T12:00:00Z,good
+0,,none,0,24,24,0,238,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T12:00:00Z,good
+0,,none,0,24,24,0,243,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T12:00:00Z,good
+0,,none,0,24,24,3,238,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T12:00:00Z,good
+0,,none,0,20,20,2,203,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T12:00:00Z,good
+0,,none,0,8,8,0,82,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T12:00:00Z,good
+0,,none,0,8,8,1,83,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T12:00:00Z,good
+0,,none,0,16,16,2,158,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T13:00:00Z,good
+0,,none,0,16,16,0,161,87,SITE-BR-02,Branch — Silom,3,2026-05-13T13:00:00Z,good
+0,,none,0,12,12,3,118,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T13:00:00Z,good
+0,,none,0,12,12,1,120,88,SITE-BR-04,Branch — Ladprao,3,2026-05-13T13:00:00Z,good
+0,,none,0,12,12,2,120,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T13:00:00Z,good
+0,,none,0,12,12,2,118,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T13:00:00Z,good
+0,,none,0,24,24,2,243,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T13:00:00Z,good
+0,,none,0,24,24,2,238,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T13:00:00Z,good
+0,,none,0,24,24,1,241,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T13:00:00Z,good
+0,,none,0,20,20,1,199,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T13:00:00Z,good
+0,,none,0,8,8,0,79,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T13:00:00Z,good
+0,,none,0,8,8,2,77,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T13:00:00Z,good
+0,,none,0,16,16,2,160,87,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T14:00:00Z,good
+0,,none,0,16,16,0,157,86,SITE-BR-02,Branch — Silom,3,2026-05-13T14:00:00Z,good
+0,,none,0,12,12,1,122,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T14:00:00Z,good
+0,,none,0,12,12,1,118,88,SITE-BR-04,Branch — Ladprao,3,2026-05-13T14:00:00Z,good
+0,,none,0,12,12,3,117,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T14:00:00Z,good
+0,,none,0,12,12,3,120,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T14:00:00Z,good
+0,,none,0,24,24,1,240,95,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T14:00:00Z,good
+0,,none,0,24,24,0,241,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T14:00:00Z,good
+0,,none,0,24,24,1,241,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T14:00:00Z,good
+0,,none,0,20,20,0,198,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T14:00:00Z,good
+0,,none,0,8,8,2,77,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T14:00:00Z,good
+0,,none,0,8,8,3,82,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T14:00:00Z,good
+0,,none,0,16,16,2,161,87,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T15:00:00Z,good
+0,,none,0,16,16,2,161,88,SITE-BR-02,Branch — Silom,3,2026-05-13T15:00:00Z,good
+0,,none,0,12,12,2,121,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T15:00:00Z,good
+0,,none,0,12,12,1,122,87,SITE-BR-04,Branch — Ladprao,3,2026-05-13T15:00:00Z,good
+0,,none,0,12,12,2,123,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T15:00:00Z,good
+0,,none,0,12,12,0,123,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T15:00:00Z,good
+0,,none,0,24,24,0,242,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T15:00:00Z,good
+0,,none,0,24,24,0,237,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T15:00:00Z,good
+0,,none,0,24,24,1,240,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T15:00:00Z,good
+0,,none,0,20,20,0,199,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T15:00:00Z,good
+0,,none,0,8,8,2,80,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T15:00:00Z,good
+0,,none,0,8,8,0,79,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T15:00:00Z,good
+0,,none,0,16,16,3,159,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T16:00:00Z,good
+0,,none,0,16,16,3,161,87,SITE-BR-02,Branch — Silom,3,2026-05-13T16:00:00Z,good
+0,,none,0,12,12,3,120,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T16:00:00Z,good
+0,,none,1,11,12,2,119,87,SITE-BR-04,Branch — Ladprao,3,2026-05-13T16:00:00Z,good
+0,,none,1,11,12,0,118,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T16:00:00Z,good
+0,,none,0,12,12,1,120,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T16:00:00Z,good
+0,,none,0,24,24,3,238,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T16:00:00Z,good
+0,,none,0,24,24,3,237,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T16:00:00Z,good
+0,,none,0,24,24,1,242,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T16:00:00Z,good
+0,,none,0,20,20,3,203,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T16:00:00Z,good
+0,,none,0,8,8,1,77,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T16:00:00Z,good
+0,,none,0,8,8,3,79,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T16:00:00Z,good
+0,,none,0,16,16,0,99,87,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T17:00:00Z,good
+0,,none,0,16,16,1,94,88,SITE-BR-02,Branch — Silom,3,2026-05-13T17:00:00Z,good
+0,,none,0,12,12,0,72,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T17:00:00Z,good
+0,,none,0,12,12,1,73,89,SITE-BR-04,Branch — Ladprao,3,2026-05-13T17:00:00Z,good
+0,,none,0,12,12,2,70,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T17:00:00Z,good
+0,,none,0,12,12,3,73,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T17:00:00Z,good
+0,,none,0,24,24,0,141,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T17:00:00Z,good
+0,,none,0,24,24,2,145,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T17:00:00Z,good
+0,,none,0,24,24,0,144,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T17:00:00Z,good
+0,,none,0,20,20,2,118,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T17:00:00Z,good
+0,,none,0,8,8,3,46,90,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T17:00:00Z,good
+0,,none,0,8,8,1,47,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T17:00:00Z,good
+0,,none,0,16,16,3,95,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T18:00:00Z,good
+0,,none,0,16,16,2,99,88,SITE-BR-02,Branch — Silom,3,2026-05-13T18:00:00Z,good
+0,,none,0,12,12,2,69,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T18:00:00Z,good
+0,,none,0,12,12,1,73,90,SITE-BR-04,Branch — Ladprao,3,2026-05-13T18:00:00Z,good
+0,,none,0,12,12,1,75,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T18:00:00Z,good
+0,,none,1,11,12,1,75,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T18:00:00Z,good
+0,,none,1,23,24,2,143,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T18:00:00Z,good
+0,,none,0,24,24,3,144,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T18:00:00Z,good
+0,,none,0,24,24,0,143,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T18:00:00Z,good
+0,,none,0,20,20,0,122,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T18:00:00Z,good
+0,,none,0,8,8,2,49,90,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T18:00:00Z,good
+0,,none,1,7,8,2,50,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T18:00:00Z,good
+0,,none,0,16,16,3,11,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T19:00:00Z,good
+0,,none,0,16,16,2,10,86,SITE-BR-02,Branch — Silom,3,2026-05-13T19:00:00Z,good
+0,,none,0,12,12,0,3,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T19:00:00Z,good
+0,,none,0,12,12,1,3,87,SITE-BR-04,Branch — Ladprao,3,2026-05-13T19:00:00Z,good
+0,,none,0,12,12,2,4,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T19:00:00Z,good
+0,,none,0,12,12,2,7,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T19:00:00Z,good
+0,,none,0,24,24,1,9,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T19:00:00Z,good
+0,,none,0,24,24,0,13,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T19:00:00Z,good
+0,,none,0,24,24,0,13,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T19:00:00Z,good
+0,,none,0,20,20,3,13,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T19:00:00Z,good
+0,,none,0,8,8,1,5,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T19:00:00Z,good
+0,,none,0,8,8,3,7,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T19:00:00Z,good
+0,,none,0,16,16,1,6,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T20:00:00Z,good
+0,,none,0,16,16,0,6,88,SITE-BR-02,Branch — Silom,3,2026-05-13T20:00:00Z,good
+0,,none,0,12,12,0,9,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T20:00:00Z,good
+0,,none,1,11,12,3,6,88,SITE-BR-04,Branch — Ladprao,3,2026-05-13T20:00:00Z,good
+0,,none,0,12,12,0,4,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T20:00:00Z,good
+0,,none,0,12,12,2,7,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T20:00:00Z,good
+0,,none,0,24,24,2,12,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T20:00:00Z,good
+0,,none,0,24,24,0,12,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T20:00:00Z,good
+0,,none,0,24,24,2,9,94,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T20:00:00Z,good
+0,,none,0,20,20,2,8,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T20:00:00Z,good
+0,,none,0,8,8,1,2,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T20:00:00Z,good
+0,,none,0,8,8,2,7,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T20:00:00Z,good
+0,,none,0,16,16,2,8,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T21:00:00Z,good
+0,,none,0,16,16,2,11,88,SITE-BR-02,Branch — Silom,3,2026-05-13T21:00:00Z,good
+0,,none,0,12,12,1,9,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T21:00:00Z,good
+0,,none,0,12,12,1,7,89,SITE-BR-04,Branch — Ladprao,3,2026-05-13T21:00:00Z,good
+0,,none,0,12,12,2,4,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T21:00:00Z,good
+0,,none,0,12,12,1,6,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T21:00:00Z,good
+0,,none,0,24,24,2,9,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T21:00:00Z,good
+0,,none,1,23,24,0,9,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T21:00:00Z,good
+0,,none,0,24,24,3,9,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T21:00:00Z,good
+0,,none,0,20,20,0,11,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T21:00:00Z,good
+0,,none,0,8,8,3,6,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T21:00:00Z,good
+0,,none,0,8,8,2,3,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T21:00:00Z,good
+0,,none,0,16,16,3,7,87,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T22:00:00Z,good
+0,,none,0,16,16,1,7,89,SITE-BR-02,Branch — Silom,3,2026-05-13T22:00:00Z,good
+0,,none,0,12,12,3,5,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T22:00:00Z,good
+0,,none,0,12,12,1,6,86,SITE-BR-04,Branch — Ladprao,3,2026-05-13T22:00:00Z,good
+0,,none,0,12,12,0,4,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T22:00:00Z,good
+0,,none,0,12,12,1,7,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T22:00:00Z,good
+0,,none,0,24,24,1,11,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T22:00:00Z,good
+0,,none,0,24,24,2,9,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T22:00:00Z,good
+0,,none,0,24,24,3,10,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T22:00:00Z,good
+0,,none,0,20,20,0,10,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T22:00:00Z,good
+0,,none,0,8,8,0,6,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T22:00:00Z,good
+0,,none,0,8,8,1,7,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T22:00:00Z,good
+0,,none,1,15,16,0,11,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-13T23:00:00Z,good
+0,,none,0,16,16,3,11,87,SITE-BR-02,Branch — Silom,3,2026-05-13T23:00:00Z,good
+0,,none,0,12,12,1,6,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-13T23:00:00Z,good
+0,,none,0,12,12,3,5,89,SITE-BR-04,Branch — Ladprao,3,2026-05-13T23:00:00Z,good
+0,,none,0,12,12,0,5,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-13T23:00:00Z,good
+0,,none,0,12,12,2,3,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-13T23:00:00Z,good
+0,,none,0,24,24,0,10,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-13T23:00:00Z,good
+0,,none,0,24,24,0,9,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-13T23:00:00Z,good
+0,,none,0,24,24,2,14,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-13T23:00:00Z,good
+0,,none,0,20,20,1,12,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-13T23:00:00Z,good
+0,,none,0,8,8,1,4,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-13T23:00:00Z,good
+0,,none,0,8,8,0,1,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-13T23:00:00Z,good
+0,,none,0,16,16,0,8,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T00:00:00Z,good
+0,,none,0,16,16,1,11,88,SITE-BR-02,Branch — Silom,3,2026-05-14T00:00:00Z,good
+0,,none,0,12,12,2,3,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T00:00:00Z,good
+0,,none,0,12,12,3,3,86,SITE-BR-04,Branch — Ladprao,3,2026-05-14T00:00:00Z,good
+0,,none,0,12,12,2,9,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T00:00:00Z,good
+0,,none,0,12,12,0,6,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T00:00:00Z,good
+0,,none,0,24,24,3,10,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T00:00:00Z,good
+0,,none,0,24,24,3,12,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T00:00:00Z,good
+0,,none,1,23,24,0,11,94,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T00:00:00Z,good
+0,,none,0,20,20,0,11,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T00:00:00Z,good
+0,,none,1,7,8,0,5,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T00:00:00Z,good
+0,,none,0,8,8,2,2,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T00:00:00Z,good
+0,,none,0,16,16,0,10,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T01:00:00Z,good
+0,,none,0,16,16,2,10,88,SITE-BR-02,Branch — Silom,3,2026-05-14T01:00:00Z,good
+0,,none,1,11,12,1,5,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T01:00:00Z,good
+0,,none,0,12,12,0,9,90,SITE-BR-04,Branch — Ladprao,3,2026-05-14T01:00:00Z,good
+0,,none,0,12,12,1,7,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T01:00:00Z,good
+0,,none,0,12,12,3,3,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T01:00:00Z,good
+0,,none,0,24,24,0,15,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T01:00:00Z,good
+0,,none,0,24,24,0,9,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T01:00:00Z,good
+0,,none,0,24,24,2,10,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T01:00:00Z,good
+0,,none,0,20,20,3,7,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T01:00:00Z,good
+0,,none,0,8,8,0,5,90,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T01:00:00Z,good
+0,,none,0,8,8,0,6,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T01:00:00Z,good
+0,,none,1,15,16,1,9,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T02:00:00Z,good
+0,,none,0,16,16,1,8,89,SITE-BR-02,Branch — Silom,3,2026-05-14T02:00:00Z,good
+0,,none,0,12,12,3,6,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T02:00:00Z,good
+0,,none,0,12,12,1,3,90,SITE-BR-04,Branch — Ladprao,3,2026-05-14T02:00:00Z,good
+0,,none,0,12,12,0,7,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T02:00:00Z,good
+0,,none,0,12,12,2,6,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T02:00:00Z,good
+0,,none,0,24,24,2,11,95,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T02:00:00Z,good
+0,,none,0,24,24,0,9,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T02:00:00Z,good
+0,,none,0,24,24,2,12,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T02:00:00Z,good
+0,,none,0,20,20,2,8,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T02:00:00Z,good
+0,,none,0,8,8,0,1,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T02:00:00Z,good
+0,,none,0,8,8,1,7,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T02:00:00Z,good
+0,,none,0,16,16,1,8,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T03:00:00Z,good
+0,,none,0,16,16,1,10,85,SITE-BR-02,Branch — Silom,3,2026-05-14T03:00:00Z,good
+0,,none,0,12,12,1,8,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T03:00:00Z,good
+0,,none,0,12,12,3,8,89,SITE-BR-04,Branch — Ladprao,3,2026-05-14T03:00:00Z,good
+0,,none,1,11,12,0,5,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T03:00:00Z,good
+0,,none,0,12,12,1,8,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T03:00:00Z,good
+0,,none,0,24,24,3,13,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T03:00:00Z,good
+0,,none,0,24,24,0,12,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T03:00:00Z,good
+0,,none,0,24,24,2,15,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T03:00:00Z,good
+0,,none,0,20,20,0,7,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T03:00:00Z,good
+0,,none,0,8,8,1,7,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T03:00:00Z,good
+0,,none,0,8,8,1,7,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T03:00:00Z,good
+0,,none,0,16,16,2,6,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T04:00:00Z,good
+0,,none,0,16,16,1,5,88,SITE-BR-02,Branch — Silom,3,2026-05-14T04:00:00Z,good
+0,,none,0,12,12,3,8,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T04:00:00Z,good
+0,,none,0,12,12,3,8,90,SITE-BR-04,Branch — Ladprao,3,2026-05-14T04:00:00Z,good
+0,,none,0,12,12,3,7,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T04:00:00Z,good
+0,,none,0,12,12,3,8,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T04:00:00Z,good
+0,,none,0,24,24,2,12,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T04:00:00Z,good
+0,,none,0,24,24,2,14,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T04:00:00Z,good
+0,,none,0,24,24,1,14,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T04:00:00Z,good
+0,,none,0,20,20,0,13,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T04:00:00Z,good
+0,,none,0,8,8,0,4,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T04:00:00Z,good
+0,,none,0,8,8,1,1,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T04:00:00Z,good
+0,,none,0,16,16,2,98,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T05:00:00Z,good
+0,,none,0,16,16,1,93,86,SITE-BR-02,Branch — Silom,3,2026-05-14T05:00:00Z,good
+0,,none,0,12,12,2,75,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T05:00:00Z,good
+0,,none,0,12,12,3,74,87,SITE-BR-04,Branch — Ladprao,3,2026-05-14T05:00:00Z,good
+0,,none,0,12,12,1,72,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T05:00:00Z,good
+0,,none,0,12,12,1,72,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T05:00:00Z,good
+0,,none,0,24,24,1,146,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T05:00:00Z,good
+0,,none,0,24,24,2,145,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T05:00:00Z,good
+0,,none,0,24,24,1,142,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T05:00:00Z,good
+0,,none,1,19,20,3,119,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T05:00:00Z,good
+0,,none,1,7,8,2,51,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T05:00:00Z,good
+0,,none,0,8,8,1,48,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T05:00:00Z,good
+0,,none,0,16,16,2,162,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T06:00:00Z,good
+0,,none,0,16,16,2,163,87,SITE-BR-02,Branch — Silom,3,2026-05-14T06:00:00Z,good
+0,,none,0,12,12,0,117,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T06:00:00Z,good
+0,,none,0,12,12,2,123,89,SITE-BR-04,Branch — Ladprao,3,2026-05-14T06:00:00Z,good
+0,,none,0,12,12,2,119,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T06:00:00Z,good
+0,,none,0,12,12,1,117,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T06:00:00Z,good
+0,,none,0,24,24,1,237,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T06:00:00Z,good
+0,,none,0,24,24,3,241,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T06:00:00Z,good
+0,,none,0,24,24,3,238,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T06:00:00Z,good
+0,,none,0,20,20,3,200,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T06:00:00Z,good
+0,,none,0,8,8,3,77,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T06:00:00Z,good
+0,,none,0,8,8,2,83,88,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T06:00:00Z,good
+0,,none,0,16,16,0,163,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T07:00:00Z,good
+0,,none,0,16,16,0,161,88,SITE-BR-02,Branch — Silom,3,2026-05-14T07:00:00Z,good
+0,,none,0,12,12,0,123,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T07:00:00Z,good
+0,,none,0,12,12,2,117,91,SITE-BR-04,Branch — Ladprao,3,2026-05-14T07:00:00Z,good
+0,,none,0,12,12,2,117,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T07:00:00Z,good
+0,,none,0,12,12,1,118,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T07:00:00Z,good
+0,,none,0,24,24,1,237,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T07:00:00Z,good
+0,,none,0,24,24,1,240,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T07:00:00Z,good
+0,,none,0,24,24,0,240,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T07:00:00Z,good
+0,,none,0,20,20,2,202,94,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T07:00:00Z,good
+0,,none,0,8,8,3,77,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T07:00:00Z,good
+0,,none,0,8,8,3,79,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T07:00:00Z,good
+0,,none,0,16,16,1,159,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T08:00:00Z,good
+0,,none,0,16,16,1,160,87,SITE-BR-02,Branch — Silom,3,2026-05-14T08:00:00Z,good
+0,,none,1,11,12,0,119,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T08:00:00Z,good
+0,,none,0,12,12,2,118,89,SITE-BR-04,Branch — Ladprao,3,2026-05-14T08:00:00Z,good
+0,,none,0,12,12,3,118,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T08:00:00Z,good
+0,,none,0,12,12,0,122,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T08:00:00Z,good
+0,,none,0,24,24,0,239,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T08:00:00Z,good
+0,,none,0,24,24,3,243,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T08:00:00Z,good
+0,,none,0,24,24,2,238,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T08:00:00Z,good
+0,,none,0,20,20,2,197,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T08:00:00Z,good
+0,,none,0,8,8,0,79,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T08:00:00Z,good
+0,,none,0,8,8,1,82,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T08:00:00Z,good
+0,,none,0,16,16,2,158,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T09:00:00Z,good
+0,,none,0,16,16,3,157,90,SITE-BR-02,Branch — Silom,3,2026-05-14T09:00:00Z,good
+0,,none,0,12,12,0,120,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T09:00:00Z,good
+0,,none,0,12,12,1,120,88,SITE-BR-04,Branch — Ladprao,3,2026-05-14T09:00:00Z,good
+0,,none,0,12,12,3,120,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T09:00:00Z,good
+0,,none,0,12,12,2,123,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T09:00:00Z,good
+0,,none,0,24,24,1,239,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T09:00:00Z,good
+0,,none,0,24,24,0,241,98,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T09:00:00Z,good
+0,,none,0,24,24,3,243,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T09:00:00Z,good
+0,,none,0,20,20,2,199,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T09:00:00Z,good
+0,,none,0,8,8,2,79,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T09:00:00Z,good
+0,,none,0,8,8,2,79,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T09:00:00Z,good
+0,,none,0,16,16,1,157,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T10:00:00Z,good
+0,,none,0,16,16,1,159,88,SITE-BR-02,Branch — Silom,3,2026-05-14T10:00:00Z,good
+0,,none,0,12,12,1,118,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T10:00:00Z,good
+0,,none,0,12,12,2,121,90,SITE-BR-04,Branch — Ladprao,3,2026-05-14T10:00:00Z,good
+0,,none,0,12,12,3,120,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T10:00:00Z,good
+0,,none,0,12,12,0,120,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T10:00:00Z,good
+0,,none,0,24,24,3,238,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T10:00:00Z,good
+0,,none,0,24,24,1,241,98,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T10:00:00Z,good
+0,,none,0,24,24,1,243,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T10:00:00Z,good
+0,,none,0,20,20,0,197,94,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T10:00:00Z,good
+0,,none,0,8,8,1,81,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T10:00:00Z,good
+0,,none,0,8,8,3,80,88,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T10:00:00Z,good
+0,,none,0,16,16,2,160,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T11:00:00Z,good
+0,,none,0,16,16,3,159,90,SITE-BR-02,Branch — Silom,3,2026-05-14T11:00:00Z,good
+0,,none,0,12,12,1,120,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T11:00:00Z,good
+0,,none,0,12,12,0,123,87,SITE-BR-04,Branch — Ladprao,3,2026-05-14T11:00:00Z,good
+0,,none,0,12,12,3,117,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T11:00:00Z,good
+0,,none,0,12,12,0,118,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T11:00:00Z,good
+0,,none,0,24,24,3,237,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T11:00:00Z,good
+0,,none,0,24,24,2,239,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T11:00:00Z,good
+0,,none,1,23,24,3,238,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T11:00:00Z,good
+0,,none,0,20,20,3,197,94,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T11:00:00Z,good
+0,,none,0,8,8,2,78,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T11:00:00Z,good
+0,,none,0,8,8,1,80,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T11:00:00Z,good
+0,,none,0,16,16,0,159,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T12:00:00Z,good
+0,,none,0,16,16,1,157,90,SITE-BR-02,Branch — Silom,3,2026-05-14T12:00:00Z,good
+0,,none,0,12,12,1,121,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T12:00:00Z,good
+0,,none,0,12,12,2,122,88,SITE-BR-04,Branch — Ladprao,3,2026-05-14T12:00:00Z,good
+1,Network degradation — upstream ISP issue,warning,2,10,12,13,45,72,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T12:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,10,12,32,42,71,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T12:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,22,24,34,87,70,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T12:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,4,20,24,39,84,70,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T12:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,23,24,17,83,69,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T12:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,18,20,13,73,62,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T12:00:00Z,fair
+0,,none,0,8,8,2,80,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T12:00:00Z,good
+0,,none,0,8,8,3,78,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T12:00:00Z,good
+0,,none,0,16,16,3,157,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T13:00:00Z,good
+0,,none,0,16,16,1,157,87,SITE-BR-02,Branch — Silom,3,2026-05-14T13:00:00Z,good
+0,,none,0,12,12,0,123,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T13:00:00Z,good
+0,,none,0,12,12,3,118,87,SITE-BR-04,Branch — Ladprao,3,2026-05-14T13:00:00Z,good
+1,Network degradation — upstream ISP issue,warning,2,10,12,26,44,74,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T13:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,10,12,17,43,74,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T13:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,22,24,35,87,69,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T13:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,4,20,24,39,87,68,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T13:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,4,20,24,27,86,67,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T13:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,3,17,20,17,68,62,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T13:00:00Z,fair
+0,,none,0,8,8,0,77,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T13:00:00Z,good
+0,,none,0,8,8,2,80,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T13:00:00Z,good
+0,,none,0,16,16,1,161,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T14:00:00Z,good
+0,,none,0,16,16,0,161,87,SITE-BR-02,Branch — Silom,3,2026-05-14T14:00:00Z,good
+0,,none,0,12,12,0,121,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T14:00:00Z,good
+0,,none,0,12,12,2,119,91,SITE-BR-04,Branch — Ladprao,3,2026-05-14T14:00:00Z,good
+1,Network degradation — upstream ISP issue,warning,2,10,12,23,44,75,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T14:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,11,12,24,44,74,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T14:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,4,20,24,19,87,70,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T14:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,4,20,24,18,85,68,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T14:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,4,20,24,19,84,71,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T14:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,19,20,38,67,62,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T14:00:00Z,fair
+0,,none,0,8,8,1,82,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T14:00:00Z,good
+0,,none,0,8,8,2,77,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T14:00:00Z,good
+0,,none,0,16,16,3,160,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T15:00:00Z,good
+0,,none,0,16,16,0,162,86,SITE-BR-02,Branch — Silom,3,2026-05-14T15:00:00Z,good
+0,,none,0,12,12,2,120,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T15:00:00Z,good
+0,,none,0,12,12,0,118,88,SITE-BR-04,Branch — Ladprao,3,2026-05-14T15:00:00Z,good
+1,Network degradation — upstream ISP issue,warning,1,11,12,31,45,71,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T15:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,11,12,11,42,71,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T15:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,4,20,24,21,86,68,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T15:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,3,21,24,26,83,70,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T15:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,22,24,31,84,71,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T15:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,18,20,15,69,62,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T15:00:00Z,fair
+0,,none,0,8,8,2,82,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T15:00:00Z,good
+0,,none,0,8,8,3,83,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T15:00:00Z,good
+0,,none,1,15,16,1,163,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T16:00:00Z,good
+0,,none,0,16,16,3,157,90,SITE-BR-02,Branch — Silom,3,2026-05-14T16:00:00Z,good
+0,,none,0,12,12,0,119,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T16:00:00Z,good
+0,,none,0,12,12,3,121,90,SITE-BR-04,Branch — Ladprao,3,2026-05-14T16:00:00Z,good
+1,Network degradation — upstream ISP issue,warning,1,11,12,13,40,73,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T16:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,10,12,23,39,73,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T16:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,22,24,23,86,69,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T16:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,23,24,32,86,70,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T16:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,4,20,24,13,87,68,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T16:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,18,20,17,69,62,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T16:00:00Z,fair
+0,,none,0,8,8,0,77,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T16:00:00Z,good
+0,,none,0,8,8,1,82,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T16:00:00Z,good
+0,,none,0,16,16,2,94,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T17:00:00Z,good
+0,,none,0,16,16,1,93,86,SITE-BR-02,Branch — Silom,3,2026-05-14T17:00:00Z,good
+0,,none,0,12,12,3,74,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T17:00:00Z,good
+0,,none,0,12,12,1,69,87,SITE-BR-04,Branch — Ladprao,3,2026-05-14T17:00:00Z,good
+0,,none,0,12,12,1,73,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T17:00:00Z,good
+0,,none,0,12,12,1,72,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T17:00:00Z,good
+0,,none,0,24,24,3,144,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T17:00:00Z,good
+0,,none,0,24,24,1,146,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T17:00:00Z,good
+0,,none,0,24,24,0,144,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T17:00:00Z,good
+0,,none,0,20,20,1,123,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T17:00:00Z,good
+0,,none,0,8,8,0,51,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T17:00:00Z,good
+0,,none,0,8,8,0,46,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T17:00:00Z,good
+0,,none,0,16,16,1,96,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T18:00:00Z,good
+0,,none,0,16,16,3,96,86,SITE-BR-02,Branch — Silom,3,2026-05-14T18:00:00Z,good
+0,,none,0,12,12,3,74,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T18:00:00Z,good
+0,,none,0,12,12,2,74,88,SITE-BR-04,Branch — Ladprao,3,2026-05-14T18:00:00Z,good
+0,,none,0,12,12,3,74,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T18:00:00Z,good
+0,,none,0,12,12,3,70,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T18:00:00Z,good
+0,,none,0,24,24,3,145,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T18:00:00Z,good
+0,,none,0,24,24,1,144,98,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T18:00:00Z,good
+0,,none,0,24,24,2,141,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T18:00:00Z,good
+0,,none,0,20,20,0,122,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T18:00:00Z,good
+0,,none,0,8,8,3,46,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T18:00:00Z,good
+0,,none,0,8,8,0,45,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T18:00:00Z,good
+0,,none,0,16,16,0,10,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T19:00:00Z,good
+0,,none,0,16,16,3,9,88,SITE-BR-02,Branch — Silom,3,2026-05-14T19:00:00Z,good
+0,,none,0,12,12,2,8,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T19:00:00Z,good
+0,,none,0,12,12,0,6,89,SITE-BR-04,Branch — Ladprao,3,2026-05-14T19:00:00Z,good
+0,,none,0,12,12,3,9,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T19:00:00Z,good
+0,,none,0,12,12,2,8,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T19:00:00Z,good
+0,,none,0,24,24,0,11,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T19:00:00Z,good
+0,,none,0,24,24,3,12,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T19:00:00Z,good
+0,,none,0,24,24,0,13,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T19:00:00Z,good
+0,,none,0,20,20,0,7,94,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T19:00:00Z,good
+0,,none,0,8,8,2,6,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T19:00:00Z,good
+0,,none,0,8,8,3,7,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T19:00:00Z,good
+0,,none,0,16,16,2,9,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T20:00:00Z,good
+0,,none,0,16,16,2,11,87,SITE-BR-02,Branch — Silom,3,2026-05-14T20:00:00Z,good
+0,,none,0,12,12,1,6,96,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T20:00:00Z,good
+0,,none,0,12,12,2,7,88,SITE-BR-04,Branch — Ladprao,3,2026-05-14T20:00:00Z,good
+0,,none,0,12,12,0,4,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T20:00:00Z,good
+0,,none,0,12,12,0,4,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T20:00:00Z,good
+0,,none,0,24,24,3,9,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T20:00:00Z,good
+0,,none,0,24,24,2,14,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T20:00:00Z,good
+0,,none,0,24,24,3,14,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T20:00:00Z,good
+0,,none,0,20,20,3,7,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T20:00:00Z,good
+0,,none,0,8,8,2,4,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T20:00:00Z,good
+0,,none,1,7,8,1,4,88,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T20:00:00Z,good
+0,,none,0,16,16,2,11,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T21:00:00Z,good
+0,,none,1,15,16,3,8,88,SITE-BR-02,Branch — Silom,3,2026-05-14T21:00:00Z,good
+0,,none,0,12,12,1,5,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T21:00:00Z,good
+0,,none,0,12,12,2,6,87,SITE-BR-04,Branch — Ladprao,3,2026-05-14T21:00:00Z,good
+0,,none,0,12,12,2,9,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T21:00:00Z,good
+0,,none,0,12,12,2,5,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T21:00:00Z,good
+0,,none,0,24,24,0,9,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T21:00:00Z,good
+0,,none,0,24,24,1,14,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T21:00:00Z,good
+0,,none,0,24,24,0,13,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T21:00:00Z,good
+0,,none,0,20,20,1,13,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T21:00:00Z,good
+0,,none,0,8,8,3,6,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T21:00:00Z,good
+0,,none,0,8,8,3,3,88,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T21:00:00Z,good
+0,,none,0,16,16,3,5,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T22:00:00Z,good
+0,,none,0,16,16,0,9,87,SITE-BR-02,Branch — Silom,3,2026-05-14T22:00:00Z,good
+0,,none,0,12,12,2,9,96,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T22:00:00Z,good
+0,,none,0,12,12,0,7,89,SITE-BR-04,Branch — Ladprao,3,2026-05-14T22:00:00Z,good
+0,,none,0,12,12,2,5,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T22:00:00Z,good
+0,,none,0,12,12,3,6,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T22:00:00Z,good
+0,,none,0,24,24,3,13,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T22:00:00Z,good
+0,,none,0,24,24,0,11,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T22:00:00Z,good
+0,,none,0,24,24,1,10,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T22:00:00Z,good
+0,,none,0,20,20,3,10,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T22:00:00Z,good
+0,,none,0,8,8,2,6,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T22:00:00Z,good
+0,,none,0,8,8,1,5,88,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T22:00:00Z,good
+0,,none,0,16,16,0,10,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-14T23:00:00Z,good
+0,,none,0,16,16,3,6,87,SITE-BR-02,Branch — Silom,3,2026-05-14T23:00:00Z,good
+0,,none,0,12,12,1,6,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-14T23:00:00Z,good
+0,,none,0,12,12,0,9,91,SITE-BR-04,Branch — Ladprao,3,2026-05-14T23:00:00Z,good
+0,,none,0,12,12,2,8,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-14T23:00:00Z,good
+0,,none,0,12,12,0,9,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-14T23:00:00Z,good
+0,,none,0,24,24,1,12,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-14T23:00:00Z,good
+0,,none,0,24,24,2,12,98,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-14T23:00:00Z,good
+0,,none,0,24,24,0,13,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-14T23:00:00Z,good
+0,,none,0,20,20,1,10,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-14T23:00:00Z,good
+0,,none,0,8,8,3,5,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-14T23:00:00Z,good
+0,,none,0,8,8,0,5,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-14T23:00:00Z,good
+0,,none,0,16,16,1,8,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T00:00:00Z,good
+0,,none,0,16,16,0,5,88,SITE-BR-02,Branch — Silom,3,2026-05-15T00:00:00Z,good
+0,,none,0,12,12,2,7,96,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T00:00:00Z,good
+0,,none,0,12,12,2,4,89,SITE-BR-04,Branch — Ladprao,3,2026-05-15T00:00:00Z,good
+0,,none,0,12,12,1,4,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T00:00:00Z,good
+0,,none,0,12,12,1,3,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T00:00:00Z,good
+0,,none,0,24,24,0,12,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T00:00:00Z,good
+0,,none,0,24,24,3,9,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T00:00:00Z,good
+0,,none,0,24,24,1,13,99,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T00:00:00Z,good
+0,,none,0,20,20,3,12,94,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T00:00:00Z,good
+0,,none,0,8,8,3,1,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T00:00:00Z,good
+0,,none,1,7,8,1,5,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T00:00:00Z,good
+0,,none,0,16,16,2,7,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T01:00:00Z,good
+0,,none,0,16,16,2,5,86,SITE-BR-02,Branch — Silom,3,2026-05-15T01:00:00Z,good
+0,,none,0,12,12,3,8,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T01:00:00Z,good
+0,,none,0,12,12,1,7,90,SITE-BR-04,Branch — Ladprao,3,2026-05-15T01:00:00Z,good
+0,,none,0,12,12,0,9,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T01:00:00Z,good
+0,,none,1,11,12,2,4,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T01:00:00Z,good
+0,,none,0,24,24,2,15,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T01:00:00Z,good
+0,,none,0,24,24,3,13,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T01:00:00Z,good
+0,,none,0,24,24,1,11,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T01:00:00Z,good
+0,,none,0,20,20,0,11,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T01:00:00Z,good
+0,,none,0,8,8,3,2,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T01:00:00Z,good
+0,,none,0,8,8,2,6,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T01:00:00Z,good
+0,,none,0,16,16,2,11,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T02:00:00Z,good
+0,,none,0,16,16,3,10,89,SITE-BR-02,Branch — Silom,3,2026-05-15T02:00:00Z,good
+0,,none,0,12,12,3,5,96,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T02:00:00Z,good
+0,,none,0,12,12,0,6,88,SITE-BR-04,Branch — Ladprao,3,2026-05-15T02:00:00Z,good
+0,,none,0,12,12,0,5,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T02:00:00Z,good
+0,,none,0,12,12,3,9,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T02:00:00Z,good
+0,,none,0,24,24,1,14,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T02:00:00Z,good
+0,,none,0,24,24,2,13,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T02:00:00Z,good
+0,,none,0,24,24,0,9,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T02:00:00Z,good
+0,,none,0,20,20,0,8,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T02:00:00Z,good
+0,,none,0,8,8,3,1,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T02:00:00Z,good
+0,,none,0,8,8,2,6,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T02:00:00Z,good
+0,,none,0,16,16,0,11,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T03:00:00Z,good
+0,,none,0,16,16,2,8,87,SITE-BR-02,Branch — Silom,3,2026-05-15T03:00:00Z,good
+0,,none,0,12,12,2,4,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T03:00:00Z,good
+0,,none,0,12,12,3,8,90,SITE-BR-04,Branch — Ladprao,3,2026-05-15T03:00:00Z,good
+0,,none,0,12,12,1,9,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T03:00:00Z,good
+0,,none,0,12,12,1,6,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T03:00:00Z,good
+0,,none,0,24,24,1,14,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T03:00:00Z,good
+0,,none,1,23,24,2,13,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T03:00:00Z,good
+0,,none,0,24,24,1,14,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T03:00:00Z,good
+0,,none,0,20,20,2,10,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T03:00:00Z,good
+0,,none,0,8,8,0,1,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T03:00:00Z,good
+0,,none,0,8,8,3,2,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T03:00:00Z,good
+0,,none,0,16,16,1,5,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T04:00:00Z,good
+0,,none,0,16,16,2,6,89,SITE-BR-02,Branch — Silom,3,2026-05-15T04:00:00Z,good
+0,,none,0,12,12,1,5,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T04:00:00Z,good
+0,,none,0,12,12,2,6,87,SITE-BR-04,Branch — Ladprao,3,2026-05-15T04:00:00Z,good
+0,,none,0,12,12,2,7,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T04:00:00Z,good
+0,,none,0,12,12,2,9,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T04:00:00Z,good
+0,,none,0,24,24,3,14,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T04:00:00Z,good
+0,,none,0,24,24,2,14,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T04:00:00Z,good
+0,,none,1,23,24,0,15,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T04:00:00Z,good
+0,,none,0,20,20,3,13,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T04:00:00Z,good
+0,,none,0,8,8,2,1,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T04:00:00Z,good
+0,,none,0,8,8,0,5,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T04:00:00Z,good
+0,,none,0,16,16,2,93,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T05:00:00Z,good
+0,,none,0,16,16,3,96,86,SITE-BR-02,Branch — Silom,3,2026-05-15T05:00:00Z,good
+0,,none,0,12,12,2,73,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T05:00:00Z,good
+0,,none,0,12,12,2,74,87,SITE-BR-04,Branch — Ladprao,3,2026-05-15T05:00:00Z,good
+0,,none,0,12,12,0,73,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T05:00:00Z,good
+0,,none,0,12,12,0,73,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T05:00:00Z,good
+0,,none,0,24,24,0,142,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T05:00:00Z,good
+0,,none,0,24,24,1,142,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T05:00:00Z,good
+0,,none,0,24,24,3,144,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T05:00:00Z,good
+0,,none,0,20,20,2,117,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T05:00:00Z,good
+0,,none,0,8,8,3,47,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T05:00:00Z,good
+0,,none,0,8,8,1,51,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T05:00:00Z,good
+0,,none,0,16,16,1,163,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T06:00:00Z,good
+0,,none,0,16,16,0,160,90,SITE-BR-02,Branch — Silom,3,2026-05-15T06:00:00Z,good
+0,,none,0,12,12,1,123,96,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T06:00:00Z,good
+0,,none,0,12,12,0,122,90,SITE-BR-04,Branch — Ladprao,3,2026-05-15T06:00:00Z,good
+0,,none,0,12,12,3,122,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T06:00:00Z,good
+0,,none,0,12,12,1,120,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T06:00:00Z,good
+0,,none,0,24,24,2,238,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T06:00:00Z,good
+0,,none,0,24,24,1,241,98,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T06:00:00Z,good
+0,,none,0,24,24,3,242,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T06:00:00Z,good
+0,,none,0,20,20,2,200,94,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T06:00:00Z,good
+0,,none,0,8,8,0,82,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T06:00:00Z,good
+0,,none,0,8,8,2,78,88,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T06:00:00Z,good
+1,Major outage — escalation in progress,critical,5,11,16,16,53,40,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T07:00:00Z,down
+1,Major outage — escalation in progress,critical,5,11,16,11,56,38,SITE-BR-02,Branch — Silom,3,2026-05-15T07:00:00Z,down
+1,Major outage — escalation in progress,critical,4,8,12,32,43,46,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T07:00:00Z,down
+1,Major outage — escalation in progress,critical,4,8,12,24,41,41,SITE-BR-04,Branch — Ladprao,3,2026-05-15T07:00:00Z,down
+0,,none,0,12,12,2,120,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T07:00:00Z,good
+0,,none,0,12,12,2,120,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T07:00:00Z,good
+0,,none,0,24,24,1,243,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T07:00:00Z,good
+0,,none,0,24,24,2,242,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T07:00:00Z,good
+0,,none,0,24,24,2,242,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T07:00:00Z,good
+0,,none,0,20,20,3,201,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T07:00:00Z,good
+0,,none,0,8,8,0,78,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T07:00:00Z,good
+0,,none,0,8,8,2,81,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T07:00:00Z,good
+1,Major outage — escalation in progress,critical,4,12,16,28,55,40,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T08:00:00Z,down
+1,Major outage — escalation in progress,critical,3,13,16,18,56,41,SITE-BR-02,Branch — Silom,3,2026-05-15T08:00:00Z,down
+1,Major outage — escalation in progress,critical,3,9,12,11,42,46,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T08:00:00Z,down
+1,Major outage — escalation in progress,critical,3,9,12,37,40,43,SITE-BR-04,Branch — Ladprao,3,2026-05-15T08:00:00Z,down
+0,,none,0,12,12,2,119,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T08:00:00Z,good
+0,,none,0,12,12,3,118,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T08:00:00Z,good
+0,,none,0,24,24,2,243,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T08:00:00Z,good
+0,,none,0,24,24,2,242,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T08:00:00Z,good
+0,,none,0,24,24,3,239,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T08:00:00Z,good
+0,,none,0,20,20,3,201,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T08:00:00Z,good
+0,,none,0,8,8,3,77,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T08:00:00Z,good
+0,,none,0,8,8,3,81,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T08:00:00Z,good
+1,Major outage — escalation in progress,critical,5,11,16,13,56,43,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T09:00:00Z,down
+1,Major outage — escalation in progress,critical,5,11,16,32,53,41,SITE-BR-02,Branch — Silom,3,2026-05-15T09:00:00Z,down
+1,Major outage — escalation in progress,critical,4,8,12,18,44,44,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T09:00:00Z,down
+1,Major outage — escalation in progress,critical,4,8,12,22,43,43,SITE-BR-04,Branch — Ladprao,3,2026-05-15T09:00:00Z,down
+0,,none,0,12,12,3,120,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T09:00:00Z,good
+0,,none,0,12,12,1,122,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T09:00:00Z,good
+0,,none,0,24,24,2,237,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T09:00:00Z,good
+0,,none,0,24,24,3,242,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T09:00:00Z,good
+0,,none,0,24,24,0,241,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T09:00:00Z,good
+0,,none,0,20,20,0,197,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T09:00:00Z,good
+0,,none,0,8,8,2,80,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T09:00:00Z,good
+0,,none,0,8,8,2,79,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T09:00:00Z,good
+1,Major outage — escalation in progress,critical,3,13,16,26,57,40,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T10:00:00Z,down
+1,Major outage — escalation in progress,critical,4,12,16,35,56,42,SITE-BR-02,Branch — Silom,3,2026-05-15T10:00:00Z,down
+1,Major outage — escalation in progress,critical,4,8,12,26,39,46,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T10:00:00Z,down
+1,Major outage — escalation in progress,critical,3,9,12,22,42,39,SITE-BR-04,Branch — Ladprao,3,2026-05-15T10:00:00Z,down
+0,,none,0,12,12,2,118,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T10:00:00Z,good
+0,,none,0,12,12,1,123,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T10:00:00Z,good
+0,,none,0,24,24,3,243,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T10:00:00Z,good
+0,,none,0,24,24,0,241,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T10:00:00Z,good
+0,,none,0,24,24,0,242,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T10:00:00Z,good
+0,,none,0,20,20,2,198,94,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T10:00:00Z,good
+0,,none,0,8,8,0,77,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T10:00:00Z,good
+0,,none,0,8,8,1,82,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T10:00:00Z,good
+0,,none,0,16,16,1,159,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T11:00:00Z,good
+0,,none,0,16,16,2,159,89,SITE-BR-02,Branch — Silom,3,2026-05-15T11:00:00Z,good
+0,,none,0,12,12,2,121,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T11:00:00Z,good
+0,,none,0,12,12,1,123,87,SITE-BR-04,Branch — Ladprao,3,2026-05-15T11:00:00Z,good
+0,,none,0,12,12,1,118,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T11:00:00Z,good
+0,,none,0,12,12,2,122,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T11:00:00Z,good
+0,,none,0,24,24,1,242,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T11:00:00Z,good
+0,,none,0,24,24,0,243,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T11:00:00Z,good
+0,,none,0,24,24,2,239,99,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T11:00:00Z,good
+0,,none,0,20,20,3,202,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T11:00:00Z,good
+0,,none,0,8,8,1,80,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T11:00:00Z,good
+0,,none,0,8,8,1,81,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T11:00:00Z,good
+0,,none,0,16,16,1,160,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T12:00:00Z,good
+0,,none,0,16,16,1,161,87,SITE-BR-02,Branch — Silom,3,2026-05-15T12:00:00Z,good
+0,,none,0,12,12,1,119,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T12:00:00Z,good
+0,,none,0,12,12,3,118,87,SITE-BR-04,Branch — Ladprao,3,2026-05-15T12:00:00Z,good
+0,,none,0,12,12,3,123,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T12:00:00Z,good
+0,,none,0,12,12,1,117,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T12:00:00Z,good
+0,,none,0,24,24,1,240,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T12:00:00Z,good
+0,,none,0,24,24,1,243,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T12:00:00Z,good
+0,,none,0,24,24,2,240,99,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T12:00:00Z,good
+0,,none,0,20,20,3,197,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T12:00:00Z,good
+0,,none,0,8,8,2,79,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T12:00:00Z,good
+0,,none,0,8,8,3,78,88,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T12:00:00Z,good
+0,,none,0,16,16,0,163,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T13:00:00Z,good
+0,,none,0,16,16,1,158,88,SITE-BR-02,Branch — Silom,3,2026-05-15T13:00:00Z,good
+0,,none,0,12,12,3,117,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T13:00:00Z,good
+0,,none,0,12,12,0,117,87,SITE-BR-04,Branch — Ladprao,3,2026-05-15T13:00:00Z,good
+0,,none,0,12,12,0,120,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T13:00:00Z,good
+0,,none,0,12,12,0,120,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T13:00:00Z,good
+0,,none,1,23,24,3,237,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T13:00:00Z,good
+0,,none,1,23,24,1,239,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T13:00:00Z,good
+0,,none,0,24,24,3,242,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T13:00:00Z,good
+0,,none,0,20,20,3,199,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T13:00:00Z,good
+0,,none,0,8,8,3,78,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T13:00:00Z,good
+0,,none,0,8,8,2,82,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T13:00:00Z,good
+0,,none,0,16,16,0,160,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T14:00:00Z,good
+0,,none,0,16,16,2,162,89,SITE-BR-02,Branch — Silom,3,2026-05-15T14:00:00Z,good
+0,,none,0,12,12,3,119,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T14:00:00Z,good
+0,,none,0,12,12,2,118,87,SITE-BR-04,Branch — Ladprao,3,2026-05-15T14:00:00Z,good
+0,,none,0,12,12,2,119,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T14:00:00Z,good
+0,,none,0,12,12,1,121,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T14:00:00Z,good
+0,,none,0,24,24,2,239,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T14:00:00Z,good
+0,,none,0,24,24,2,238,98,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T14:00:00Z,good
+0,,none,0,24,24,0,243,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T14:00:00Z,good
+0,,none,0,20,20,1,202,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T14:00:00Z,good
+0,,none,0,8,8,0,83,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T14:00:00Z,good
+0,,none,1,7,8,2,81,88,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T14:00:00Z,good
+0,,none,0,16,16,3,160,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T15:00:00Z,good
+0,,none,0,16,16,2,159,87,SITE-BR-02,Branch — Silom,3,2026-05-15T15:00:00Z,good
+0,,none,0,12,12,1,118,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T15:00:00Z,good
+0,,none,0,12,12,2,123,89,SITE-BR-04,Branch — Ladprao,3,2026-05-15T15:00:00Z,good
+0,,none,0,12,12,2,118,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T15:00:00Z,good
+0,,none,0,12,12,1,123,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T15:00:00Z,good
+0,,none,0,24,24,0,237,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T15:00:00Z,good
+0,,none,0,24,24,3,243,98,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T15:00:00Z,good
+0,,none,0,24,24,1,243,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T15:00:00Z,good
+0,,none,0,20,20,0,202,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T15:00:00Z,good
+0,,none,0,8,8,3,79,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T15:00:00Z,good
+0,,none,0,8,8,3,77,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T15:00:00Z,good
+0,,none,0,16,16,2,162,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T16:00:00Z,good
+0,,none,0,16,16,3,161,87,SITE-BR-02,Branch — Silom,3,2026-05-15T16:00:00Z,good
+0,,none,0,12,12,1,121,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T16:00:00Z,good
+0,,none,0,12,12,2,121,90,SITE-BR-04,Branch — Ladprao,3,2026-05-15T16:00:00Z,good
+0,,none,0,12,12,1,122,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T16:00:00Z,good
+0,,none,0,12,12,0,118,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T16:00:00Z,good
+0,,none,0,24,24,0,241,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T16:00:00Z,good
+0,,none,0,24,24,2,240,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T16:00:00Z,good
+0,,none,0,24,24,3,239,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T16:00:00Z,good
+0,,none,0,20,20,1,197,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T16:00:00Z,good
+0,,none,0,8,8,1,78,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T16:00:00Z,good
+0,,none,0,8,8,0,82,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T16:00:00Z,good
+0,,none,0,16,16,2,95,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T17:00:00Z,good
+0,,none,0,16,16,1,98,86,SITE-BR-02,Branch — Silom,3,2026-05-15T17:00:00Z,good
+0,,none,0,12,12,1,72,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T17:00:00Z,good
+0,,none,0,12,12,1,75,87,SITE-BR-04,Branch — Ladprao,3,2026-05-15T17:00:00Z,good
+0,,none,0,12,12,1,70,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T17:00:00Z,good
+0,,none,0,12,12,0,72,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T17:00:00Z,good
+0,,none,0,24,24,2,143,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T17:00:00Z,good
+0,,none,0,24,24,3,142,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T17:00:00Z,good
+0,,none,0,24,24,3,144,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T17:00:00Z,good
+0,,none,0,20,20,1,120,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T17:00:00Z,good
+0,,none,0,8,8,3,49,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T17:00:00Z,good
+0,,none,0,8,8,3,49,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T17:00:00Z,good
+0,,none,0,16,16,1,98,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T18:00:00Z,good
+0,,none,0,16,16,2,97,86,SITE-BR-02,Branch — Silom,3,2026-05-15T18:00:00Z,good
+0,,none,0,12,12,1,74,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T18:00:00Z,good
+0,,none,0,12,12,1,69,87,SITE-BR-04,Branch — Ladprao,3,2026-05-15T18:00:00Z,good
+0,,none,0,12,12,3,72,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T18:00:00Z,good
+0,,none,0,12,12,1,72,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T18:00:00Z,good
+0,,none,0,24,24,2,143,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T18:00:00Z,good
+0,,none,0,24,24,1,145,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T18:00:00Z,good
+0,,none,0,24,24,3,145,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T18:00:00Z,good
+0,,none,0,20,20,0,123,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T18:00:00Z,good
+0,,none,0,8,8,2,45,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T18:00:00Z,good
+0,,none,0,8,8,2,46,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T18:00:00Z,good
+0,,none,0,16,16,2,8,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T19:00:00Z,good
+0,,none,0,16,16,1,10,88,SITE-BR-02,Branch — Silom,3,2026-05-15T19:00:00Z,good
+0,,none,0,12,12,3,9,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T19:00:00Z,good
+0,,none,0,12,12,2,4,90,SITE-BR-04,Branch — Ladprao,3,2026-05-15T19:00:00Z,good
+0,,none,0,12,12,3,6,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T19:00:00Z,good
+0,,none,0,12,12,3,7,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T19:00:00Z,good
+0,,none,0,24,24,2,12,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T19:00:00Z,good
+0,,none,0,24,24,3,9,98,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T19:00:00Z,good
+0,,none,0,24,24,2,13,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T19:00:00Z,good
+0,,none,0,20,20,1,10,94,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T19:00:00Z,good
+0,,none,0,8,8,0,1,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T19:00:00Z,good
+0,,none,0,8,8,2,6,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T19:00:00Z,good
+0,,none,0,16,16,1,7,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T20:00:00Z,good
+0,,none,0,16,16,0,8,88,SITE-BR-02,Branch — Silom,3,2026-05-15T20:00:00Z,good
+0,,none,0,12,12,1,7,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T20:00:00Z,good
+0,,none,0,12,12,3,8,90,SITE-BR-04,Branch — Ladprao,3,2026-05-15T20:00:00Z,good
+0,,none,0,12,12,2,6,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T20:00:00Z,good
+0,,none,0,12,12,2,6,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T20:00:00Z,good
+0,,none,0,24,24,3,13,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T20:00:00Z,good
+0,,none,0,24,24,0,10,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T20:00:00Z,good
+0,,none,0,24,24,3,10,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T20:00:00Z,good
+0,,none,0,20,20,0,12,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T20:00:00Z,good
+0,,none,0,8,8,2,2,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T20:00:00Z,good
+0,,none,0,8,8,2,3,88,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T20:00:00Z,good
+0,,none,1,15,16,1,6,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T21:00:00Z,good
+0,,none,0,16,16,2,10,89,SITE-BR-02,Branch — Silom,3,2026-05-15T21:00:00Z,good
+0,,none,0,12,12,2,4,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T21:00:00Z,good
+0,,none,0,12,12,1,7,91,SITE-BR-04,Branch — Ladprao,3,2026-05-15T21:00:00Z,good
+0,,none,0,12,12,0,4,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T21:00:00Z,good
+0,,none,0,12,12,1,9,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T21:00:00Z,good
+0,,none,0,24,24,3,15,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T21:00:00Z,good
+0,,none,0,24,24,2,9,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T21:00:00Z,good
+0,,none,0,24,24,2,11,99,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T21:00:00Z,good
+0,,none,0,20,20,1,8,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T21:00:00Z,good
+0,,none,0,8,8,1,6,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T21:00:00Z,good
+0,,none,0,8,8,3,4,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T21:00:00Z,good
+0,,none,0,16,16,1,7,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T22:00:00Z,good
+0,,none,0,16,16,2,11,90,SITE-BR-02,Branch — Silom,3,2026-05-15T22:00:00Z,good
+0,,none,0,12,12,0,4,96,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T22:00:00Z,good
+0,,none,0,12,12,2,4,88,SITE-BR-04,Branch — Ladprao,3,2026-05-15T22:00:00Z,good
+0,,none,0,12,12,1,6,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T22:00:00Z,good
+0,,none,0,12,12,1,7,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T22:00:00Z,good
+0,,none,0,24,24,3,9,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T22:00:00Z,good
+0,,none,0,24,24,2,10,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T22:00:00Z,good
+0,,none,0,24,24,0,12,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T22:00:00Z,good
+0,,none,0,20,20,2,12,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T22:00:00Z,good
+0,,none,0,8,8,3,5,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T22:00:00Z,good
+0,,none,0,8,8,0,4,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T22:00:00Z,good
+0,,none,0,16,16,0,10,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-15T23:00:00Z,good
+0,,none,0,16,16,2,9,88,SITE-BR-02,Branch — Silom,3,2026-05-15T23:00:00Z,good
+0,,none,0,12,12,2,3,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-15T23:00:00Z,good
+0,,none,0,12,12,0,4,89,SITE-BR-04,Branch — Ladprao,3,2026-05-15T23:00:00Z,good
+0,,none,0,12,12,2,4,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-15T23:00:00Z,good
+0,,none,0,12,12,0,4,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-15T23:00:00Z,good
+0,,none,0,24,24,3,14,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-15T23:00:00Z,good
+0,,none,0,24,24,2,14,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-15T23:00:00Z,good
+0,,none,0,24,24,1,10,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-15T23:00:00Z,good
+0,,none,0,20,20,3,13,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-15T23:00:00Z,good
+0,,none,0,8,8,3,6,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-15T23:00:00Z,good
+0,,none,0,8,8,2,3,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-15T23:00:00Z,good
+0,,none,0,16,16,3,9,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T00:00:00Z,good
+0,,none,0,16,16,3,6,89,SITE-BR-02,Branch — Silom,3,2026-05-16T00:00:00Z,good
+0,,none,0,12,12,2,7,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T00:00:00Z,good
+0,,none,0,12,12,0,9,90,SITE-BR-04,Branch — Ladprao,3,2026-05-16T00:00:00Z,good
+0,,none,0,12,12,1,5,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T00:00:00Z,good
+0,,none,0,12,12,2,4,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T00:00:00Z,good
+0,,none,0,24,24,2,11,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T00:00:00Z,good
+0,,none,0,24,24,3,14,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T00:00:00Z,good
+0,,none,0,24,24,1,10,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T00:00:00Z,good
+0,,none,0,20,20,1,7,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T00:00:00Z,good
+0,,none,0,8,8,2,5,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T00:00:00Z,good
+0,,none,0,8,8,0,7,88,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T00:00:00Z,good
+0,,none,0,16,16,3,8,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T01:00:00Z,good
+0,,none,0,16,16,1,10,90,SITE-BR-02,Branch — Silom,3,2026-05-16T01:00:00Z,good
+0,,none,0,12,12,1,7,96,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T01:00:00Z,good
+0,,none,0,12,12,1,5,88,SITE-BR-04,Branch — Ladprao,3,2026-05-16T01:00:00Z,good
+0,,none,0,12,12,2,3,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T01:00:00Z,good
+0,,none,1,11,12,1,8,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T01:00:00Z,good
+0,,none,0,24,24,3,14,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T01:00:00Z,good
+0,,none,0,24,24,1,9,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T01:00:00Z,good
+0,,none,1,23,24,2,11,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T01:00:00Z,good
+0,,none,0,20,20,2,8,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T01:00:00Z,good
+0,,none,0,8,8,3,6,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T01:00:00Z,good
+0,,none,0,8,8,2,3,88,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T01:00:00Z,good
+0,,none,0,16,16,1,5,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T02:00:00Z,good
+0,,none,0,16,16,2,5,88,SITE-BR-02,Branch — Silom,3,2026-05-16T02:00:00Z,good
+0,,none,0,12,12,0,4,96,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T02:00:00Z,good
+0,,none,0,12,12,1,6,88,SITE-BR-04,Branch — Ladprao,3,2026-05-16T02:00:00Z,good
+0,,none,0,12,12,2,3,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T02:00:00Z,good
+0,,none,0,12,12,3,7,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T02:00:00Z,good
+0,,none,0,24,24,3,14,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T02:00:00Z,good
+0,,none,0,24,24,2,15,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T02:00:00Z,good
+0,,none,0,24,24,0,10,99,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T02:00:00Z,good
+0,,none,0,20,20,1,8,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T02:00:00Z,good
+0,,none,0,8,8,3,6,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T02:00:00Z,good
+0,,none,0,8,8,2,7,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T02:00:00Z,good
+0,,none,0,16,16,0,11,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T03:00:00Z,good
+0,,none,0,16,16,0,7,89,SITE-BR-02,Branch — Silom,3,2026-05-16T03:00:00Z,good
+0,,none,0,12,12,0,6,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T03:00:00Z,good
+0,,none,0,12,12,1,8,91,SITE-BR-04,Branch — Ladprao,3,2026-05-16T03:00:00Z,good
+0,,none,0,12,12,2,7,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T03:00:00Z,good
+0,,none,0,12,12,1,5,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T03:00:00Z,good
+0,,none,0,24,24,1,10,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T03:00:00Z,good
+0,,none,0,24,24,3,11,98,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T03:00:00Z,good
+0,,none,0,24,24,3,13,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T03:00:00Z,good
+0,,none,0,20,20,2,13,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T03:00:00Z,good
+0,,none,0,8,8,2,5,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T03:00:00Z,good
+0,,none,0,8,8,0,2,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T03:00:00Z,good
+0,,none,0,16,16,3,5,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T04:00:00Z,good
+0,,none,0,16,16,0,10,88,SITE-BR-02,Branch — Silom,3,2026-05-16T04:00:00Z,good
+0,,none,0,12,12,2,5,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T04:00:00Z,good
+0,,none,0,12,12,1,6,91,SITE-BR-04,Branch — Ladprao,3,2026-05-16T04:00:00Z,good
+0,,none,0,12,12,1,4,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T04:00:00Z,good
+0,,none,0,12,12,3,6,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T04:00:00Z,good
+0,,none,0,24,24,2,15,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T04:00:00Z,good
+0,,none,0,24,24,2,12,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T04:00:00Z,good
+0,,none,0,24,24,2,14,99,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T04:00:00Z,good
+0,,none,0,20,20,3,8,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T04:00:00Z,good
+0,,none,0,8,8,1,7,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T04:00:00Z,good
+0,,none,0,8,8,1,5,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T04:00:00Z,good
+0,,none,0,16,16,1,93,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T05:00:00Z,good
+0,,none,0,16,16,3,96,86,SITE-BR-02,Branch — Silom,3,2026-05-16T05:00:00Z,good
+0,,none,0,12,12,1,70,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T05:00:00Z,good
+0,,none,0,12,12,1,73,90,SITE-BR-04,Branch — Ladprao,3,2026-05-16T05:00:00Z,good
+0,,none,0,12,12,0,70,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T05:00:00Z,good
+0,,none,0,12,12,2,72,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T05:00:00Z,good
+0,,none,1,23,24,0,141,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T05:00:00Z,good
+0,,none,0,24,24,3,145,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T05:00:00Z,good
+0,,none,0,24,24,1,143,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T05:00:00Z,good
+0,,none,0,20,20,0,120,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T05:00:00Z,good
+0,,none,0,8,8,2,48,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T05:00:00Z,good
+0,,none,0,8,8,1,47,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T05:00:00Z,good
+0,,none,0,16,16,1,160,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T06:00:00Z,good
+0,,none,0,16,16,0,162,88,SITE-BR-02,Branch — Silom,3,2026-05-16T06:00:00Z,good
+0,,none,0,12,12,2,117,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T06:00:00Z,good
+0,,none,0,12,12,3,117,90,SITE-BR-04,Branch — Ladprao,3,2026-05-16T06:00:00Z,good
+0,,none,0,12,12,1,122,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T06:00:00Z,good
+0,,none,0,12,12,0,119,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T06:00:00Z,good
+0,,none,0,24,24,1,237,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T06:00:00Z,good
+0,,none,0,24,24,0,237,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T06:00:00Z,good
+0,,none,0,24,24,1,242,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T06:00:00Z,good
+0,,none,0,20,20,2,202,94,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T06:00:00Z,good
+0,,none,0,8,8,1,77,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T06:00:00Z,good
+0,,none,0,8,8,0,81,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T06:00:00Z,good
+0,,none,0,16,16,1,161,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T07:00:00Z,good
+0,,none,0,16,16,1,160,90,SITE-BR-02,Branch — Silom,3,2026-05-16T07:00:00Z,good
+0,,none,0,12,12,3,118,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T07:00:00Z,good
+0,,none,0,12,12,1,117,88,SITE-BR-04,Branch — Ladprao,3,2026-05-16T07:00:00Z,good
+0,,none,0,12,12,3,122,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T07:00:00Z,good
+0,,none,0,12,12,0,122,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T07:00:00Z,good
+0,,none,0,24,24,1,238,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T07:00:00Z,good
+0,,none,0,24,24,2,241,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T07:00:00Z,good
+0,,none,0,24,24,0,237,99,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T07:00:00Z,good
+0,,none,0,20,20,2,198,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T07:00:00Z,good
+0,,none,1,7,8,0,79,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T07:00:00Z,good
+0,,none,0,8,8,0,79,88,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T07:00:00Z,good
+0,,none,0,16,16,3,162,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T08:00:00Z,good
+0,,none,0,16,16,3,157,88,SITE-BR-02,Branch — Silom,3,2026-05-16T08:00:00Z,good
+0,,none,0,12,12,1,121,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T08:00:00Z,good
+0,,none,0,12,12,1,121,89,SITE-BR-04,Branch — Ladprao,3,2026-05-16T08:00:00Z,good
+0,,none,0,12,12,2,122,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T08:00:00Z,good
+0,,none,0,12,12,3,121,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T08:00:00Z,good
+0,,none,0,24,24,0,238,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T08:00:00Z,good
+0,,none,0,24,24,1,241,98,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T08:00:00Z,good
+0,,none,0,24,24,3,238,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T08:00:00Z,good
+0,,none,0,20,20,0,201,94,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T08:00:00Z,good
+0,,none,0,8,8,2,77,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T08:00:00Z,good
+0,,none,0,8,8,3,77,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T08:00:00Z,good
+0,,none,0,16,16,1,160,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T09:00:00Z,good
+0,,none,0,16,16,1,160,87,SITE-BR-02,Branch — Silom,3,2026-05-16T09:00:00Z,good
+0,,none,0,12,12,3,123,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T09:00:00Z,good
+0,,none,0,12,12,2,117,89,SITE-BR-04,Branch — Ladprao,3,2026-05-16T09:00:00Z,good
+0,,none,0,12,12,1,118,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T09:00:00Z,good
+0,,none,0,12,12,1,118,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T09:00:00Z,good
+0,,none,0,24,24,1,241,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T09:00:00Z,good
+0,,none,0,24,24,1,238,98,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T09:00:00Z,good
+0,,none,0,24,24,3,243,99,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T09:00:00Z,good
+0,,none,0,20,20,2,201,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T09:00:00Z,good
+0,,none,0,8,8,1,78,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T09:00:00Z,good
+0,,none,0,8,8,0,79,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T09:00:00Z,good
+0,,none,0,16,16,3,160,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T10:00:00Z,good
+0,,none,0,16,16,3,158,89,SITE-BR-02,Branch — Silom,3,2026-05-16T10:00:00Z,good
+0,,none,0,12,12,3,118,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T10:00:00Z,good
+0,,none,0,12,12,2,118,87,SITE-BR-04,Branch — Ladprao,3,2026-05-16T10:00:00Z,good
+0,,none,0,12,12,1,117,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T10:00:00Z,good
+0,,none,0,12,12,1,117,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T10:00:00Z,good
+0,,none,0,24,24,3,238,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T10:00:00Z,good
+0,,none,0,24,24,0,238,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T10:00:00Z,good
+0,,none,0,24,24,0,237,99,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T10:00:00Z,good
+0,,none,0,20,20,3,199,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T10:00:00Z,good
+0,,none,0,8,8,1,83,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T10:00:00Z,good
+0,,none,0,8,8,2,77,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T10:00:00Z,good
+0,,none,0,16,16,0,157,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T11:00:00Z,good
+0,,none,0,16,16,2,159,87,SITE-BR-02,Branch — Silom,3,2026-05-16T11:00:00Z,good
+0,,none,0,12,12,1,121,96,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T11:00:00Z,good
+0,,none,0,12,12,3,117,89,SITE-BR-04,Branch — Ladprao,3,2026-05-16T11:00:00Z,good
+0,,none,0,12,12,1,122,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T11:00:00Z,good
+0,,none,0,12,12,3,121,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T11:00:00Z,good
+0,,none,0,24,24,1,242,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T11:00:00Z,good
+0,,none,1,23,24,3,242,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T11:00:00Z,good
+0,,none,0,24,24,2,239,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T11:00:00Z,good
+0,,none,0,20,20,2,200,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T11:00:00Z,good
+0,,none,0,8,8,3,81,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T11:00:00Z,good
+0,,none,0,8,8,2,77,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T11:00:00Z,good
+0,,none,0,16,16,1,161,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T12:00:00Z,good
+0,,none,0,16,16,2,161,89,SITE-BR-02,Branch — Silom,3,2026-05-16T12:00:00Z,good
+0,,none,0,12,12,0,119,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T12:00:00Z,good
+0,,none,0,12,12,2,121,89,SITE-BR-04,Branch — Ladprao,3,2026-05-16T12:00:00Z,good
+0,,none,0,12,12,1,123,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T12:00:00Z,good
+0,,none,0,12,12,3,123,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T12:00:00Z,good
+0,,none,0,24,24,3,237,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T12:00:00Z,good
+0,,none,0,24,24,1,239,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T12:00:00Z,good
+0,,none,0,24,24,2,241,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T12:00:00Z,good
+0,,none,0,20,20,0,202,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T12:00:00Z,good
+0,,none,0,8,8,1,78,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T12:00:00Z,good
+0,,none,0,8,8,2,82,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T12:00:00Z,good
+0,,none,0,16,16,2,161,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T13:00:00Z,good
+0,,none,1,15,16,0,163,88,SITE-BR-02,Branch — Silom,3,2026-05-16T13:00:00Z,good
+0,,none,0,12,12,0,122,96,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T13:00:00Z,good
+0,,none,0,12,12,0,119,88,SITE-BR-04,Branch — Ladprao,3,2026-05-16T13:00:00Z,good
+0,,none,0,12,12,2,120,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T13:00:00Z,good
+0,,none,0,12,12,3,122,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T13:00:00Z,good
+0,,none,0,24,24,0,237,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T13:00:00Z,good
+0,,none,0,24,24,2,243,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T13:00:00Z,good
+0,,none,0,24,24,2,242,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T13:00:00Z,good
+0,,none,0,20,20,2,199,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T13:00:00Z,good
+0,,none,0,8,8,1,82,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T13:00:00Z,good
+0,,none,0,8,8,2,79,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T13:00:00Z,good
+0,,none,0,16,16,2,162,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T14:00:00Z,good
+0,,none,1,15,16,2,158,86,SITE-BR-02,Branch — Silom,3,2026-05-16T14:00:00Z,good
+0,,none,0,12,12,2,123,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T14:00:00Z,good
+0,,none,0,12,12,1,119,89,SITE-BR-04,Branch — Ladprao,3,2026-05-16T14:00:00Z,good
+0,,none,0,12,12,2,123,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T14:00:00Z,good
+0,,none,0,12,12,0,122,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T14:00:00Z,good
+0,,none,0,24,24,2,243,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T14:00:00Z,good
+0,,none,0,24,24,2,242,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T14:00:00Z,good
+0,,none,0,24,24,1,239,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T14:00:00Z,good
+0,,none,0,20,20,0,201,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T14:00:00Z,good
+0,,none,0,8,8,3,80,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T14:00:00Z,good
+0,,none,0,8,8,3,81,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T14:00:00Z,good
+0,,none,0,16,16,0,162,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T15:00:00Z,good
+0,,none,0,16,16,2,162,88,SITE-BR-02,Branch — Silom,3,2026-05-16T15:00:00Z,good
+0,,none,0,12,12,0,121,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T15:00:00Z,good
+0,,none,0,12,12,3,119,88,SITE-BR-04,Branch — Ladprao,3,2026-05-16T15:00:00Z,good
+0,,none,0,12,12,2,117,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T15:00:00Z,good
+0,,none,0,12,12,1,117,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T15:00:00Z,good
+0,,none,0,24,24,1,238,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T15:00:00Z,good
+0,,none,0,24,24,2,238,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T15:00:00Z,good
+0,,none,0,24,24,2,243,99,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T15:00:00Z,good
+0,,none,0,20,20,0,201,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T15:00:00Z,good
+0,,none,0,8,8,3,81,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T15:00:00Z,good
+0,,none,0,8,8,2,82,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T15:00:00Z,good
+0,,none,0,16,16,3,159,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T16:00:00Z,good
+0,,none,0,16,16,0,157,89,SITE-BR-02,Branch — Silom,3,2026-05-16T16:00:00Z,good
+0,,none,0,12,12,2,118,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T16:00:00Z,good
+0,,none,0,12,12,2,117,90,SITE-BR-04,Branch — Ladprao,3,2026-05-16T16:00:00Z,good
+0,,none,0,12,12,1,120,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T16:00:00Z,good
+0,,none,0,12,12,1,123,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T16:00:00Z,good
+0,,none,0,24,24,1,238,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T16:00:00Z,good
+0,,none,0,24,24,3,238,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T16:00:00Z,good
+0,,none,0,24,24,0,241,99,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T16:00:00Z,good
+0,,none,0,20,20,1,200,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T16:00:00Z,good
+0,,none,0,8,8,0,78,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T16:00:00Z,good
+0,,none,0,8,8,0,77,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T16:00:00Z,good
+0,,none,0,16,16,2,98,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T17:00:00Z,good
+0,,none,0,16,16,3,95,88,SITE-BR-02,Branch — Silom,3,2026-05-16T17:00:00Z,good
+0,,none,0,12,12,2,71,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T17:00:00Z,good
+0,,none,0,12,12,2,75,89,SITE-BR-04,Branch — Ladprao,3,2026-05-16T17:00:00Z,good
+0,,none,0,12,12,2,71,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T17:00:00Z,good
+0,,none,0,12,12,2,72,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T17:00:00Z,good
+0,,none,0,24,24,1,145,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T17:00:00Z,good
+0,,none,0,24,24,1,144,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T17:00:00Z,good
+0,,none,0,24,24,1,141,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T17:00:00Z,good
+0,,none,0,20,20,3,121,94,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T17:00:00Z,good
+0,,none,1,7,8,1,46,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T17:00:00Z,good
+0,,none,0,8,8,1,49,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T17:00:00Z,good
+0,,none,0,16,16,3,95,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T18:00:00Z,good
+0,,none,0,16,16,1,96,87,SITE-BR-02,Branch — Silom,3,2026-05-16T18:00:00Z,good
+0,,none,0,12,12,0,69,96,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T18:00:00Z,good
+0,,none,1,11,12,0,73,87,SITE-BR-04,Branch — Ladprao,3,2026-05-16T18:00:00Z,good
+0,,none,1,11,12,0,73,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T18:00:00Z,good
+0,,none,0,12,12,0,70,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T18:00:00Z,good
+0,,none,0,24,24,2,144,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T18:00:00Z,good
+0,,none,0,24,24,3,142,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T18:00:00Z,good
+0,,none,0,24,24,3,141,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T18:00:00Z,good
+0,,none,0,20,20,0,119,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T18:00:00Z,good
+0,,none,0,8,8,0,47,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T18:00:00Z,good
+0,,none,0,8,8,3,47,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T18:00:00Z,good
+0,,none,0,16,16,3,7,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T19:00:00Z,good
+0,,none,0,16,16,3,6,89,SITE-BR-02,Branch — Silom,3,2026-05-16T19:00:00Z,good
+0,,none,0,12,12,3,7,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T19:00:00Z,good
+0,,none,0,12,12,1,9,87,SITE-BR-04,Branch — Ladprao,3,2026-05-16T19:00:00Z,good
+0,,none,0,12,12,2,5,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T19:00:00Z,good
+0,,none,0,12,12,1,3,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T19:00:00Z,good
+0,,none,0,24,24,1,15,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T19:00:00Z,good
+0,,none,0,24,24,0,15,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T19:00:00Z,good
+0,,none,0,24,24,2,12,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T19:00:00Z,good
+0,,none,0,20,20,1,10,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T19:00:00Z,good
+0,,none,0,8,8,3,5,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T19:00:00Z,good
+0,,none,0,8,8,3,5,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T19:00:00Z,good
+0,,none,0,16,16,2,5,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T20:00:00Z,good
+0,,none,1,15,16,2,10,86,SITE-BR-02,Branch — Silom,3,2026-05-16T20:00:00Z,good
+0,,none,0,12,12,0,4,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T20:00:00Z,good
+0,,none,0,12,12,0,9,89,SITE-BR-04,Branch — Ladprao,3,2026-05-16T20:00:00Z,good
+0,,none,0,12,12,1,6,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T20:00:00Z,good
+0,,none,0,12,12,2,9,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T20:00:00Z,good
+0,,none,0,24,24,3,11,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T20:00:00Z,good
+0,,none,0,24,24,3,15,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T20:00:00Z,good
+0,,none,0,24,24,2,15,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T20:00:00Z,good
+0,,none,0,20,20,2,13,94,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T20:00:00Z,good
+0,,none,0,8,8,0,5,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T20:00:00Z,good
+0,,none,0,8,8,1,1,88,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T20:00:00Z,good
+0,,none,0,16,16,3,10,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T21:00:00Z,good
+0,,none,0,16,16,3,11,87,SITE-BR-02,Branch — Silom,3,2026-05-16T21:00:00Z,good
+0,,none,0,12,12,1,3,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T21:00:00Z,good
+0,,none,0,12,12,2,4,87,SITE-BR-04,Branch — Ladprao,3,2026-05-16T21:00:00Z,good
+0,,none,0,12,12,0,5,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T21:00:00Z,good
+0,,none,0,12,12,0,9,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T21:00:00Z,good
+0,,none,0,24,24,3,14,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T21:00:00Z,good
+0,,none,0,24,24,3,12,98,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T21:00:00Z,good
+0,,none,0,24,24,0,10,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T21:00:00Z,good
+0,,none,0,20,20,1,11,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T21:00:00Z,good
+0,,none,0,8,8,2,3,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T21:00:00Z,good
+0,,none,0,8,8,0,1,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T21:00:00Z,good
+0,,none,0,16,16,0,32,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T22:00:00Z,good
+0,,none,0,16,16,1,35,86,SITE-BR-02,Branch — Silom,3,2026-05-16T22:00:00Z,good
+0,,none,0,12,12,3,21,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T22:00:00Z,good
+0,,none,0,12,12,2,23,87,SITE-BR-04,Branch — Ladprao,3,2026-05-16T22:00:00Z,good
+0,,none,0,12,12,0,23,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T22:00:00Z,good
+0,,none,0,12,12,1,22,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T22:00:00Z,good
+0,,none,0,24,24,3,49,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T22:00:00Z,good
+0,,none,0,24,24,2,46,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T22:00:00Z,good
+0,,none,0,24,24,3,51,99,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T22:00:00Z,good
+0,,none,0,20,20,1,40,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T22:00:00Z,good
+0,,none,0,8,8,3,14,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T22:00:00Z,good
+0,,none,0,8,8,1,19,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T22:00:00Z,good
+0,,none,0,16,16,1,31,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-16T23:00:00Z,good
+0,,none,0,16,16,0,34,87,SITE-BR-02,Branch — Silom,3,2026-05-16T23:00:00Z,good
+0,,none,0,12,12,0,27,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-16T23:00:00Z,good
+0,,none,0,12,12,2,27,88,SITE-BR-04,Branch — Ladprao,3,2026-05-16T23:00:00Z,good
+0,,none,0,12,12,2,27,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-16T23:00:00Z,good
+0,,none,0,12,12,2,21,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-16T23:00:00Z,good
+0,,none,0,24,24,1,47,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-16T23:00:00Z,good
+0,,none,0,24,24,0,48,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-16T23:00:00Z,good
+0,,none,0,24,24,1,48,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-16T23:00:00Z,good
+0,,none,0,20,20,3,37,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-16T23:00:00Z,good
+0,,none,0,8,8,0,15,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-16T23:00:00Z,good
+0,,none,0,8,8,1,18,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-16T23:00:00Z,good
+0,,none,0,16,16,1,31,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T00:00:00Z,good
+0,,none,0,16,16,3,35,90,SITE-BR-02,Branch — Silom,3,2026-05-17T00:00:00Z,good
+0,,none,0,12,12,1,27,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T00:00:00Z,good
+0,,none,0,12,12,0,21,88,SITE-BR-04,Branch — Ladprao,3,2026-05-17T00:00:00Z,good
+0,,none,0,12,12,2,27,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T00:00:00Z,good
+0,,none,1,11,12,2,24,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T00:00:00Z,good
+0,,none,0,24,24,1,45,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T00:00:00Z,good
+0,,none,0,24,24,2,49,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T00:00:00Z,good
+0,,none,0,24,24,3,46,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T00:00:00Z,good
+0,,none,0,20,20,3,39,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T00:00:00Z,good
+0,,none,0,8,8,1,18,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T00:00:00Z,good
+0,,none,0,8,8,1,15,88,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T00:00:00Z,good
+0,,none,1,15,16,3,29,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T01:00:00Z,good
+0,,none,0,16,16,1,32,90,SITE-BR-02,Branch — Silom,3,2026-05-17T01:00:00Z,good
+0,,none,0,12,12,2,24,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T01:00:00Z,good
+0,,none,0,12,12,2,21,87,SITE-BR-04,Branch — Ladprao,3,2026-05-17T01:00:00Z,good
+0,,none,0,12,12,1,23,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T01:00:00Z,good
+0,,none,0,12,12,0,24,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T01:00:00Z,good
+0,,none,0,24,24,3,45,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T01:00:00Z,good
+0,,none,0,24,24,3,51,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T01:00:00Z,good
+0,,none,0,24,24,1,48,99,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T01:00:00Z,good
+0,,none,0,20,20,0,40,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T01:00:00Z,good
+0,,none,1,7,8,3,19,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T01:00:00Z,good
+0,,none,0,8,8,1,16,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T01:00:00Z,good
+0,,none,0,16,16,1,29,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T02:00:00Z,good
+0,,none,0,16,16,3,30,89,SITE-BR-02,Branch — Silom,3,2026-05-17T02:00:00Z,good
+0,,none,0,12,12,0,23,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T02:00:00Z,good
+0,,none,0,12,12,3,24,90,SITE-BR-04,Branch — Ladprao,3,2026-05-17T02:00:00Z,good
+0,,none,0,12,12,0,23,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T02:00:00Z,good
+0,,none,0,12,12,2,21,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T02:00:00Z,good
+0,,none,0,24,24,0,51,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T02:00:00Z,good
+0,,none,0,24,24,3,46,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T02:00:00Z,good
+0,,none,0,24,24,3,46,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T02:00:00Z,good
+0,,none,0,20,20,2,42,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T02:00:00Z,good
+0,,none,0,8,8,1,16,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T02:00:00Z,good
+0,,none,0,8,8,0,18,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T02:00:00Z,good
+0,,none,0,16,16,2,31,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T03:00:00Z,good
+0,,none,0,16,16,3,32,90,SITE-BR-02,Branch — Silom,3,2026-05-17T03:00:00Z,good
+0,,none,0,12,12,0,24,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T03:00:00Z,good
+0,,none,0,12,12,3,25,89,SITE-BR-04,Branch — Ladprao,3,2026-05-17T03:00:00Z,good
+0,,none,0,12,12,2,25,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T03:00:00Z,good
+0,,none,0,12,12,1,26,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T03:00:00Z,good
+0,,none,0,24,24,3,50,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T03:00:00Z,good
+0,,none,0,24,24,0,45,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T03:00:00Z,good
+0,,none,0,24,24,3,46,99,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T03:00:00Z,good
+0,,none,0,20,20,2,43,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T03:00:00Z,good
+0,,none,1,7,8,0,15,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T03:00:00Z,good
+0,,none,0,8,8,2,16,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T03:00:00Z,good
+0,,none,0,16,16,2,32,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T04:00:00Z,good
+0,,none,0,16,16,1,30,90,SITE-BR-02,Branch — Silom,3,2026-05-17T04:00:00Z,good
+0,,none,0,12,12,2,26,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T04:00:00Z,good
+0,,none,0,12,12,2,25,89,SITE-BR-04,Branch — Ladprao,3,2026-05-17T04:00:00Z,good
+0,,none,0,12,12,0,26,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T04:00:00Z,good
+0,,none,0,12,12,1,26,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T04:00:00Z,good
+0,,none,0,24,24,3,49,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T04:00:00Z,good
+0,,none,0,24,24,0,50,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T04:00:00Z,good
+0,,none,0,24,24,0,47,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T04:00:00Z,good
+0,,none,0,20,20,1,41,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T04:00:00Z,good
+0,,none,0,8,8,1,14,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T04:00:00Z,good
+0,,none,0,8,8,3,18,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T04:00:00Z,good
+0,,none,0,16,16,2,32,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T05:00:00Z,good
+0,,none,0,16,16,2,31,88,SITE-BR-02,Branch — Silom,3,2026-05-17T05:00:00Z,good
+0,,none,1,11,12,3,26,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T05:00:00Z,good
+0,,none,0,12,12,3,25,88,SITE-BR-04,Branch — Ladprao,3,2026-05-17T05:00:00Z,good
+0,,none,0,12,12,0,23,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T05:00:00Z,good
+0,,none,0,12,12,3,22,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T05:00:00Z,good
+0,,none,0,24,24,1,48,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T05:00:00Z,good
+0,,none,0,24,24,3,45,98,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T05:00:00Z,good
+0,,none,0,24,24,0,50,99,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T05:00:00Z,good
+0,,none,0,20,20,2,37,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T05:00:00Z,good
+0,,none,0,8,8,2,13,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T05:00:00Z,good
+0,,none,1,7,8,1,18,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T05:00:00Z,good
+0,,none,0,16,16,0,33,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T06:00:00Z,good
+0,,none,0,16,16,1,33,87,SITE-BR-02,Branch — Silom,3,2026-05-17T06:00:00Z,good
+0,,none,0,12,12,1,25,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T06:00:00Z,good
+0,,none,0,12,12,0,22,91,SITE-BR-04,Branch — Ladprao,3,2026-05-17T06:00:00Z,good
+0,,none,0,12,12,3,21,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T06:00:00Z,good
+0,,none,0,12,12,3,21,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T06:00:00Z,good
+0,,none,0,24,24,1,50,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T06:00:00Z,good
+0,,none,0,24,24,1,46,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T06:00:00Z,good
+0,,none,0,24,24,1,50,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T06:00:00Z,good
+0,,none,0,20,20,3,42,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T06:00:00Z,good
+0,,none,0,8,8,2,18,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T06:00:00Z,good
+0,,none,0,8,8,3,13,88,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T06:00:00Z,good
+0,,none,0,16,16,0,30,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T07:00:00Z,good
+0,,none,0,16,16,0,30,86,SITE-BR-02,Branch — Silom,3,2026-05-17T07:00:00Z,good
+0,,none,0,12,12,1,25,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T07:00:00Z,good
+0,,none,0,12,12,2,24,89,SITE-BR-04,Branch — Ladprao,3,2026-05-17T07:00:00Z,good
+0,,none,0,12,12,3,27,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T07:00:00Z,good
+0,,none,0,12,12,2,22,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T07:00:00Z,good
+0,,none,0,24,24,2,47,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T07:00:00Z,good
+0,,none,0,24,24,0,46,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T07:00:00Z,good
+0,,none,0,24,24,1,48,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T07:00:00Z,good
+0,,none,0,20,20,2,37,94,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T07:00:00Z,good
+0,,none,0,8,8,0,17,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T07:00:00Z,good
+0,,none,0,8,8,0,17,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T07:00:00Z,good
+0,,none,0,16,16,0,33,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T08:00:00Z,good
+0,,none,0,16,16,0,32,86,SITE-BR-02,Branch — Silom,3,2026-05-17T08:00:00Z,good
+0,,none,0,12,12,0,21,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T08:00:00Z,good
+0,,none,0,12,12,2,24,90,SITE-BR-04,Branch — Ladprao,3,2026-05-17T08:00:00Z,good
+0,,none,0,12,12,2,23,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T08:00:00Z,good
+0,,none,0,12,12,1,24,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T08:00:00Z,good
+0,,none,0,24,24,1,48,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T08:00:00Z,good
+0,,none,0,24,24,3,48,98,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T08:00:00Z,good
+0,,none,0,24,24,3,48,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T08:00:00Z,good
+0,,none,0,20,20,1,40,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T08:00:00Z,good
+0,,none,0,8,8,2,19,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T08:00:00Z,good
+0,,none,0,8,8,2,18,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T08:00:00Z,good
+0,,none,0,16,16,0,35,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T09:00:00Z,good
+0,,none,0,16,16,2,33,89,SITE-BR-02,Branch — Silom,3,2026-05-17T09:00:00Z,good
+0,,none,0,12,12,1,23,96,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T09:00:00Z,good
+0,,none,0,12,12,3,21,89,SITE-BR-04,Branch — Ladprao,3,2026-05-17T09:00:00Z,good
+0,,none,0,12,12,1,23,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T09:00:00Z,good
+0,,none,0,12,12,0,21,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T09:00:00Z,good
+0,,none,0,24,24,1,49,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T09:00:00Z,good
+0,,none,0,24,24,2,46,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T09:00:00Z,good
+0,,none,0,24,24,3,50,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T09:00:00Z,good
+0,,none,0,20,20,3,40,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T09:00:00Z,good
+0,,none,0,8,8,2,14,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T09:00:00Z,good
+0,,none,0,8,8,3,15,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T09:00:00Z,good
+0,,none,0,16,16,2,29,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T10:00:00Z,good
+0,,none,0,16,16,0,31,89,SITE-BR-02,Branch — Silom,3,2026-05-17T10:00:00Z,good
+0,,none,0,12,12,2,24,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T10:00:00Z,good
+0,,none,0,12,12,3,26,88,SITE-BR-04,Branch — Ladprao,3,2026-05-17T10:00:00Z,good
+0,,none,0,12,12,1,22,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T10:00:00Z,good
+0,,none,0,12,12,2,24,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T10:00:00Z,good
+0,,none,0,24,24,2,51,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T10:00:00Z,good
+0,,none,0,24,24,3,49,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T10:00:00Z,good
+0,,none,0,24,24,3,48,99,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T10:00:00Z,good
+0,,none,0,20,20,3,40,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T10:00:00Z,good
+0,,none,0,8,8,1,15,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T10:00:00Z,good
+0,,none,0,8,8,2,18,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T10:00:00Z,good
+0,,none,0,16,16,2,34,92,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T11:00:00Z,good
+0,,none,0,16,16,0,31,88,SITE-BR-02,Branch — Silom,3,2026-05-17T11:00:00Z,good
+0,,none,0,12,12,2,21,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T11:00:00Z,good
+0,,none,0,12,12,3,23,91,SITE-BR-04,Branch — Ladprao,3,2026-05-17T11:00:00Z,good
+0,,none,1,11,12,3,22,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T11:00:00Z,good
+0,,none,0,12,12,0,26,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T11:00:00Z,good
+0,,none,0,24,24,2,47,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T11:00:00Z,good
+0,,none,0,24,24,2,48,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T11:00:00Z,good
+0,,none,0,24,24,3,49,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T11:00:00Z,good
+0,,none,0,20,20,0,39,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T11:00:00Z,good
+0,,none,0,8,8,1,14,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T11:00:00Z,good
+0,,none,0,8,8,1,19,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T11:00:00Z,good
+0,,none,0,16,16,2,31,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T12:00:00Z,good
+0,,none,0,16,16,1,33,90,SITE-BR-02,Branch — Silom,3,2026-05-17T12:00:00Z,good
+0,,none,1,11,12,0,22,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T12:00:00Z,good
+0,,none,0,12,12,0,25,89,SITE-BR-04,Branch — Ladprao,3,2026-05-17T12:00:00Z,good
+0,,none,0,12,12,0,22,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T12:00:00Z,good
+0,,none,0,12,12,0,27,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T12:00:00Z,good
+0,,none,0,24,24,0,49,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T12:00:00Z,good
+0,,none,0,24,24,3,46,98,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T12:00:00Z,good
+0,,none,0,24,24,2,46,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T12:00:00Z,good
+0,,none,0,20,20,3,38,94,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T12:00:00Z,good
+0,,none,0,8,8,0,15,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T12:00:00Z,good
+0,,none,0,8,8,3,16,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T12:00:00Z,good
+1,Major outage — escalation in progress,critical,4,12,16,16,11,39,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T13:00:00Z,down
+1,Major outage — escalation in progress,critical,5,11,16,25,10,38,SITE-BR-02,Branch — Silom,3,2026-05-17T13:00:00Z,down
+1,Major outage — escalation in progress,critical,3,9,12,26,7,40,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T13:00:00Z,down
+1,Major outage — escalation in progress,critical,3,9,12,19,11,37,SITE-BR-04,Branch — Ladprao,3,2026-05-17T13:00:00Z,down
+1,Major outage — escalation in progress,critical,4,8,12,14,9,47,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T13:00:00Z,down
+1,Major outage — escalation in progress,critical,3,9,12,14,9,48,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T13:00:00Z,down
+1,Major outage — escalation in progress,critical,5,19,24,16,17,46,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T13:00:00Z,down
+1,Major outage — escalation in progress,critical,6,18,24,28,18,45,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T13:00:00Z,down
+1,Major outage — escalation in progress,critical,6,18,24,10,18,43,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T13:00:00Z,down
+1,Major outage — escalation in progress,critical,5,15,20,27,11,40,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T13:00:00Z,down
+1,Major outage — escalation in progress,critical,3,5,8,24,2,43,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T13:00:00Z,down
+1,Major outage — escalation in progress,critical,3,5,8,31,4,35,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T13:00:00Z,down
+1,Major outage — escalation in progress,critical,3,13,16,30,8,37,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T14:00:00Z,down
+1,Major outage — escalation in progress,critical,3,13,16,12,8,38,SITE-BR-02,Branch — Silom,3,2026-05-17T14:00:00Z,down
+1,Major outage — escalation in progress,critical,3,9,12,37,6,44,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T14:00:00Z,down
+1,Major outage — escalation in progress,critical,4,8,12,32,10,35,SITE-BR-04,Branch — Ladprao,3,2026-05-17T14:00:00Z,down
+1,Major outage — escalation in progress,critical,3,9,12,36,7,51,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T14:00:00Z,down
+1,Major outage — escalation in progress,critical,4,8,12,27,6,47,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T14:00:00Z,down
+1,Major outage — escalation in progress,critical,5,19,24,16,18,46,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T14:00:00Z,down
+1,Major outage — escalation in progress,critical,8,16,24,22,13,45,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T14:00:00Z,down
+1,Major outage — escalation in progress,critical,6,18,24,33,18,44,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T14:00:00Z,down
+1,Major outage — escalation in progress,critical,5,15,20,27,15,42,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T14:00:00Z,down
+1,Major outage — escalation in progress,critical,3,5,8,28,2,40,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T14:00:00Z,down
+1,Major outage — escalation in progress,critical,3,5,8,18,3,33,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T14:00:00Z,down
+0,,none,0,16,16,1,34,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T15:00:00Z,good
+0,,none,0,16,16,1,34,86,SITE-BR-02,Branch — Silom,3,2026-05-17T15:00:00Z,good
+0,,none,0,12,12,2,24,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T15:00:00Z,good
+0,,none,0,12,12,1,27,90,SITE-BR-04,Branch — Ladprao,3,2026-05-17T15:00:00Z,good
+0,,none,0,12,12,1,26,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T15:00:00Z,good
+0,,none,0,12,12,2,24,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T15:00:00Z,good
+1,Network degradation — upstream ISP issue,warning,2,22,24,8,48,81,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T15:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,22,24,11,47,77,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T15:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,4,20,24,12,48,81,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T15:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,18,20,5,42,72,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T15:00:00Z,fair
+0,,none,0,8,8,2,15,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T15:00:00Z,good
+0,,none,0,8,8,1,16,88,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T15:00:00Z,good
+0,,none,1,15,16,3,33,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T16:00:00Z,good
+0,,none,0,16,16,0,29,86,SITE-BR-02,Branch — Silom,3,2026-05-17T16:00:00Z,good
+0,,none,0,12,12,3,21,96,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T16:00:00Z,good
+0,,none,0,12,12,3,23,91,SITE-BR-04,Branch — Ladprao,3,2026-05-17T16:00:00Z,good
+0,,none,0,12,12,3,26,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T16:00:00Z,good
+0,,none,0,12,12,2,21,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T16:00:00Z,good
+1,Network degradation — upstream ISP issue,warning,4,20,24,10,45,80,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T16:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,3,21,24,12,51,76,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T16:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,23,24,4,46,80,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T16:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,19,20,11,42,75,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T16:00:00Z,fair
+0,,none,0,8,8,2,18,95,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T16:00:00Z,good
+0,,none,0,8,8,2,17,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T16:00:00Z,good
+0,,none,0,16,16,1,33,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T17:00:00Z,good
+0,,none,0,16,16,1,31,86,SITE-BR-02,Branch — Silom,3,2026-05-17T17:00:00Z,good
+0,,none,0,12,12,2,21,96,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T17:00:00Z,good
+0,,none,0,12,12,3,23,88,SITE-BR-04,Branch — Ladprao,3,2026-05-17T17:00:00Z,good
+0,,none,0,12,12,3,23,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T17:00:00Z,good
+0,,none,0,12,12,3,27,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T17:00:00Z,good
+1,Network degradation — upstream ISP issue,warning,2,22,24,10,51,80,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T17:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,4,20,24,12,46,80,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T17:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,4,20,24,9,48,77,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T17:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,2,18,20,6,42,76,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T17:00:00Z,fair
+0,,none,0,8,8,3,19,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T17:00:00Z,good
+0,,none,0,8,8,0,19,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T17:00:00Z,good
+0,,none,0,16,16,3,32,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T18:00:00Z,good
+0,,none,0,16,16,3,31,87,SITE-BR-02,Branch — Silom,3,2026-05-17T18:00:00Z,good
+0,,none,0,12,12,2,23,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T18:00:00Z,good
+0,,none,0,12,12,0,24,91,SITE-BR-04,Branch — Ladprao,3,2026-05-17T18:00:00Z,good
+0,,none,0,12,12,3,27,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T18:00:00Z,good
+0,,none,0,12,12,1,22,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T18:00:00Z,good
+0,,none,0,24,24,1,49,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T18:00:00Z,good
+0,,none,0,24,24,0,45,98,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T18:00:00Z,good
+0,,none,0,24,24,2,46,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T18:00:00Z,good
+0,,none,0,20,20,1,41,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T18:00:00Z,good
+0,,none,0,8,8,2,19,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T18:00:00Z,good
+0,,none,0,8,8,3,13,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T18:00:00Z,good
+0,,none,0,16,16,1,30,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T19:00:00Z,good
+0,,none,0,16,16,0,34,88,SITE-BR-02,Branch — Silom,3,2026-05-17T19:00:00Z,good
+0,,none,0,12,12,2,23,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T19:00:00Z,good
+0,,none,1,11,12,0,26,91,SITE-BR-04,Branch — Ladprao,3,2026-05-17T19:00:00Z,good
+0,,none,0,12,12,2,24,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T19:00:00Z,good
+0,,none,0,12,12,2,24,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T19:00:00Z,good
+0,,none,0,24,24,1,47,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T19:00:00Z,good
+0,,none,0,24,24,3,49,98,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T19:00:00Z,good
+0,,none,0,24,24,0,50,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T19:00:00Z,good
+0,,none,0,20,20,2,43,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T19:00:00Z,good
+0,,none,0,8,8,1,17,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T19:00:00Z,good
+0,,none,0,8,8,2,19,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T19:00:00Z,good
+0,,none,0,16,16,0,35,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T20:00:00Z,good
+0,,none,0,16,16,2,29,86,SITE-BR-02,Branch — Silom,3,2026-05-17T20:00:00Z,good
+0,,none,0,12,12,1,26,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T20:00:00Z,good
+0,,none,0,12,12,2,26,90,SITE-BR-04,Branch — Ladprao,3,2026-05-17T20:00:00Z,good
+0,,none,0,12,12,3,24,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T20:00:00Z,good
+0,,none,0,12,12,0,25,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T20:00:00Z,good
+0,,none,0,24,24,0,48,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T20:00:00Z,good
+0,,none,0,24,24,0,46,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T20:00:00Z,good
+0,,none,0,24,24,2,48,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T20:00:00Z,good
+0,,none,0,20,20,0,38,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T20:00:00Z,good
+0,,none,0,8,8,3,17,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T20:00:00Z,good
+0,,none,0,8,8,3,14,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T20:00:00Z,good
+0,,none,0,16,16,3,29,87,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T21:00:00Z,good
+0,,none,0,16,16,0,31,85,SITE-BR-02,Branch — Silom,3,2026-05-17T21:00:00Z,good
+0,,none,0,12,12,1,22,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T21:00:00Z,good
+0,,none,0,12,12,3,26,87,SITE-BR-04,Branch — Ladprao,3,2026-05-17T21:00:00Z,good
+0,,none,0,12,12,3,22,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T21:00:00Z,good
+0,,none,0,12,12,0,23,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T21:00:00Z,good
+0,,none,0,24,24,3,51,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T21:00:00Z,good
+0,,none,0,24,24,2,45,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T21:00:00Z,good
+0,,none,0,24,24,1,49,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T21:00:00Z,good
+0,,none,0,20,20,3,39,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T21:00:00Z,good
+0,,none,0,8,8,0,13,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T21:00:00Z,good
+0,,none,0,8,8,1,18,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T21:00:00Z,good
+0,,none,0,16,16,0,33,87,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T22:00:00Z,good
+0,,none,1,15,16,1,29,86,SITE-BR-02,Branch — Silom,3,2026-05-17T22:00:00Z,good
+0,,none,0,12,12,0,21,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T22:00:00Z,good
+0,,none,0,12,12,1,22,90,SITE-BR-04,Branch — Ladprao,3,2026-05-17T22:00:00Z,good
+0,,none,0,12,12,2,22,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T22:00:00Z,good
+0,,none,0,12,12,2,22,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T22:00:00Z,good
+0,,none,0,24,24,0,51,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T22:00:00Z,good
+0,,none,0,24,24,0,46,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T22:00:00Z,good
+0,,none,0,24,24,1,46,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T22:00:00Z,good
+0,,none,0,20,20,1,39,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T22:00:00Z,good
+0,,none,0,8,8,2,19,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T22:00:00Z,good
+0,,none,0,8,8,1,14,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T22:00:00Z,good
+0,,none,0,16,16,3,30,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-17T23:00:00Z,good
+0,,none,0,16,16,0,34,89,SITE-BR-02,Branch — Silom,3,2026-05-17T23:00:00Z,good
+0,,none,0,12,12,0,27,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-17T23:00:00Z,good
+0,,none,0,12,12,0,27,90,SITE-BR-04,Branch — Ladprao,3,2026-05-17T23:00:00Z,good
+0,,none,0,12,12,2,22,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-17T23:00:00Z,good
+0,,none,1,11,12,3,25,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-17T23:00:00Z,good
+0,,none,0,24,24,1,45,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-17T23:00:00Z,good
+0,,none,0,24,24,1,45,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-17T23:00:00Z,good
+0,,none,0,24,24,3,45,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-17T23:00:00Z,good
+0,,none,0,20,20,1,37,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-17T23:00:00Z,good
+0,,none,0,8,8,3,13,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-17T23:00:00Z,good
+0,,none,1,7,8,3,18,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-17T23:00:00Z,good
+0,,none,0,16,16,2,31,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T00:00:00Z,good
+0,,none,1,15,16,0,35,87,SITE-BR-02,Branch — Silom,3,2026-05-18T00:00:00Z,good
+0,,none,0,12,12,3,27,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T00:00:00Z,good
+0,,none,0,12,12,0,25,86,SITE-BR-04,Branch — Ladprao,3,2026-05-18T00:00:00Z,good
+0,,none,0,12,12,2,25,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T00:00:00Z,good
+0,,none,0,12,12,2,25,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T00:00:00Z,good
+0,,none,0,24,24,1,47,95,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T00:00:00Z,good
+0,,none,0,24,24,3,48,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T00:00:00Z,good
+0,,none,0,24,24,0,47,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T00:00:00Z,good
+0,,none,0,20,20,0,37,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T00:00:00Z,good
+0,,none,0,8,8,2,15,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T00:00:00Z,good
+0,,none,0,8,8,0,13,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T00:00:00Z,good
+0,,none,0,16,16,2,33,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T01:00:00Z,good
+0,,none,0,16,16,3,35,88,SITE-BR-02,Branch — Silom,3,2026-05-18T01:00:00Z,good
+0,,none,0,12,12,0,21,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T01:00:00Z,good
+0,,none,0,12,12,1,21,88,SITE-BR-04,Branch — Ladprao,3,2026-05-18T01:00:00Z,good
+0,,none,0,12,12,1,24,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T01:00:00Z,good
+0,,none,0,12,12,2,23,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T01:00:00Z,good
+0,,none,0,24,24,1,47,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T01:00:00Z,good
+0,,none,0,24,24,1,49,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T01:00:00Z,good
+0,,none,0,24,24,2,48,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T01:00:00Z,good
+0,,none,0,20,20,1,39,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T01:00:00Z,good
+0,,none,0,8,8,1,19,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T01:00:00Z,good
+0,,none,0,8,8,2,13,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T01:00:00Z,good
+0,,none,0,16,16,0,32,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T02:00:00Z,good
+0,,none,0,16,16,0,33,88,SITE-BR-02,Branch — Silom,3,2026-05-18T02:00:00Z,good
+0,,none,0,12,12,0,24,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T02:00:00Z,good
+0,,none,0,12,12,3,23,87,SITE-BR-04,Branch — Ladprao,3,2026-05-18T02:00:00Z,good
+0,,none,0,12,12,1,21,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T02:00:00Z,good
+0,,none,0,12,12,1,22,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T02:00:00Z,good
+0,,none,0,24,24,2,46,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T02:00:00Z,good
+0,,none,0,24,24,2,48,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T02:00:00Z,good
+0,,none,1,23,24,0,49,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T02:00:00Z,good
+0,,none,0,20,20,2,41,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T02:00:00Z,good
+0,,none,0,8,8,2,19,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T02:00:00Z,good
+0,,none,0,8,8,0,16,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T02:00:00Z,good
+0,,none,0,16,16,3,31,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T03:00:00Z,good
+0,,none,0,16,16,1,35,88,SITE-BR-02,Branch — Silom,3,2026-05-18T03:00:00Z,good
+0,,none,0,12,12,0,25,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T03:00:00Z,good
+0,,none,1,11,12,0,24,89,SITE-BR-04,Branch — Ladprao,3,2026-05-18T03:00:00Z,good
+0,,none,0,12,12,1,26,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T03:00:00Z,good
+0,,none,0,12,12,1,22,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T03:00:00Z,good
+0,,none,1,23,24,1,49,95,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T03:00:00Z,good
+0,,none,0,24,24,0,50,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T03:00:00Z,good
+0,,none,0,24,24,2,46,94,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T03:00:00Z,good
+0,,none,0,20,20,2,38,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T03:00:00Z,good
+0,,none,0,8,8,0,19,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T03:00:00Z,good
+0,,none,0,8,8,2,13,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T03:00:00Z,good
+0,,none,0,16,16,3,31,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T04:00:00Z,good
+0,,none,0,16,16,0,30,85,SITE-BR-02,Branch — Silom,3,2026-05-18T04:00:00Z,good
+0,,none,0,12,12,0,23,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T04:00:00Z,good
+0,,none,0,12,12,0,23,90,SITE-BR-04,Branch — Ladprao,3,2026-05-18T04:00:00Z,good
+0,,none,1,11,12,1,22,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T04:00:00Z,good
+0,,none,0,12,12,0,22,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T04:00:00Z,good
+0,,none,0,24,24,1,48,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T04:00:00Z,good
+0,,none,0,24,24,0,51,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T04:00:00Z,good
+0,,none,1,23,24,1,47,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T04:00:00Z,good
+0,,none,0,20,20,3,42,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T04:00:00Z,good
+0,,none,0,8,8,0,19,90,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T04:00:00Z,good
+0,,none,0,8,8,0,13,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T04:00:00Z,good
+0,,none,0,16,16,3,29,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T05:00:00Z,good
+0,,none,0,16,16,2,31,89,SITE-BR-02,Branch — Silom,3,2026-05-18T05:00:00Z,good
+0,,none,0,12,12,1,22,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T05:00:00Z,good
+0,,none,0,12,12,2,26,90,SITE-BR-04,Branch — Ladprao,3,2026-05-18T05:00:00Z,good
+0,,none,0,12,12,2,26,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T05:00:00Z,good
+0,,none,0,12,12,2,27,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T05:00:00Z,good
+0,,none,0,24,24,1,45,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T05:00:00Z,good
+0,,none,0,24,24,0,45,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T05:00:00Z,good
+0,,none,0,24,24,3,49,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T05:00:00Z,good
+0,,none,0,20,20,2,38,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T05:00:00Z,good
+0,,none,0,8,8,1,13,90,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T05:00:00Z,good
+0,,none,1,7,8,0,17,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T05:00:00Z,good
+0,,none,0,16,16,1,29,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T06:00:00Z,good
+0,,none,0,16,16,2,29,87,SITE-BR-02,Branch — Silom,3,2026-05-18T06:00:00Z,good
+0,,none,0,12,12,3,22,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T06:00:00Z,good
+0,,none,0,12,12,3,21,87,SITE-BR-04,Branch — Ladprao,3,2026-05-18T06:00:00Z,good
+0,,none,0,12,12,0,23,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T06:00:00Z,good
+0,,none,0,12,12,1,27,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T06:00:00Z,good
+0,,none,0,24,24,0,45,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T06:00:00Z,good
+0,,none,0,24,24,3,47,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T06:00:00Z,good
+0,,none,0,24,24,1,51,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T06:00:00Z,good
+0,,none,0,20,20,1,39,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T06:00:00Z,good
+0,,none,0,8,8,1,15,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T06:00:00Z,good
+0,,none,0,8,8,0,14,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T06:00:00Z,good
+0,,none,0,16,16,1,31,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T07:00:00Z,good
+0,,none,0,16,16,3,33,89,SITE-BR-02,Branch — Silom,3,2026-05-18T07:00:00Z,good
+0,,none,0,12,12,2,27,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T07:00:00Z,good
+0,,none,0,12,12,1,22,88,SITE-BR-04,Branch — Ladprao,3,2026-05-18T07:00:00Z,good
+0,,none,0,12,12,0,26,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T07:00:00Z,good
+0,,none,0,12,12,1,24,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T07:00:00Z,good
+0,,none,0,24,24,2,47,95,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T07:00:00Z,good
+0,,none,0,24,24,1,47,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T07:00:00Z,good
+0,,none,0,24,24,3,46,94,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T07:00:00Z,good
+0,,none,0,20,20,0,39,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T07:00:00Z,good
+0,,none,0,8,8,2,17,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T07:00:00Z,good
+0,,none,0,8,8,0,16,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T07:00:00Z,good
+0,,none,0,16,16,0,29,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T08:00:00Z,good
+0,,none,0,16,16,1,35,89,SITE-BR-02,Branch — Silom,3,2026-05-18T08:00:00Z,good
+0,,none,0,12,12,0,24,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T08:00:00Z,good
+0,,none,0,12,12,2,25,86,SITE-BR-04,Branch — Ladprao,3,2026-05-18T08:00:00Z,good
+0,,none,0,12,12,3,23,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T08:00:00Z,good
+0,,none,0,12,12,1,26,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T08:00:00Z,good
+0,,none,0,24,24,2,46,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T08:00:00Z,good
+0,,none,0,24,24,2,49,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T08:00:00Z,good
+0,,none,0,24,24,3,47,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T08:00:00Z,good
+0,,none,0,20,20,1,43,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T08:00:00Z,good
+0,,none,0,8,8,0,19,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T08:00:00Z,good
+0,,none,0,8,8,2,17,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T08:00:00Z,good
+0,,none,0,16,16,2,32,87,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T09:00:00Z,good
+0,,none,0,16,16,1,29,87,SITE-BR-02,Branch — Silom,3,2026-05-18T09:00:00Z,good
+0,,none,0,12,12,2,27,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T09:00:00Z,good
+0,,none,0,12,12,1,24,90,SITE-BR-04,Branch — Ladprao,3,2026-05-18T09:00:00Z,good
+0,,none,0,12,12,1,27,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T09:00:00Z,good
+0,,none,0,12,12,1,23,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T09:00:00Z,good
+0,,none,0,24,24,0,51,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T09:00:00Z,good
+0,,none,0,24,24,3,48,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T09:00:00Z,good
+0,,none,0,24,24,1,51,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T09:00:00Z,good
+0,,none,0,20,20,1,43,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T09:00:00Z,good
+0,,none,0,8,8,1,16,90,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T09:00:00Z,good
+0,,none,0,8,8,2,18,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T09:00:00Z,good
+0,,none,0,16,16,1,35,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T10:00:00Z,good
+0,,none,0,16,16,3,29,87,SITE-BR-02,Branch — Silom,3,2026-05-18T10:00:00Z,good
+0,,none,0,12,12,1,27,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T10:00:00Z,good
+0,,none,0,12,12,1,23,88,SITE-BR-04,Branch — Ladprao,3,2026-05-18T10:00:00Z,good
+0,,none,0,12,12,2,22,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T10:00:00Z,good
+0,,none,0,12,12,2,26,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T10:00:00Z,good
+0,,none,0,24,24,2,45,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T10:00:00Z,good
+0,,none,0,24,24,3,49,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T10:00:00Z,good
+0,,none,0,24,24,2,50,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T10:00:00Z,good
+0,,none,0,20,20,3,40,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T10:00:00Z,good
+0,,none,0,8,8,1,16,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T10:00:00Z,good
+0,,none,0,8,8,2,19,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T10:00:00Z,good
+0,,none,0,16,16,2,31,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T11:00:00Z,good
+0,,none,0,16,16,3,31,88,SITE-BR-02,Branch — Silom,3,2026-05-18T11:00:00Z,good
+0,,none,0,12,12,0,22,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T11:00:00Z,good
+0,,none,0,12,12,3,22,86,SITE-BR-04,Branch — Ladprao,3,2026-05-18T11:00:00Z,good
+0,,none,0,12,12,2,21,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T11:00:00Z,good
+0,,none,0,12,12,0,22,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T11:00:00Z,good
+0,,none,0,24,24,0,45,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T11:00:00Z,good
+0,,none,0,24,24,0,50,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T11:00:00Z,good
+0,,none,0,24,24,2,50,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T11:00:00Z,good
+0,,none,0,20,20,0,37,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T11:00:00Z,good
+0,,none,0,8,8,0,18,94,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T11:00:00Z,good
+0,,none,0,8,8,2,17,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T11:00:00Z,good
+0,,none,0,16,16,3,33,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T12:00:00Z,good
+0,,none,0,16,16,3,34,87,SITE-BR-02,Branch — Silom,3,2026-05-18T12:00:00Z,good
+0,,none,0,12,12,1,23,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T12:00:00Z,good
+0,,none,0,12,12,0,22,90,SITE-BR-04,Branch — Ladprao,3,2026-05-18T12:00:00Z,good
+0,,none,0,12,12,3,26,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T12:00:00Z,good
+0,,none,0,12,12,0,25,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T12:00:00Z,good
+0,,none,0,24,24,3,51,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T12:00:00Z,good
+0,,none,0,24,24,0,51,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T12:00:00Z,good
+0,,none,0,24,24,3,50,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T12:00:00Z,good
+0,,none,0,20,20,2,42,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T12:00:00Z,good
+0,,none,0,8,8,1,15,90,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T12:00:00Z,good
+0,,none,0,8,8,0,14,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T12:00:00Z,good
+0,,none,0,16,16,2,34,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T13:00:00Z,good
+0,,none,0,16,16,2,33,87,SITE-BR-02,Branch — Silom,3,2026-05-18T13:00:00Z,good
+0,,none,0,12,12,1,24,95,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T13:00:00Z,good
+0,,none,0,12,12,2,24,90,SITE-BR-04,Branch — Ladprao,3,2026-05-18T13:00:00Z,good
+0,,none,0,12,12,2,26,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T13:00:00Z,good
+0,,none,0,12,12,1,24,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T13:00:00Z,good
+0,,none,0,24,24,2,51,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T13:00:00Z,good
+0,,none,0,24,24,1,48,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T13:00:00Z,good
+0,,none,0,24,24,1,46,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T13:00:00Z,good
+0,,none,0,20,20,1,38,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T13:00:00Z,good
+0,,none,0,8,8,1,16,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T13:00:00Z,good
+0,,none,0,8,8,3,16,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T13:00:00Z,good
+0,,none,0,16,16,3,30,91,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T14:00:00Z,good
+0,,none,0,16,16,0,32,85,SITE-BR-02,Branch — Silom,3,2026-05-18T14:00:00Z,good
+0,,none,0,12,12,1,27,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T14:00:00Z,good
+0,,none,0,12,12,3,25,86,SITE-BR-04,Branch — Ladprao,3,2026-05-18T14:00:00Z,good
+0,,none,0,12,12,2,22,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T14:00:00Z,good
+0,,none,0,12,12,0,23,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T14:00:00Z,good
+0,,none,0,24,24,2,49,95,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T14:00:00Z,good
+0,,none,0,24,24,0,45,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T14:00:00Z,good
+0,,none,0,24,24,1,47,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T14:00:00Z,good
+0,,none,0,20,20,0,42,93,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T14:00:00Z,good
+0,,none,0,8,8,3,17,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T14:00:00Z,good
+0,,none,0,8,8,1,16,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T14:00:00Z,good
+0,,none,0,16,16,2,33,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T15:00:00Z,good
+0,,none,0,16,16,1,33,85,SITE-BR-02,Branch — Silom,3,2026-05-18T15:00:00Z,good
+0,,none,0,12,12,3,23,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T15:00:00Z,good
+0,,none,0,12,12,3,25,88,SITE-BR-04,Branch — Ladprao,3,2026-05-18T15:00:00Z,good
+0,,none,0,12,12,1,22,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T15:00:00Z,good
+0,,none,0,12,12,0,25,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T15:00:00Z,good
+0,,none,0,24,24,3,48,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T15:00:00Z,good
+0,,none,0,24,24,1,48,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T15:00:00Z,good
+0,,none,0,24,24,1,50,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T15:00:00Z,good
+0,,none,0,20,20,1,42,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T15:00:00Z,good
+0,,none,0,8,8,2,15,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T15:00:00Z,good
+0,,none,0,8,8,1,17,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T15:00:00Z,good
+0,,none,0,16,16,3,34,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T16:00:00Z,good
+0,,none,0,16,16,1,30,89,SITE-BR-02,Branch — Silom,3,2026-05-18T16:00:00Z,good
+0,,none,0,12,12,2,27,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T16:00:00Z,good
+0,,none,0,12,12,1,25,88,SITE-BR-04,Branch — Ladprao,3,2026-05-18T16:00:00Z,good
+0,,none,0,12,12,1,25,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T16:00:00Z,good
+0,,none,0,12,12,2,24,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T16:00:00Z,good
+0,,none,0,24,24,2,46,99,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T16:00:00Z,good
+0,,none,0,24,24,3,49,97,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T16:00:00Z,good
+0,,none,0,24,24,0,46,98,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T16:00:00Z,good
+0,,none,0,20,20,3,38,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T16:00:00Z,good
+0,,none,0,8,8,0,18,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T16:00:00Z,good
+0,,none,0,8,8,2,17,87,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T16:00:00Z,good
+0,,none,1,15,16,3,32,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T17:00:00Z,good
+0,,none,0,16,16,2,34,88,SITE-BR-02,Branch — Silom,3,2026-05-18T17:00:00Z,good
+0,,none,0,12,12,0,27,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T17:00:00Z,good
+0,,none,0,12,12,2,21,87,SITE-BR-04,Branch — Ladprao,3,2026-05-18T17:00:00Z,good
+0,,none,0,12,12,3,23,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T17:00:00Z,good
+0,,none,1,11,12,0,21,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T17:00:00Z,good
+0,,none,0,24,24,1,47,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T17:00:00Z,good
+0,,none,0,24,24,3,50,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T17:00:00Z,good
+0,,none,0,24,24,1,50,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T17:00:00Z,good
+0,,none,0,20,20,1,43,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T17:00:00Z,good
+0,,none,0,8,8,3,17,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T17:00:00Z,good
+0,,none,0,8,8,0,15,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T17:00:00Z,good
+0,,none,0,16,16,3,31,87,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T18:00:00Z,good
+0,,none,0,16,16,3,31,86,SITE-BR-02,Branch — Silom,3,2026-05-18T18:00:00Z,good
+0,,none,0,12,12,3,26,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T18:00:00Z,good
+0,,none,0,12,12,2,23,85,SITE-BR-04,Branch — Ladprao,3,2026-05-18T18:00:00Z,good
+0,,none,0,12,12,1,21,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T18:00:00Z,good
+0,,none,0,12,12,1,24,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T18:00:00Z,good
+0,,none,0,24,24,0,48,95,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T18:00:00Z,good
+0,,none,0,24,24,1,47,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T18:00:00Z,good
+0,,none,0,24,24,0,46,94,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T18:00:00Z,good
+0,,none,0,20,20,0,43,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T18:00:00Z,good
+0,,none,0,8,8,1,16,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T18:00:00Z,good
+0,,none,0,8,8,0,14,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T18:00:00Z,good
+0,,none,0,16,16,3,34,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T19:00:00Z,good
+0,,none,0,16,16,0,34,87,SITE-BR-02,Branch — Silom,3,2026-05-18T19:00:00Z,good
+0,,none,0,12,12,1,25,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T19:00:00Z,good
+0,,none,0,12,12,1,24,89,SITE-BR-04,Branch — Ladprao,3,2026-05-18T19:00:00Z,good
+0,,none,0,12,12,1,26,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T19:00:00Z,good
+0,,none,0,12,12,1,23,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T19:00:00Z,good
+0,,none,0,24,24,0,50,95,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T19:00:00Z,good
+0,,none,0,24,24,2,50,92,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T19:00:00Z,good
+0,,none,0,24,24,3,50,93,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T19:00:00Z,good
+0,,none,0,20,20,0,43,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T19:00:00Z,good
+1,Network degradation — upstream ISP issue,warning,1,7,8,27,5,70,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T19:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,7,8,24,3,62,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T19:00:00Z,fair
+0,,none,0,16,16,0,33,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T20:00:00Z,good
+0,,none,0,16,16,1,32,84,SITE-BR-02,Branch — Silom,3,2026-05-18T20:00:00Z,good
+0,,none,0,12,12,3,23,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T20:00:00Z,good
+0,,none,0,12,12,0,21,89,SITE-BR-04,Branch — Ladprao,3,2026-05-18T20:00:00Z,good
+0,,none,0,12,12,2,23,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T20:00:00Z,good
+0,,none,0,12,12,1,27,96,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T20:00:00Z,good
+0,,none,0,24,24,3,47,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T20:00:00Z,good
+0,,none,0,24,24,0,50,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T20:00:00Z,good
+0,,none,0,24,24,0,48,93,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T20:00:00Z,good
+0,,none,0,20,20,0,38,88,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T20:00:00Z,good
+1,Network degradation — upstream ISP issue,warning,1,7,8,28,8,70,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T20:00:00Z,fair
+1,Network degradation — upstream ISP issue,warning,1,7,8,36,6,61,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T20:00:00Z,fair
+0,,none,0,16,16,2,30,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T21:00:00Z,good
+0,,none,0,16,16,1,29,85,SITE-BR-02,Branch — Silom,3,2026-05-18T21:00:00Z,good
+0,,none,0,12,12,2,23,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T21:00:00Z,good
+0,,none,0,12,12,1,27,87,SITE-BR-04,Branch — Ladprao,3,2026-05-18T21:00:00Z,good
+0,,none,0,12,12,0,25,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T21:00:00Z,good
+0,,none,0,12,12,1,23,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T21:00:00Z,good
+0,,none,0,24,24,0,45,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T21:00:00Z,good
+0,,none,0,24,24,2,48,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T21:00:00Z,good
+0,,none,0,24,24,0,45,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T21:00:00Z,good
+0,,none,0,20,20,3,38,90,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T21:00:00Z,good
+0,,none,0,8,8,3,19,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T21:00:00Z,good
+0,,none,0,8,8,3,17,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T21:00:00Z,good
+0,,none,0,16,16,0,7,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T22:00:00Z,good
+0,,none,0,16,16,0,11,85,SITE-BR-02,Branch — Silom,3,2026-05-18T22:00:00Z,good
+0,,none,0,12,12,2,9,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T22:00:00Z,good
+0,,none,0,12,12,0,6,87,SITE-BR-04,Branch — Ladprao,3,2026-05-18T22:00:00Z,good
+0,,none,0,12,12,0,3,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T22:00:00Z,good
+0,,none,0,12,12,1,8,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T22:00:00Z,good
+0,,none,1,23,24,0,9,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T22:00:00Z,good
+0,,none,0,24,24,1,9,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T22:00:00Z,good
+0,,none,0,24,24,3,14,93,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T22:00:00Z,good
+0,,none,0,20,20,1,7,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T22:00:00Z,good
+0,,none,0,8,8,0,4,89,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T22:00:00Z,good
+0,,none,0,8,8,2,5,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T22:00:00Z,good
+0,,none,0,16,16,0,9,86,SITE-BR-01,Branch — Sukhumvit,3,2026-05-18T23:00:00Z,good
+0,,none,0,16,16,3,9,88,SITE-BR-02,Branch — Silom,3,2026-05-18T23:00:00Z,good
+0,,none,0,12,12,0,5,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-18T23:00:00Z,good
+0,,none,1,11,12,0,8,89,SITE-BR-04,Branch — Ladprao,3,2026-05-18T23:00:00Z,good
+0,,none,0,12,12,0,9,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-18T23:00:00Z,good
+0,,none,0,12,12,0,7,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-18T23:00:00Z,good
+0,,none,0,24,24,2,14,94,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-18T23:00:00Z,good
+0,,none,0,24,24,3,9,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-18T23:00:00Z,good
+0,,none,0,24,24,0,10,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-18T23:00:00Z,good
+0,,none,0,20,20,1,8,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-18T23:00:00Z,good
+0,,none,0,8,8,2,5,90,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-18T23:00:00Z,good
+0,,none,0,8,8,0,2,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-18T23:00:00Z,good
+0,,none,0,16,16,2,10,87,SITE-BR-01,Branch — Sukhumvit,3,2026-05-19T00:00:00Z,good
+0,,none,1,15,16,0,8,85,SITE-BR-02,Branch — Silom,3,2026-05-19T00:00:00Z,good
+0,,none,0,12,12,1,3,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-19T00:00:00Z,good
+0,,none,0,12,12,2,3,86,SITE-BR-04,Branch — Ladprao,3,2026-05-19T00:00:00Z,good
+0,,none,0,12,12,1,7,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-19T00:00:00Z,good
+0,,none,0,12,12,1,9,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-19T00:00:00Z,good
+0,,none,0,24,24,2,11,95,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-19T00:00:00Z,good
+0,,none,0,24,24,0,11,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-19T00:00:00Z,good
+0,,none,0,24,24,1,11,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-19T00:00:00Z,good
+0,,none,0,20,20,1,12,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-19T00:00:00Z,good
+0,,none,0,8,8,3,6,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-19T00:00:00Z,good
+0,,none,0,8,8,0,7,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-19T00:00:00Z,good
+0,,none,0,16,16,2,7,86,SITE-BR-01,Branch — Sukhumvit,3,2026-05-19T01:00:00Z,good
+0,,none,0,16,16,1,8,84,SITE-BR-02,Branch — Silom,3,2026-05-19T01:00:00Z,good
+0,,none,0,12,12,3,8,90,SITE-BR-03,Branch — Chatuchak,3,2026-05-19T01:00:00Z,good
+0,,none,0,12,12,1,6,87,SITE-BR-04,Branch — Ladprao,3,2026-05-19T01:00:00Z,good
+0,,none,0,12,12,2,7,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-19T01:00:00Z,good
+0,,none,0,12,12,0,5,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-19T01:00:00Z,good
+0,,none,0,24,24,3,9,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-19T01:00:00Z,good
+0,,none,0,24,24,2,11,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-19T01:00:00Z,good
+0,,none,0,24,24,1,10,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-19T01:00:00Z,good
+0,,none,0,20,20,3,9,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-19T01:00:00Z,good
+0,,none,0,8,8,1,4,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-19T01:00:00Z,good
+0,,none,0,8,8,0,2,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-19T01:00:00Z,good
+0,,none,1,15,16,2,5,86,SITE-BR-01,Branch — Sukhumvit,3,2026-05-19T02:00:00Z,good
+0,,none,0,16,16,2,9,86,SITE-BR-02,Branch — Silom,3,2026-05-19T02:00:00Z,good
+0,,none,0,12,12,0,7,90,SITE-BR-03,Branch — Chatuchak,3,2026-05-19T02:00:00Z,good
+0,,none,0,12,12,1,6,85,SITE-BR-04,Branch — Ladprao,3,2026-05-19T02:00:00Z,good
+0,,none,0,12,12,1,4,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-19T02:00:00Z,good
+0,,none,0,12,12,0,7,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-19T02:00:00Z,good
+0,,none,0,24,24,3,15,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-19T02:00:00Z,good
+0,,none,0,24,24,3,10,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-19T02:00:00Z,good
+0,,none,0,24,24,1,13,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-19T02:00:00Z,good
+0,,none,0,20,20,0,13,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-19T02:00:00Z,good
+0,,none,0,8,8,2,2,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-19T02:00:00Z,good
+0,,none,0,8,8,3,5,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-19T02:00:00Z,good
+0,,none,0,16,16,2,10,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-19T03:00:00Z,good
+0,,none,0,16,16,0,7,85,SITE-BR-02,Branch — Silom,3,2026-05-19T03:00:00Z,good
+0,,none,0,12,12,2,4,92,SITE-BR-03,Branch — Chatuchak,3,2026-05-19T03:00:00Z,good
+0,,none,0,12,12,3,7,87,SITE-BR-04,Branch — Ladprao,3,2026-05-19T03:00:00Z,good
+0,,none,0,12,12,3,4,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-19T03:00:00Z,good
+0,,none,0,12,12,0,3,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-19T03:00:00Z,good
+0,,none,0,24,24,1,9,95,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-19T03:00:00Z,good
+0,,none,0,24,24,0,12,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-19T03:00:00Z,good
+0,,none,0,24,24,3,10,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-19T03:00:00Z,good
+0,,none,0,20,20,0,12,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-19T03:00:00Z,good
+0,,none,0,8,8,3,5,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-19T03:00:00Z,good
+0,,none,0,8,8,2,1,82,SITE-WH-02,Warehouse — Bang Na,2,2026-05-19T03:00:00Z,good
+0,,none,0,16,16,3,5,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-19T04:00:00Z,good
+0,,none,0,16,16,1,11,84,SITE-BR-02,Branch — Silom,3,2026-05-19T04:00:00Z,good
+0,,none,0,12,12,3,4,91,SITE-BR-03,Branch — Chatuchak,3,2026-05-19T04:00:00Z,good
+0,,none,0,12,12,1,3,89,SITE-BR-04,Branch — Ladprao,3,2026-05-19T04:00:00Z,good
+0,,none,0,12,12,2,6,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-19T04:00:00Z,good
+0,,none,0,12,12,2,3,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-19T04:00:00Z,good
+0,,none,0,24,24,1,12,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-19T04:00:00Z,good
+0,,none,0,24,24,1,9,92,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-19T04:00:00Z,good
+0,,none,0,24,24,3,12,93,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-19T04:00:00Z,good
+0,,none,0,20,20,1,7,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-19T04:00:00Z,good
+0,,none,0,8,8,0,3,91,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-19T04:00:00Z,good
+0,,none,0,8,8,3,1,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-19T04:00:00Z,good
+0,,none,0,16,16,2,93,89,SITE-BR-01,Branch — Sukhumvit,3,2026-05-19T05:00:00Z,good
+0,,none,0,16,16,0,99,88,SITE-BR-02,Branch — Silom,3,2026-05-19T05:00:00Z,good
+0,,none,0,12,12,3,72,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-19T05:00:00Z,good
+0,,none,0,12,12,1,72,89,SITE-BR-04,Branch — Ladprao,3,2026-05-19T05:00:00Z,good
+0,,none,0,12,12,0,72,97,SITE-DC-01,Data Centre — Wing A,2,2026-05-19T05:00:00Z,good
+0,,none,0,12,12,3,70,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-19T05:00:00Z,good
+0,,none,0,24,24,2,145,94,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-19T05:00:00Z,good
+0,,none,0,24,24,0,146,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-19T05:00:00Z,good
+0,,none,0,24,24,3,147,94,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-19T05:00:00Z,good
+0,,none,0,20,20,2,121,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-19T05:00:00Z,good
+0,,none,0,8,8,0,51,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-19T05:00:00Z,good
+0,,none,0,8,8,0,50,84,SITE-WH-02,Warehouse — Bang Na,2,2026-05-19T05:00:00Z,good
+0,,none,0,16,16,3,158,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-19T06:00:00Z,good
+0,,none,1,15,16,3,160,84,SITE-BR-02,Branch — Silom,3,2026-05-19T06:00:00Z,good
+0,,none,0,12,12,3,121,90,SITE-BR-03,Branch — Chatuchak,3,2026-05-19T06:00:00Z,good
+0,,none,0,12,12,1,117,89,SITE-BR-04,Branch — Ladprao,3,2026-05-19T06:00:00Z,good
+0,,none,0,12,12,3,118,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-19T06:00:00Z,good
+0,,none,0,12,12,0,119,96,SITE-DC-02,Data Centre — Wing B,2,2026-05-19T06:00:00Z,good
+0,,none,0,24,24,3,238,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-19T06:00:00Z,good
+0,,none,0,24,24,3,238,92,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-19T06:00:00Z,good
+0,,none,0,24,24,2,242,96,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-19T06:00:00Z,good
+0,,none,0,20,20,0,201,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-19T06:00:00Z,good
+0,,none,0,8,8,2,81,89,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-19T06:00:00Z,good
+0,,none,0,8,8,1,83,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-19T06:00:00Z,good
+0,,none,0,16,16,3,160,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-19T07:00:00Z,good
+0,,none,0,16,16,1,157,85,SITE-BR-02,Branch — Silom,3,2026-05-19T07:00:00Z,good
+0,,none,0,12,12,2,117,94,SITE-BR-03,Branch — Chatuchak,3,2026-05-19T07:00:00Z,good
+0,,none,0,12,12,3,123,85,SITE-BR-04,Branch — Ladprao,3,2026-05-19T07:00:00Z,good
+0,,none,0,12,12,0,121,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-19T07:00:00Z,good
+0,,none,0,12,12,0,118,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-19T07:00:00Z,good
+0,,none,0,24,24,2,240,96,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-19T07:00:00Z,good
+0,,none,0,24,24,1,237,95,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-19T07:00:00Z,good
+0,,none,0,24,24,0,238,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-19T07:00:00Z,good
+0,,none,0,20,20,3,202,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-19T07:00:00Z,good
+0,,none,0,8,8,0,78,89,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-19T07:00:00Z,good
+0,,none,0,8,8,0,77,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-19T07:00:00Z,good
+0,,none,0,16,16,1,159,88,SITE-BR-01,Branch — Sukhumvit,3,2026-05-19T08:00:00Z,good
+0,,none,0,16,16,2,159,84,SITE-BR-02,Branch — Silom,3,2026-05-19T08:00:00Z,good
+0,,none,0,12,12,2,117,90,SITE-BR-03,Branch — Chatuchak,3,2026-05-19T08:00:00Z,good
+0,,none,0,12,12,1,120,86,SITE-BR-04,Branch — Ladprao,3,2026-05-19T08:00:00Z,good
+0,,none,0,12,12,1,118,98,SITE-DC-01,Data Centre — Wing A,2,2026-05-19T08:00:00Z,good
+0,,none,0,12,12,2,122,99,SITE-DC-02,Data Centre — Wing B,2,2026-05-19T08:00:00Z,good
+0,,none,0,24,24,3,240,95,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-19T08:00:00Z,good
+0,,none,0,24,24,2,242,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-19T08:00:00Z,good
+0,,none,0,24,24,2,237,95,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-19T08:00:00Z,good
+0,,none,0,20,20,0,199,88,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-19T08:00:00Z,good
+0,,none,0,8,8,3,80,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-19T08:00:00Z,good
+0,,none,0,8,8,2,78,83,SITE-WH-02,Warehouse — Bang Na,2,2026-05-19T08:00:00Z,good
+0,,none,0,16,16,1,157,87,SITE-BR-01,Branch — Sukhumvit,3,2026-05-19T09:00:00Z,good
+0,,none,0,16,16,3,158,85,SITE-BR-02,Branch — Silom,3,2026-05-19T09:00:00Z,good
+0,,none,0,12,12,3,117,90,SITE-BR-03,Branch — Chatuchak,3,2026-05-19T09:00:00Z,good
+0,,none,1,11,12,0,121,86,SITE-BR-04,Branch — Ladprao,3,2026-05-19T09:00:00Z,good
+0,,none,0,12,12,0,120,99,SITE-DC-01,Data Centre — Wing A,2,2026-05-19T09:00:00Z,good
+0,,none,0,12,12,1,122,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-19T09:00:00Z,good
+0,,none,0,24,24,0,238,97,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-19T09:00:00Z,good
+0,,none,0,24,24,1,241,94,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-19T09:00:00Z,good
+0,,none,0,24,24,2,241,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-19T09:00:00Z,good
+0,,none,0,20,20,0,199,92,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-19T09:00:00Z,good
+0,,none,1,7,8,3,82,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-19T09:00:00Z,good
+0,,none,0,8,8,0,79,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-19T09:00:00Z,good
+0,,none,0,16,16,0,161,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-19T10:00:00Z,good
+0,,none,0,16,16,1,162,86,SITE-BR-02,Branch — Silom,3,2026-05-19T10:00:00Z,good
+0,,none,0,12,12,3,118,93,SITE-BR-03,Branch — Chatuchak,3,2026-05-19T10:00:00Z,good
+0,,none,0,12,12,2,118,88,SITE-BR-04,Branch — Ladprao,3,2026-05-19T10:00:00Z,good
+0,,none,0,12,12,1,123,97,SITE-DC-01,Data Centre — Wing A,2,2026-05-19T10:00:00Z,good
+0,,none,0,12,12,1,119,97,SITE-DC-02,Data Centre — Wing B,2,2026-05-19T10:00:00Z,good
+0,,none,0,24,24,1,242,94,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-19T10:00:00Z,good
+0,,none,0,24,24,1,240,93,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-19T10:00:00Z,good
+0,,none,0,24,24,3,238,97,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-19T10:00:00Z,good
+0,,none,0,20,20,2,202,91,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-19T10:00:00Z,good
+0,,none,0,8,8,1,82,93,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-19T10:00:00Z,good
+0,,none,0,8,8,3,78,85,SITE-WH-02,Warehouse — Bang Na,2,2026-05-19T10:00:00Z,good
+0,,none,0,16,16,2,158,90,SITE-BR-01,Branch — Sukhumvit,3,2026-05-19T11:00:00Z,good
+0,,none,0,16,16,0,159,87,SITE-BR-02,Branch — Silom,3,2026-05-19T11:00:00Z,good
+0,,none,0,12,12,2,120,90,SITE-BR-03,Branch — Chatuchak,3,2026-05-19T11:00:00Z,good
+0,,none,0,12,12,0,118,85,SITE-BR-04,Branch — Ladprao,3,2026-05-19T11:00:00Z,good
+0,,none,0,12,12,1,123,97,SITE-DC-01,Data Centre — Wing A,2,2026-05-19T11:00:00Z,good
+0,,none,0,12,12,0,120,98,SITE-DC-02,Data Centre — Wing B,2,2026-05-19T11:00:00Z,good
+0,,none,0,24,24,0,238,98,SITE-HQ-01,Bangkok HQ — Floor 1,4,2026-05-19T11:00:00Z,good
+0,,none,0,24,24,1,240,96,SITE-HQ-02,Bangkok HQ — Floor 2,4,2026-05-19T11:00:00Z,good
+0,,none,0,24,24,2,237,94,SITE-HQ-03,Bangkok HQ — Floor 3,4,2026-05-19T11:00:00Z,good
+0,,none,0,20,20,3,202,89,SITE-HQ-04,Bangkok HQ — Floor 4,4,2026-05-19T11:00:00Z,good
+0,,none,0,8,8,3,83,92,SITE-WH-01,Warehouse — Lat Krabang,2,2026-05-19T11:00:00Z,good
+0,,none,0,8,8,1,82,86,SITE-WH-02,Warehouse — Bang Na,2,2026-05-19T11:00:00Z,good
