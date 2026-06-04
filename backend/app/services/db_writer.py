@@ -1,4 +1,4 @@
-"""Writes normalised SiteHealth records to MySQL."""
+"""Writes normalised SiteHealth records to MS SQL Server."""
 
 import logging
 from datetime import datetime, timezone
@@ -50,7 +50,8 @@ def persist_sites(db: Session, sites: List[SiteHealth]) -> int:
 def get_latest_snapshot(db: Session) -> list:
     """Return the most recent record per site_id.
 
-    MySQL does not support DISTINCT ON --- rewritten as a subquery join.
+    Uses a subquery join -- works identically on MS SQL and MySQL.
+    MS SQL does not support PostgreSQL DISTINCT ON syntax.
     """
     result = db.execute(text("""
         SELECT wm.*
@@ -59,8 +60,9 @@ def get_latest_snapshot(db: Session) -> list:
             SELECT site_id, MAX(ingested_at) AS max_ingested
             FROM wireless_metrics
             GROUP BY site_id
-        ) latest ON wm.site_id = latest.site_id
-                     AND wm.ingested_at = latest.max_ingested
+        ) latest
+            ON  wm.site_id    = latest.site_id
+            AND wm.ingested_at = latest.max_ingested
         ORDER BY wm.site_id
     """))
     return result.mappings().all()
@@ -70,34 +72,42 @@ def get_trend(db: Session, hours: int = 168) -> list:
     """
     Return hourly trend data for the last N hours.
 
-    Rebases data_timestamp offsets onto NOW() so the chart always shows
-    a rolling window regardless of when the CSV was generated.
+    Rebases data_timestamp offsets onto GETUTCDATE() so the chart always
+    shows a rolling window regardless of when the CSV was generated.
 
-    MySQL differences from PostgreSQL version:
-      - DATE_FORMAT replaces date_trunc
-      - TIMESTAMPDIFF replaces interval arithmetic
-      - INTERVAL syntax uses MySQL format
-      - Window functions MAX() OVER () supported in MySQL 8+
+    MS SQL Server T-SQL specifics used here:
+      GETUTCDATE()          -- UTC equivalent of NOW() / PostgreSQL NOW()
+      DATEADD(unit, n, x)   -- replaces DATE_SUB / DATE_ADD
+      DATEDIFF(unit, a, b)  -- replaces TIMESTAMPDIFF
+      DATEADD(HOUR,         -- truncate to hour boundary
+        DATEDIFF(HOUR, 0, x), 0)
+      MAX() OVER ()         -- window function, supported in MS SQL 2012+
     """
     result = db.execute(text(f"""
         WITH ranked AS (
             SELECT *,
-                   MAX(ingested_at) OVER () AS max_ingest,
+                   MAX(ingested_at)    OVER () AS max_ingest,
                    MAX(data_timestamp) OVER () AS max_data_ts
             FROM wireless_metrics
             WHERE ingested_at >= (
-                SELECT DATE_SUB(MAX(ingested_at), INTERVAL 5 MINUTE)
+                SELECT DATEADD(MINUTE, -5, MAX(ingested_at))
                 FROM wireless_metrics
             )
         ),
         rebased AS (
             SELECT
-                DATE_FORMAT(
-                    DATE_SUB(
-                        NOW(),
-                        INTERVAL TIMESTAMPDIFF(SECOND, data_timestamp, max_data_ts) SECOND
+                DATEADD(
+                    HOUR,
+                    DATEDIFF(
+                        HOUR,
+                        0,
+                        DATEADD(
+                            SECOND,
+                            -DATEDIFF(SECOND, data_timestamp, max_data_ts),
+                            GETUTCDATE()
+                        )
                     ),
-                    '%Y-%m-%d %H:00:00'
+                    0
                 ) AS bucket,
                 composite_score,
                 ap_online_pct,
@@ -110,10 +120,7 @@ def get_trend(db: Session, hours: int = 168) -> list:
             ROUND(AVG(ap_online_pct), 1)    AS ap_online_pct,
             SUM(client_count)               AS client_count
         FROM rebased
-        WHERE bucket >= DATE_FORMAT(
-                DATE_SUB(NOW(), INTERVAL {hours} HOUR),
-                '%Y-%m-%d %H:00:00'
-              )
+        WHERE bucket >= DATEADD(HOUR, -{hours}, GETUTCDATE())
         GROUP BY bucket
         ORDER BY bucket ASC
     """))

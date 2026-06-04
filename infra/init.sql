@@ -1,112 +1,187 @@
 -- =============================================================================
 -- GBS Service Health Dashboard -- Database Initialisation
--- MySQL 8.0+
+-- Microsoft SQL Server 2017+ / Azure SQL
 -- Run once using the gbs_admin (or DBA) account before starting the application.
+-- Execute in SQL Server Management Studio (SSMS) or sqlcmd.
 -- =============================================================================
 
--- Create database if not already created by the DBA
-CREATE DATABASE IF NOT EXISTS gbs_health
-    CHARACTER SET utf8mb4
-    COLLATE utf8mb4_unicode_ci;
+-- =============================================================================
+-- Create database (comment out if DBA has already created it)
+-- =============================================================================
+IF NOT EXISTS (
+    SELECT name FROM sys.databases WHERE name = N'gbs_health'
+)
+BEGIN
+    CREATE DATABASE gbs_health
+        COLLATE SQL_Latin1_General_CP1_CI_AS;
+    PRINT 'Database gbs_health created.';
+END
+GO
 
 USE gbs_health;
+GO
 
 -- =============================================================================
 -- wireless_metrics -- main time-series table
--- Partitioned by YEAR(data_timestamp) for efficient time-range queries.
--- Add a new partition each year as the data grows.
 -- =============================================================================
-CREATE TABLE IF NOT EXISTS wireless_metrics (
-    id                BIGINT        NOT NULL AUTO_INCREMENT,
-    ingested_at       DATETIME(0)   NOT NULL DEFAULT (UTC_TIMESTAMP()),
-    site_id           VARCHAR(64)   NOT NULL,
-    site_name         VARCHAR(255)  NOT NULL,
-    data_timestamp    DATETIME(0)   NOT NULL,
-    composite_score   DECIMAL(5,1)  NOT NULL,
-    site_health_score INT           NOT NULL,
-    ap_total          INT           NOT NULL,
-    ap_online         INT           NOT NULL,
-    ap_offline        INT           NOT NULL,
-    ap_online_pct     DECIMAL(5,1)  NOT NULL,
-    client_count      INT           NOT NULL,
-    auth_failures_1h  INT           NOT NULL,
-    active_alerts     INT           NOT NULL,
-    alert_severity    VARCHAR(16)   NOT NULL,
-    alert_description TEXT,
-    ssid_count        INT           NOT NULL,
-    uplink_quality    VARCHAR(16)   NOT NULL,
-    status            VARCHAR(8)    NOT NULL,
-    PRIMARY KEY (id, data_timestamp)
+IF NOT EXISTS (
+    SELECT 1 FROM sys.objects
+    WHERE object_id = OBJECT_ID(N'dbo.wireless_metrics')
+    AND type = N'U'
 )
-ENGINE=InnoDB
-DEFAULT CHARSET=utf8mb4
-COLLATE=utf8mb4_unicode_ci
-PARTITION BY RANGE (YEAR(data_timestamp)) (
-    PARTITION p2025 VALUES LESS THAN (2026),
-    PARTITION p2026 VALUES LESS THAN (2027),
-    PARTITION p2027 VALUES LESS THAN (2028),
-    PARTITION pfuture VALUES LESS THAN MAXVALUE
-);
+BEGIN
+    CREATE TABLE dbo.wireless_metrics (
+        id                BIGINT          NOT NULL IDENTITY(1,1),
+        ingested_at       DATETIME2(0)    NOT NULL DEFAULT GETUTCDATE(),
+        site_id           NVARCHAR(64)    NOT NULL,
+        site_name         NVARCHAR(255)   NOT NULL,
+        data_timestamp    DATETIME2(0)    NOT NULL,
+        composite_score   DECIMAL(5,1)    NOT NULL,
+        site_health_score INT             NOT NULL,
+        ap_total          INT             NOT NULL,
+        ap_online         INT             NOT NULL,
+        ap_offline        INT             NOT NULL,
+        ap_online_pct     DECIMAL(5,1)    NOT NULL,
+        client_count      INT             NOT NULL,
+        auth_failures_1h  INT             NOT NULL,
+        active_alerts     INT             NOT NULL,
+        alert_severity    NVARCHAR(16)    NOT NULL,
+        alert_description NVARCHAR(MAX)   NULL,
+        ssid_count        INT             NOT NULL,
+        uplink_quality    NVARCHAR(16)    NOT NULL,
+        status            NVARCHAR(8)     NOT NULL,
 
--- Index for fast per-site lookups and trend queries
-CREATE INDEX IF NOT EXISTS idx_wm_site_ingested
-    ON wireless_metrics (site_id, ingested_at DESC);
+        CONSTRAINT PK_wireless_metrics PRIMARY KEY CLUSTERED (id ASC)
+    );
+    PRINT 'Table wireless_metrics created.';
+END
+GO
 
-CREATE INDEX IF NOT EXISTS idx_wm_data_timestamp
-    ON wireless_metrics (data_timestamp);
+-- Index for fast per-site lookups (latest record per site)
+IF NOT EXISTS (
+    SELECT 1 FROM sys.indexes
+    WHERE name = N'IX_wireless_metrics_site_ingested'
+    AND object_id = OBJECT_ID(N'dbo.wireless_metrics')
+)
+BEGIN
+    CREATE NONCLUSTERED INDEX IX_wireless_metrics_site_ingested
+        ON dbo.wireless_metrics (site_id ASC, ingested_at DESC);
+    PRINT 'Index IX_wireless_metrics_site_ingested created.';
+END
+GO
+
+-- Index for trend query (data_timestamp range scans)
+IF NOT EXISTS (
+    SELECT 1 FROM sys.indexes
+    WHERE name = N'IX_wireless_metrics_data_timestamp'
+    AND object_id = OBJECT_ID(N'dbo.wireless_metrics')
+)
+BEGIN
+    CREATE NONCLUSTERED INDEX IX_wireless_metrics_data_timestamp
+        ON dbo.wireless_metrics (data_timestamp ASC)
+        INCLUDE (composite_score, ap_online_pct, client_count, ingested_at);
+    PRINT 'Index IX_wireless_metrics_data_timestamp created.';
+END
+GO
 
 -- =============================================================================
 -- dashboard_config -- key-value configuration store
 -- =============================================================================
-CREATE TABLE IF NOT EXISTS dashboard_config (
-    `key`       VARCHAR(128) NOT NULL,
-    `value`     TEXT         NOT NULL,
-    description TEXT,
-    updated_at  DATETIME(0)  NOT NULL DEFAULT (UTC_TIMESTAMP())
-                             ON UPDATE (UTC_TIMESTAMP()),
-    PRIMARY KEY (`key`)
+IF NOT EXISTS (
+    SELECT 1 FROM sys.objects
+    WHERE object_id = OBJECT_ID(N'dbo.dashboard_config')
+    AND type = N'U'
 )
-ENGINE=InnoDB
-DEFAULT CHARSET=utf8mb4
-COLLATE=utf8mb4_unicode_ci;
+BEGIN
+    CREATE TABLE dbo.dashboard_config (
+        [key]       NVARCHAR(128)   NOT NULL,
+        [value]     NVARCHAR(MAX)   NOT NULL,
+        description NVARCHAR(MAX)   NULL,
+        updated_at  DATETIME2(0)    NOT NULL DEFAULT GETUTCDATE(),
 
--- Seed default thresholds (safe to re-run -- INSERT IGNORE skips existing rows)
-INSERT IGNORE INTO dashboard_config (`key`, `value`, description) VALUES
-    ('score_green',    '72',   'Composite score threshold for Green status'),
-    ('score_amber',    '55',   'Composite score threshold for Amber (below = Red)'),
-    ('ap_pct_green',   '95',   'AP online % threshold for Green'),
-    ('ap_pct_amber',   '85',   'AP online % threshold for Amber'),
-    ('poll_interval',  '60',   'Ingestion poll interval in seconds'),
-    ('is_poc',         'true', 'Flag indicating POC mode (file-based data)');
+        CONSTRAINT PK_dashboard_config PRIMARY KEY CLUSTERED ([key] ASC)
+    );
+    PRINT 'Table dashboard_config created.';
+END
+GO
+
+-- Seed default thresholds
+-- MERGE used for idempotency -- safe to re-run without duplicating rows
+MERGE dbo.dashboard_config AS target
+USING (VALUES
+    ('score_green',   '72',   'Composite score threshold for Green status'),
+    ('score_amber',   '55',   'Composite score threshold for Amber (below = Red)'),
+    ('ap_pct_green',  '95',   'AP online % threshold for Green'),
+    ('ap_pct_amber',  '85',   'AP online % threshold for Amber'),
+    ('poll_interval', '60',   'Ingestion poll interval in seconds'),
+    ('is_poc',        'true', 'Flag indicating POC mode (file-based data)')
+) AS source ([key], [value], description)
+ON target.[key] = source.[key]
+WHEN NOT MATCHED THEN
+    INSERT ([key], [value], description)
+    VALUES (source.[key], source.[value], source.description);
+GO
+
+PRINT 'Default configuration seeded.';
+GO
 
 -- =============================================================================
--- Retention event -- deletes rows older than 90 days (runs nightly at 02:00)
+-- Retention -- delete rows older than 90 days
 -- Equivalent of TimescaleDB add_retention_policy()
--- Requires MySQL Event Scheduler to be enabled:
---   SET GLOBAL event_scheduler = ON;
+--
+-- Option A: Run manually or via SQL Server Agent Job (recommended).
+-- Option B: Ask the DBA to schedule the statement below as a nightly job.
+--
+-- Statement to schedule:
+--   DELETE FROM dbo.wireless_metrics
+--   WHERE data_timestamp < DATEADD(DAY, -90, GETUTCDATE());
+--
+-- SQL Server Agent Job setup is left to the DBA team.
 -- =============================================================================
-DROP EVENT IF EXISTS gbs_retention_cleanup;
-
-CREATE EVENT gbs_retention_cleanup
-    ON SCHEDULE EVERY 1 DAY
-    STARTS (CURRENT_DATE + INTERVAL 1 DAY + INTERVAL 2 HOUR)
-    DO
-        DELETE FROM wireless_metrics
-        WHERE data_timestamp < DATE_SUB(UTC_TIMESTAMP(), INTERVAL 90 DAY);
-
--- Enable event scheduler (requires SUPER or EVENT privilege)
--- Uncomment if not already enabled at server level:
--- SET GLOBAL event_scheduler = ON;
+PRINT 'NOTE: Schedule a nightly SQL Agent Job to run:';
+PRINT '  DELETE FROM dbo.wireless_metrics WHERE data_timestamp < DATEADD(DAY, -90, GETUTCDATE())';
+GO
 
 -- =============================================================================
 -- Grant permissions to application service account
--- Run this section as the DBA/root account.
--- Replace 'changeme' with the actual password provided by the SQL team.
--- Replace '%' with the actual application VM IP for tighter security.
+-- Run this block as SA or a user with ALTER ANY USER privilege.
+-- Replace the password placeholder with the actual password.
+-- Replace the login host restriction as appropriate for your environment.
 -- =============================================================================
--- CREATE USER IF NOT EXISTS 'gbs_app'@'%' IDENTIFIED BY 'changeme';
--- GRANT SELECT, INSERT, DELETE ON gbs_health.* TO 'gbs_app'@'%';
--- GRANT EVENT ON gbs_health.* TO 'gbs_app'@'%';
--- FLUSH PRIVILEGES;
 
-SELECT 'GBS Health database initialised successfully.' AS status;
+-- Create login at server level (if it doesn't exist)
+IF NOT EXISTS (
+    SELECT 1 FROM sys.server_principals WHERE name = N'gbs_app'
+)
+BEGIN
+    -- Replace 'changeme' with the actual password from the SQL team
+    CREATE LOGIN gbs_app WITH PASSWORD = 'changeme',
+        CHECK_POLICY = OFF,      -- disable complexity policy for POC
+        CHECK_EXPIRATION = OFF;  -- disable password expiry for POC
+    PRINT 'Login gbs_app created.';
+END
+GO
+
+-- Create database user mapped to the login
+IF NOT EXISTS (
+    SELECT 1 FROM sys.database_principals WHERE name = N'gbs_app'
+)
+BEGIN
+    CREATE USER gbs_app FOR LOGIN gbs_app;
+    PRINT 'Database user gbs_app created.';
+END
+GO
+
+-- Grant minimum required permissions
+GRANT SELECT   ON dbo.wireless_metrics  TO gbs_app;
+GRANT INSERT   ON dbo.wireless_metrics  TO gbs_app;
+GRANT DELETE   ON dbo.wireless_metrics  TO gbs_app;
+GRANT SELECT   ON dbo.dashboard_config  TO gbs_app;
+GRANT INSERT   ON dbo.dashboard_config  TO gbs_app;
+GO
+
+PRINT 'Permissions granted to gbs_app.';
+GO
+
+PRINT 'GBS Health database initialised successfully.';
+GO
