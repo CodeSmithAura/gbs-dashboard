@@ -1,10 +1,11 @@
-"""Writes normalised SiteHealth records to TimescaleDB."""
+"""Writes normalised SiteHealth records to MySQL."""
 
 import logging
 from datetime import datetime, timezone
 from typing import List
 
 from sqlalchemy.orm import Session
+from sqlalchemy import text
 
 from app.models.orm import WirelessMetric
 from app.models.schemas import SiteHealth
@@ -46,13 +47,21 @@ def persist_sites(db: Session, sites: List[SiteHealth]) -> int:
     return len(rows)
 
 
-def get_latest_snapshot(db: Session) -> List[WirelessMetric]:
-    """Return the most recent record per site_id."""
-    from sqlalchemy import text
+def get_latest_snapshot(db: Session) -> list:
+    """Return the most recent record per site_id.
+
+    MySQL does not support DISTINCT ON --- rewritten as a subquery join.
+    """
     result = db.execute(text("""
-        SELECT DISTINCT ON (site_id) *
-        FROM wireless_metrics
-        ORDER BY site_id, ingested_at DESC
+        SELECT wm.*
+        FROM wireless_metrics wm
+        INNER JOIN (
+            SELECT site_id, MAX(ingested_at) AS max_ingested
+            FROM wireless_metrics
+            GROUP BY site_id
+        ) latest ON wm.site_id = latest.site_id
+                     AND wm.ingested_at = latest.max_ingested
+        ORDER BY wm.site_id
     """))
     return result.mappings().all()
 
@@ -61,32 +70,34 @@ def get_trend(db: Session, hours: int = 168) -> list:
     """
     Return hourly trend data for the last N hours.
 
-    The 7-day CSV may have been generated days or weeks ago so its
-    data_timestamp values are stale. We filter by ingested_at (always
-    recent) but preserve the relative shape from data_timestamp by
-    computing an hour offset from the earliest data_timestamp in each
-    ingest batch — then rebasing those offsets onto NOW() so the chart
-    always shows a rolling window ending at the current time.
+    Rebases data_timestamp offsets onto NOW() so the chart always shows
+    a rolling window regardless of when the CSV was generated.
+
+    MySQL differences from PostgreSQL version:
+      - DATE_FORMAT replaces date_trunc
+      - TIMESTAMPDIFF replaces interval arithmetic
+      - INTERVAL syntax uses MySQL format
+      - Window functions MAX() OVER () supported in MySQL 8+
     """
-    from sqlalchemy import text
     result = db.execute(text(f"""
         WITH ranked AS (
-            -- Get all rows from the most recent ingest batch
-            -- (identified by the latest ingested_at value)
             SELECT *,
-                   MAX(ingested_at) OVER () AS latest_ingest
+                   MAX(ingested_at) OVER () AS max_ingest,
+                   MAX(data_timestamp) OVER () AS max_data_ts
             FROM wireless_metrics
             WHERE ingested_at >= (
-                SELECT MAX(ingested_at) - INTERVAL '5 minutes'
+                SELECT DATE_SUB(MAX(ingested_at), INTERVAL 5 MINUTE)
                 FROM wireless_metrics
             )
         ),
         rebased AS (
-            -- Rebase data_timestamp so that the latest data point
-            -- aligns with NOW(), preserving the relative hourly shape
             SELECT
-                date_trunc('hour',
-                    NOW() - (MAX(data_timestamp) OVER () - data_timestamp)
+                DATE_FORMAT(
+                    DATE_SUB(
+                        NOW(),
+                        INTERVAL TIMESTAMPDIFF(SECOND, data_timestamp, max_data_ts) SECOND
+                    ),
+                    '%Y-%m-%d %H:00:00'
                 ) AS bucket,
                 composite_score,
                 ap_online_pct,
@@ -95,11 +106,14 @@ def get_trend(db: Session, hours: int = 168) -> list:
         )
         SELECT
             bucket,
-            ROUND(AVG(composite_score)::numeric, 1) AS score,
-            ROUND(AVG(ap_online_pct)::numeric, 1)   AS ap_online_pct,
-            SUM(client_count)                        AS client_count
+            ROUND(AVG(composite_score), 1)  AS score,
+            ROUND(AVG(ap_online_pct), 1)    AS ap_online_pct,
+            SUM(client_count)               AS client_count
         FROM rebased
-        WHERE bucket >= NOW() - INTERVAL '{hours} hours'
+        WHERE bucket >= DATE_FORMAT(
+                DATE_SUB(NOW(), INTERVAL {hours} HOUR),
+                '%Y-%m-%d %H:00:00'
+              )
         GROUP BY bucket
         ORDER BY bucket ASC
     """))

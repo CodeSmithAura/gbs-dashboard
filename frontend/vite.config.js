@@ -1,27 +1,30 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// Inside Docker the frontend container reaches the backend via the
-// Docker Compose service name "backend" on port 8000.
-// The browser (on the host machine) reaches it via localhost:8000 —
-// but the Vite proxy runs server-side inside the container, so it
-// must resolve using the internal Docker network name, not localhost.
-const BACKEND_INTERNAL = 'http://backend:8000'
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '')
 
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    host: '0.0.0.0',
-    port: 3000,
-    proxy: {
-      '/api': {
-        target: BACKEND_INTERNAL,
-        changeOrigin: true,
-      },
-      '/health': {
-        target: BACKEND_INTERNAL,
-        changeOrigin: true,
+  return {
+    plugins: [react()],
+    server: {
+      // Dev mode only -- proxy used when running Vite dev server locally
+      // In production (npm run build), IIS handles the proxy via web.config
+      host: '0.0.0.0',
+      port: 3000,
+      proxy: {
+        '/api': {
+          target: env.VITE_API_BASE_URL || 'http://localhost:8000',
+          changeOrigin: true,
+        },
+        '/health': {
+          target: env.VITE_API_BASE_URL || 'http://localhost:8000',
+          changeOrigin: true,
+        },
       },
     },
-  },
+    build: {
+      outDir: 'dist',
+      emptyOutDir: true,
+    },
+  }
 })
