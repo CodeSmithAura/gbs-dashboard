@@ -1,9 +1,33 @@
+# GBS Service Health Dashboard -- backend dependencies
+# Python 3.12 required. Do not upgrade to 3.14 (PyO3 incompatibility).
+# Pin exact versions for reproducible installs.
+
+# ------ Web framework ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 fastapi==0.111.0
 uvicorn[standard]==0.29.0
+
+# ------ Database -- MS SQL Server via pyodbc ------------------------------------------------------------------------------------------------------------------
+# ODBC Driver 18 for SQL Server must be installed at OS level separately.
+# Download: https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server
 sqlalchemy==2.0.30
 pyodbc==5.1.0
+
+# ------ Data validation and settings ---------------------------------------------------------------------------------------------------------------------------------------
 pydantic==2.7.1
 pydantic-settings==2.2.1
-python-multipart==0.0.9
+
+# ------ HTTP client -- SolarWinds SWIS API calls ---------------------------------------------------------------------------------------------------
 httpx==0.27.0
+
+# ------ Security -- input sanitisation ---------------------------------------------------------------------------------------------------------------------------------
+# bleach: HTML sanitisation for any user-facing text fields
+bleach==6.1.0
+
+# ------ Utilities ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python-multipart==0.0.9
 python-dotenv==1.0.1
+
+# ------ Test dependencies (not installed in production) ------------------------------------------------------------------------------
+# Install with: pip install pytest pytest-asyncio httpx
+# pytest==8.2.0
+# pytest-asyncio==0.23.6
