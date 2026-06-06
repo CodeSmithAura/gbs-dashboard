@@ -178,6 +178,7 @@ export default function Dashboard({
       </section>
 
       {/* ------ PILLAR E: LAN Health --------------------------------------------------------------------------------------------------------------------------- */}
+    <ErrorBoundary pillar="LAN Health">
       <LANHealthTile
         lanSummary={lanSummary}
         lanSites={lanSites}
