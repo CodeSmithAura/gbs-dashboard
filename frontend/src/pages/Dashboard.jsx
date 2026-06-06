@@ -1,47 +1,44 @@
 /**
- * Dashboard -- main page layout.
+ * Dashboard -- main page.
  *
- * Layout:
- *   Row 1: Wireless pillar (existing ScoreGauge + KpiCards + SiteTable)
- *   Row 2: LAN Health pillar (new LANHealthTile -- full width)
+ * Renders PillarAccordion passing render functions for each active pillar.
+ * The accordion manages expand/collapse state and the overall GBS strip.
  *
- * Props are passed straight through from App -- no data fetching here.
- * Adding more pillars in future batches means adding rows to this layout.
+ * Option A migration path:
+ *   Replace PillarAccordion with PillarCardGrid + DetailDrawer here.
+ *   The renderWirelessDetail / renderLanDetail functions are reused unchanged.
  */
 
 import React from 'react'
-import ScoreGauge   from '../components/dashboard/ScoreGauge'
-import KpiCard      from '../components/dashboard/KpiCard'
-import SiteTable    from '../components/dashboard/SiteTable'
-import AlertFeed    from '../components/dashboard/AlertFeed'
-import TrendChart   from '../components/dashboard/TrendChart'
-import LANHealthTile from '../components/dashboard/LANHealthTile'
+import PillarAccordion from '../components/dashboard/PillarAccordion'
+import ScoreGauge      from '../components/dashboard/ScoreGauge'
+import KpiCard         from '../components/dashboard/KpiCard'
+import SiteTable       from '../components/dashboard/SiteTable'
+import AlertFeed       from '../components/dashboard/AlertFeed'
+import TrendChart      from '../components/dashboard/TrendChart'
+import LANHealthTile   from '../components/dashboard/LANHealthTile'
 
-const SECTION_STYLE = {
-  background:   '#ffffff',
-  borderRadius: 12,
-  border:       '1px solid rgba(0,0,0,0.08)',
-  padding:      '16px 20px',
+const DETAIL_WRAP = {
+  padding:      '20px',
+  background:   '#f8fafc',
+  borderBottom: '1px solid rgba(0,0,0,0.07)',
 }
 
 const LABEL = {
-  fontSize:     11,
-  fontWeight:   700,
-  color:        'rgba(0,0,0,0.4)',
-  letterSpacing:'0.06em',
-  textTransform:'uppercase',
-  marginBottom: 12,
+  fontSize:      11,
+  fontWeight:    700,
+  color:         'rgba(0,0,0,0.38)',
+  letterSpacing: '0.06em',
+  textTransform: 'uppercase',
+  marginBottom:  12,
 }
 
 function Spinner() {
   return (
-    <div style={{
-      flex: 1, display: 'flex', alignItems: 'center',
-      justifyContent: 'center', padding: 60,
-    }}
-    role="status" aria-label="Loading dashboard data">
+    <div style={{ display: 'flex', justifyContent: 'center', padding: 48 }}
+         role="status" aria-label="Loading">
       <div style={{
-        width: 36, height: 36, borderRadius: '50%',
+        width: 32, height: 32, borderRadius: '50%',
         border: '3px solid #e2e8f0',
         borderTop: '3px solid #2563eb',
         animation: 'spin 0.8s linear infinite',
@@ -51,134 +48,73 @@ function Spinner() {
 }
 
 export default function Dashboard({
-  // Wireless
   summary, sites, alerts, trend, loading,
-  // LAN
   lanSummary, lanSites, lanAlerts, lanTrend,
   lanScope, lanGroups, lanCountries,
   onLanScopeChange, lanError,
 }) {
   if (loading && !summary && !lanSummary) return <Spinner />
 
-  return (
-    <div style={{
-      padding:   '20px 24px',
-      display:   'flex',
-      flexDirection: 'column',
-      gap:       20,
-      maxWidth:  1600,
-      margin:    '0 auto',
-      width:     '100%',
-      boxSizing: 'border-box',
-    }}>
-
-      {/* ------ PILLAR A: Wireless Health ------------------------------------------------------------------------------------------------------------ */}
-      <section
-        aria-labelledby="wireless-heading"
-        style={{ ...SECTION_STYLE }}
-      >
-        <h2 id="wireless-heading" style={{ ...LABEL, margin: '0 0 12px' }}>
-          Pillar A -- Wireless Health (Aruba)
-        </h2>
-
-        {summary ? (
-          <>
-            {/* Row 1a: Score + KPIs */}
+  // ------ Wireless detail renderer ------------------------------------------------------------------------------------------------------------------------------------------------
+  const renderWirelessDetail = () => (
+    <div style={DETAIL_WRAP}>
+      {summary ? (
+        <>
+          <div style={{
+            display:             'grid',
+            gridTemplateColumns: '160px 1fr',
+            gap:                 20,
+            marginBottom:        16,
+          }}>
+            <ScoreGauge score={summary.overall_score} status={summary.status} />
             <div style={{
               display:             'grid',
-              gridTemplateColumns: '180px 1fr',
-              gap:                 20,
-              marginBottom:        20,
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              gap:                 10,
+              alignContent:        'start',
             }}>
-              <ScoreGauge
-                score={summary.overall_score}
-                status={summary.status}
-              />
-              <div style={{
-                display:             'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                gap:                 12,
-                alignContent:        'start',
-              }}>
-                <KpiCard
-                  icon="antenna"
-                  label="APs Online"
-                  value={summary.aps_online}
-                  sub={`of ${summary.total_aps} total`}
-                />
-                <KpiCard
-                  icon="users"
-                  label="Connected Clients"
-                  value={summary.total_clients}
-                  sub="across all sites"
-                />
-                <KpiCard
-                  icon="bell"
-                  label="Active Alerts"
-                  value={summary.active_alerts}
-                  sub={`${summary.critical_alerts || 0} critical`}
-                />
-                <KpiCard
-                  icon="circle-check"
-                  label="Sites Healthy"
-                  value={summary.sites_healthy}
-                  sub={`${summary.sites_degraded} degraded`}
-                />
-                <KpiCard
-                  icon="circle-x"
-                  label="Sites Critical"
-                  value={summary.sites_critical}
-                  sub="require attention"
-                />
-                <KpiCard
-                  icon="wifi"
-                  label="Total Sites"
-                  value={summary.total_sites}
-                  sub="monitored"
-                />
-              </div>
+              <KpiCard icon="antenna"      label="APs Online"        value={summary.aps_online}     sub={`of ${summary.total_aps} total`} />
+              <KpiCard icon="users"        label="Connected Clients" value={summary.total_clients}  sub="across all sites" />
+              <KpiCard icon="bell"         label="Active Alerts"     value={summary.active_alerts}  sub={`${summary.critical_alerts || 0} critical`} />
+              <KpiCard icon="circle-check" label="Sites Healthy"     value={summary.sites_healthy}  sub={`${summary.sites_degraded} degraded`} />
+              <KpiCard icon="circle-x"     label="Sites Critical"    value={summary.sites_critical} sub="require attention" />
+              <KpiCard icon="wifi"         label="Total Sites"       value={summary.total_sites}    sub="monitored" />
             </div>
-
-            {/* Row 1b: Alerts + Trend */}
-            <div style={{
-              display:             'grid',
-              gridTemplateColumns: '1fr 1.4fr',
-              gap:                 16,
-              marginBottom:        16,
-            }}>
-              <div style={{
-                border:       '1px solid rgba(0,0,0,0.08)',
-                borderRadius: 8, overflow: 'hidden',
-              }}>
-                <div style={{ ...LABEL, padding: '8px 12px',
-                              background: '#f8fafc', borderBottom: '1px solid rgba(0,0,0,0.08)',
-                              marginBottom: 0 }}>
-                  Wireless Alerts
-                </div>
-                <AlertFeed alerts={alerts} />
-              </div>
-              <div style={{
-                border:       '1px solid rgba(0,0,0,0.08)',
-                borderRadius: 8, padding: '12px',
-              }}>
-                <div style={{ ...LABEL, marginBottom: 8 }}>7-Day Trend</div>
-                <TrendChart trend={trend} />
-              </div>
-            </div>
-
-            {/* Row 1c: Site table */}
-            <SiteTable sites={sites} />
-          </>
-        ) : (
-          <div style={{ color: 'rgba(0,0,0,0.4)', fontSize: 13, padding: 16 }}
-               role="status">
-            Wireless data loading...
           </div>
-        )}
-      </section>
 
-      {/* ------ PILLAR E: LAN Health --------------------------------------------------------------------------------------------------------------------------- */}
-    <ErrorBoundary pillar="LAN Health">
+          <div style={{
+            display:             'grid',
+            gridTemplateColumns: '1fr 1.4fr',
+            gap:                 14,
+            marginBottom:        14,
+          }}>
+            <div style={{ border: '1px solid rgba(0,0,0,0.08)', borderRadius: 8, overflow: 'hidden' }}>
+              <div style={{ ...LABEL, padding: '8px 12px',
+                            background: '#fff', borderBottom: '1px solid rgba(0,0,0,0.08)',
+                            marginBottom: 0 }}>
+                Wireless Alerts
+              </div>
+              <AlertFeed alerts={alerts} />
+            </div>
+            <div style={{ border: '1px solid rgba(0,0,0,0.08)', borderRadius: 8, padding: 12 }}>
+              <div style={{ ...LABEL, marginBottom: 8 }}>7-Day Trend</div>
+              <TrendChart trend={trend} />
+            </div>
+          </div>
+
+          <SiteTable sites={sites} />
+        </>
+      ) : (
+        <div style={{ color: 'rgba(0,0,0,0.4)', fontSize: 13 }} role="status">
+          Wireless data loading...
+        </div>
+      )}
+    </div>
+  )
+
+  // ------ LAN detail renderer ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+  const renderLanDetail = () => (
+    <div style={DETAIL_WRAP}>
       <LANHealthTile
         lanSummary={lanSummary}
         lanSites={lanSites}
@@ -191,8 +127,35 @@ export default function Dashboard({
         lanError={lanError}
         loading={loading}
       />
-      </ErrorBoundary>
+    </div>
+  )
 
+  return (
+    <div style={{
+      padding:       '20px 24px',
+      maxWidth:      1600,
+      margin:        '0 auto',
+      width:         '100%',
+      boxSizing:     'border-box',
+    }}>
+      <PillarAccordion
+        summary={summary}
+        sites={sites}
+        alerts={alerts}
+        trend={trend}
+        loading={loading}
+        lanSummary={lanSummary}
+        lanSites={lanSites}
+        lanAlerts={lanAlerts}
+        lanTrend={lanTrend}
+        lanScope={lanScope}
+        lanGroups={lanGroups}
+        lanCountries={lanCountries}
+        onLanScopeChange={onLanScopeChange}
+        lanError={lanError}
+        renderWirelessDetail={renderWirelessDetail}
+        renderLanDetail={renderLanDetail}
+      />
     </div>
   )
 }
