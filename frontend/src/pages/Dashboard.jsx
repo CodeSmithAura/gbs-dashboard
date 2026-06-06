@@ -73,12 +73,12 @@ export default function Dashboard({
               gap:                 10,
               alignContent:        'start',
             }}>
-              <KpiCard icon="antenna"      label="APs Online"        value={summary.aps_online}     sub={`of ${summary.total_aps} total`} />
-              <KpiCard icon="users"        label="Connected Clients" value={summary.total_clients}  sub="across all sites" />
-              <KpiCard icon="bell"         label="Active Alerts"     value={summary.active_alerts}  sub={`${summary.critical_alerts || 0} critical`} />
-              <KpiCard icon="circle-check" label="Sites Healthy"     value={summary.sites_healthy}  sub={`${summary.sites_degraded} degraded`} />
-              <KpiCard icon="circle-x"     label="Sites Critical"    value={summary.sites_critical} sub="require attention" />
-              <KpiCard icon="wifi"         label="Total Sites"       value={summary.total_sites}    sub="monitored" />
+              <KpiCard icon="📡"      label="APs Online"        value={summary.aps_online}     sub={`of ${summary.total_aps} total`} />
+              <KpiCard icon="👥"        label="Connected Clients" value={summary.total_clients}  sub="across all sites" />
+              <KpiCard icon="🔔"         label="Active Alerts"     value={summary.active_alerts}  sub={`${summary.critical_alerts || 0} critical`} />
+              <KpiCard icon="✅" label="Sites Healthy"     value={summary.sites_healthy}  sub={`${summary.sites_degraded} degraded`} />
+              <KpiCard icon="❌"     label="Sites Critical"    value={summary.sites_critical} sub="require attention" />
+              <KpiCard icon="📶"         label="Total Sites"       value={summary.total_sites}    sub="monitored" />
             </div>
           </div>
 

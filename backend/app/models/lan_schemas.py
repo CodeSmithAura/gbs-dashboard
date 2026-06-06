@@ -77,7 +77,7 @@ class SolarWindsAlertRaw(BaseModel):
     related_node:    Optional[str] = None
     triggered_at:    str           # ISO string from SWIS
     description:     str
-acknowledged:    bool = False
+    acknowledged:    bool = False
 
     @field_validator("acknowledged", mode="before")
     @classmethod
