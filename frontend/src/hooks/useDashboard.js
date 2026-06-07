@@ -1,25 +1,19 @@
 /**
  * useDashboard -- unified data hook for both pillars.
  *
- * Manages:
- *   - Wireless pillar data (summary, sites, alerts, trend)
- *   - LAN pillar data (lanSummary, lanSites, lanAlerts, lanTrend)
- *   - LAN scope state (selected country / group)
- *   - Combo box options (groups + countries)
- *   - Demo mode state
- *   - Polling interval (3s during demo, 30s otherwise)
- *
- * Design:
- *   - Wireless and LAN fetches run in parallel (Promise.all per pillar)
- *   - LAN scope change triggers immediate re-fetch without waiting for interval
- *   - Combo box options fetched once on mount, refreshed every hour
- *   - Each pillar has its own error state so one failing does not hide the other
+ * Key design decisions:
+ *   - lanScopeRef is the single source of truth for current scope
+ *   - ALL fetchLan calls (manual, interval, fetchAll) explicitly pass
+ *     lanScopeRef.current -- no implicit fallback that can go stale
+ *   - fetchAll passes scope explicitly so the 30s interval always
+ *     respects the currently selected country/group
+ *   - Scope change is synchronous on the ref before any fetch fires
  */
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { api } from '../utils/api'
 
-const COMBO_REFRESH_MS = 60 * 60 * 1000  // refresh groups/countries every hour
+const COMBO_REFRESH_MS = 60 * 60 * 1000
 
 export function useDashboard(baseIntervalMs = 30000) {
 
@@ -33,23 +27,24 @@ export function useDashboard(baseIntervalMs = 30000) {
   const [lan, setLan] = useState({
     summary: null, sites: null, alerts: [], trend: []
   })
-  const [lanError, setLanError]   = useState(null)
-  const [lanScope, setLanScope]   = useState('all')
-  const [lanGroups, setLanGroups]     = useState([])
+  const [lanError, setLanError]         = useState(null)
+  const [lanScope, setLanScope]         = useState('all')
+  const [lanGroups, setLanGroups]       = useState([])
   const [lanCountries, setLanCountries] = useState([])
 
-  // ------ Shared state ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  // ------ Shared ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   const [loading, setLoading]     = useState(true)
   const [lastRefresh, setRefresh] = useState(null)
   const [demoState, setDemoState] = useState(null)
-  const intervalRef               = useRef(null)
-  const comboTimerRef             = useRef(null)
-  const lanScopeRef               = useRef(lanScope)  // stable ref for interval callbacks
 
-  // Keep scope ref in sync
-  useEffect(() => { lanScopeRef.current = lanScope }, [lanScope])
+  // Refs
+  const intervalRef   = useRef(null)
+  const comboTimerRef = useRef(null)
+  // lanScopeRef is the authoritative scope value for all async callbacks.
+  // Updated synchronously before any fetch so callbacks always read current value.
+  const lanScopeRef = useRef('all')
 
-  // ------ Fetch wireless pillar ------------------------------------------------------------------------------------------------------------------------------------------------------
+  // ------ Fetch wireless ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   const fetchWireless = useCallback(async () => {
     try {
       const [summary, sites, alerts, trend] = await Promise.all([
@@ -62,9 +57,11 @@ export function useDashboard(baseIntervalMs = 30000) {
     }
   }, [])
 
-  // ------ Fetch LAN pillar (scope-aware) ---------------------------------------------------------------------------------------------------------------------------
+  // ------ Fetch LAN -- always receives scope explicitly, never relies on closure ------
   const fetchLan = useCallback(async (scope) => {
-    const s = scope ?? lanScopeRef.current
+    // scope must always be passed explicitly by the caller.
+    // If somehow called without it, read the ref as a safety net.
+    const s = (scope !== undefined && scope !== null) ? scope : lanScopeRef.current
     try {
       const [summary, sites, alerts, trend] = await Promise.all([
         api.lanSummary(s),
@@ -77,18 +74,18 @@ export function useDashboard(baseIntervalMs = 30000) {
     } catch (e) {
       setLanError(e.message)
     }
-  }, [])
+  }, [])  // stable -- no deps, never recreated
 
-  // ------ Fetch combo box options (groups + countries) ---------------------------------------------------------------------------------
+  // ------ Fetch combo options ------------------------------------------------------------------------------------------------------------------------------------------------------------
   const fetchComboOptions = useCallback(async () => {
     try {
       const [groups, countries] = await Promise.all([
         api.lanGroups(), api.lanCountries(),
       ])
-      setLanGroups(groups   || [])
+      setLanGroups(groups    || [])
       setLanCountries(countries || [])
     } catch {
-      // Non-critical -- combo box degrades gracefully if this fails
+      // non-critical
     }
   }, [])
 
@@ -98,74 +95,73 @@ export function useDashboard(baseIntervalMs = 30000) {
       const ds = await api.demoStatus()
       setDemoState(ds)
     } catch {
-      // Silently ignore -- demo endpoint optional
+      // silently ignore
     }
   }, [])
 
-  // ------ fetchAll -- both pillars in parallel ---------------------------------------------------------------------------------------------------------
+  // ------ fetchAll -- ALWAYS passes current scope explicitly to fetchLan ---------------------------
   const fetchAll = useCallback(async () => {
-    await Promise.all([fetchWireless(), fetchLan(lanScopeRef.current)])
+    await Promise.all([
+      fetchWireless(),
+      fetchLan(lanScopeRef.current),  // explicit -- never stale
+    ])
     setRefresh(new Date())
     setLoading(false)
   }, [fetchWireless, fetchLan])
 
-  // ------ Scope change handler -- immediate re-fetch ---------------------------------------------------------------------------------------
+  // ------ Scope change -- ref updated first, then fetch ------------------------------------------------------------------------------
   const handleScopeChange = useCallback((newScope) => {
-    setLanScope(newScope)
+    // Update ref synchronously before fetch so any concurrent interval
+    // callback also reads the new scope if it fires during the fetch
     lanScopeRef.current = newScope
-    fetchLan(newScope)
+    setLanScope(newScope)
+    fetchLan(newScope)  // explicit scope -- no ambiguity
   }, [fetchLan])
 
-  // ------ Polling interval ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  // ------ Interval management ------------------------------------------------------------------------------------------------------------------------------------------------------------
   const resetInterval = useCallback((ms) => {
     if (intervalRef.current) clearInterval(intervalRef.current)
     intervalRef.current = setInterval(() => {
+      // fetchAll reads lanScopeRef.current at call time -- always current
       fetchAll()
       fetchDemoState()
     }, ms)
   }, [fetchAll, fetchDemoState])
 
-  // ------ Mount and polling setup ------------------------------------------------------------------------------------------------------------------------------------------------
+  // ------ Mount ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   useEffect(() => {
     fetchAll()
     fetchDemoState()
     fetchComboOptions()
-
-    // Refresh combo box options hourly (countries/groups rarely change)
     comboTimerRef.current = setInterval(fetchComboOptions, COMBO_REFRESH_MS)
-
     return () => {
-      if (intervalRef.current)  clearInterval(intervalRef.current)
+      if (intervalRef.current)   clearInterval(intervalRef.current)
       if (comboTimerRef.current) clearInterval(comboTimerRef.current)
     }
   }, [])  // eslint-disable-line react-hooks/exhaustive-deps
 
-  // ------ Adjust poll speed when demo runs ------------------------------------------------------------------------------------------------------------------
+  // ------ Poll speed -- demo vs normal ---------------------------------------------------------------------------------------------------------------------------------
   useEffect(() => {
-    const isRunning = demoState?.running
-    resetInterval(isRunning ? 3000 : baseIntervalMs)
+    resetInterval(demoState?.running ? 3000 : baseIntervalMs)
   }, [demoState?.running, baseIntervalMs, resetInterval])
 
   return {
-    // Wireless
     summary:       wireless.summary,
     sites:         wireless.sites,
     alerts:        wireless.alerts,
     trend:         wireless.trend,
     wirelessError,
 
-    // LAN
-    lanSummary:    lan.summary,
-    lanSites:      lan.sites,
-    lanAlerts:     lan.alerts,
-    lanTrend:      lan.trend,
+    lanSummary:       lan.summary,
+    lanSites:         lan.sites,
+    lanAlerts:        lan.alerts,
+    lanTrend:         lan.trend,
     lanError,
     lanScope,
     lanGroups,
     lanCountries,
     onLanScopeChange: handleScopeChange,
 
-    // Shared
     loading,
     lastRefresh,
     demoState,
