@@ -104,7 +104,7 @@ export function useDashboard(baseIntervalMs = 30000) {
 
   // ------ fetchAll -- both pillars in parallel ---------------------------------------------------------------------------------------------------------
   const fetchAll = useCallback(async () => {
-    await Promise.all([fetchWireless(), fetchLan()])
+    await Promise.all([fetchWireless(), fetchLan(lanScopeRef.current)])
     setRefresh(new Date())
     setLoading(false)
   }, [fetchWireless, fetchLan])

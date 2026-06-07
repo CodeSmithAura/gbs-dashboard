@@ -166,6 +166,14 @@ def lan_sites(
 
     if scope == "all":
         rows = get_latest_country_snapshots(db)
+        if not rows:
+            # Snapshots not yet written -- fall back to in-memory state
+            state   = get_lan_state()
+            snaps   = state.get("country_snapshots", [])
+            return {
+                "view_type": "country",
+                "data": [s.model_dump() for s in snaps]
+            }
         return {"view_type": "country", "data": rows}
 
     countries, label = resolve_scope_countries(db, scope)
