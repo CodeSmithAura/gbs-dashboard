@@ -135,6 +135,8 @@ function SortableHeader({ label, sortKey, sortState, onSort, ariaLabel }) {
 }
 
 function AlertFeed({ alerts }) {
+  const [page, setPage] = React.useState(0)
+  const PAGE_SIZE = 20
   if (!alerts || alerts.length === 0) {
     return (
       <div style={{ padding: '16px', textAlign: 'center',
@@ -146,7 +148,9 @@ function AlertFeed({ alerts }) {
   }
 
   const sevColor = { critical: C.red, warning: C.amber, info: C.blue, none: C.muted }
-  const top = alerts.slice(0, 10)
+const start   = page * PAGE_SIZE
+const top     = alerts.slice(start, start + PAGE_SIZE)
+const totalPages = Math.ceil(alerts.length / PAGE_SIZE)
 
   return (
     <div
@@ -192,9 +196,62 @@ function AlertFeed({ alerts }) {
         </div>
       ))}
     </div>
+    
+    {totalPages > 1 && (
+      <div style={{
+        display:        'flex',
+        alignItems:     'center',
+        justifyContent: 'space-between',
+        padding:        '6px 12px',
+        borderTop:      `1px solid ${C.border}`,
+        background:     C.bgSection,
+      }}>
+        <button
+          onClick={() => setPage(p => Math.max(0, p - 1))}
+          disabled={page === 0}
+          aria-label="Previous alerts page"
+          style={{
+            padding:      '3px 10px',
+            fontSize:     11,
+            fontWeight:   600,
+            background:   page === 0 ? 'transparent' : C.bg,
+            border:       `1px solid ${C.border}`,
+            borderRadius: 5,
+            cursor:       page === 0 ? 'not-allowed' : 'pointer',
+            color:        page === 0 ? C.muted : '#0f172a',
+          }}
+        >
+          Prev
+        </button>
+
+        <span style={{ fontSize: 11, color: C.muted }}>
+          {page + 1} / {totalPages}
+          <span style={{ marginLeft: 6, color: C.muted }}>
+            ({alerts.length} total)
+          </span>
+        </span>
+
+        <button
+          onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))}
+          disabled={page === totalPages - 1}
+          aria-label="Next alerts page"
+          style={{
+            padding:      '3px 10px',
+            fontSize:     11,
+            fontWeight:   600,
+            background:   page === totalPages - 1 ? 'transparent' : C.bg,
+            border:       `1px solid ${C.border}`,
+            borderRadius: 5,
+            cursor:       page === totalPages - 1 ? 'not-allowed' : 'pointer',
+            color:        page === totalPages - 1 ? C.muted : '#0f172a',
+          }}
+        >
+          Next
+        </button>
+      </div>
+    )}
   )
 }
-
 function LanTrendChart({ trend }) {
   if (!trend || trend.length < 2) {
     return (
@@ -608,7 +665,7 @@ export default function LANHealthTile({
                           textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               Active Alerts
             </div>
-            <AlertFeed alerts={lanAlerts} />
+            <AlertFeed key={lanScope || 'all'} alerts={lanAlerts} />
           </div>
 
           <div style={{ border: `1px solid ${C.border}`, borderRadius: 8,
