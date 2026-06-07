@@ -75,6 +75,7 @@ class SolarWindsAlertRaw(BaseModel):
     severity:        int           # 2=Critical 1=Warning 0=Informational
     node_name:       str
     related_node:    Optional[str] = None
+    related_node_id: Optional[int] = None
     triggered_at:    str           # ISO string from SWIS
     description:     str
     acknowledged:    bool = False
@@ -101,7 +102,13 @@ class SolarWindsAlertRaw(BaseModel):
             return int(v)
         except (TypeError, ValueError):
             return 0
-
+    @field_validator("related_node_id", mode="before")
+    @classmethod
+    def coerce_node_id(cls, v):
+        try:
+            return int(v) if v is not None else None
+        except (TypeError, ValueError):
+            return None
 
 # ------ Normalised models (stored to database and served by API) ------------------------------------------------------
 

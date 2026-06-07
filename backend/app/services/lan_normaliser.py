@@ -117,29 +117,28 @@ def _determine_status(
 
 
 def _node_alert(
-    node_name: str,
+    node_id: int,
     alerts: List[SolarWindsAlertRaw],
 ) -> Tuple[int, str, str]:
     """
-    Find the highest severity alert for a node.
-    Returns (count, severity_label, description).
+    Find alerts for a node using RelatedNodeId integer match.
+    Falls back to node_name string match for alerts with no RelatedNodeId.
+    Integer match is exact and reliable -- no FQDN/hostname ambiguity.
     """
     node_alerts = [
         a for a in alerts
-        if a.node_name.lower() == node_name.lower()
-        or (a.related_node and a.related_node.lower() == node_name.lower())
+        if (a.related_node_id is not None and a.related_node_id == node_id)
+        or (a.related_node_id is None and
+            a.node_name.lower() == str(node_id).lower())
     ]
     if not node_alerts:
         return 0, "none", ""
-
-    # Pick highest severity
     best = max(node_alerts, key=lambda a: a.severity)
     return (
         len(node_alerts),
         _map_alert_severity(best.severity),
         best.description,
     )
-
 
 # ------ Public normalisation functions ------------------------------------------------------------------------------------------------------------------------------------
 
@@ -164,7 +163,7 @@ def normalise_nodes(
     results: List[LANNodeHealth] = []
     for node in nodes:
         iface = iface_map.get(node.node_id)
-        alert_count, alert_sev, alert_desc = _node_alert(node.node_name, alerts)
+        alert_count, alert_sev, alert_desc = _node_alert(node.node_id, alerts)
         score  = _compute_node_score(node, iface, alert_sev)
         status = _determine_status(score, t)
 

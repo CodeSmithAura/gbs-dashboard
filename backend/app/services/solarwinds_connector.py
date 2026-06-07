@@ -73,6 +73,7 @@ SELECT TOP {limit}
        ao.AlertConfigurations.Severity     AS severity,
        ao.EntityCaption                    AS node_name,
        ao.RelatedNodeCaption               AS related_node,
+       ao.RelatedNodeId                    AS related_node_id,
        ao.AlertActive.TriggeredDateTime    AS triggered_at,
        ao.AlertActive.TriggeredMessage     AS description,
        ao.AlertActive.Acknowledged         AS acknowledged
