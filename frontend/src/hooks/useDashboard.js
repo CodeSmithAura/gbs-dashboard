@@ -115,6 +115,7 @@ export function useDashboard(baseIntervalMs = 30000) {
     // callback also reads the new scope if it fires during the fetch
     lanScopeRef.current = newScope
     setLanScope(newScope)
+    setLan(prev => ({ ...prev, sites: null }))
     fetchLan(newScope)  // explicit scope -- no ambiguity
   }, [fetchLan])
 

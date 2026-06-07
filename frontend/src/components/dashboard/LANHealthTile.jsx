@@ -316,6 +316,8 @@ export default function LANHealthTile({
   const score       = lanSummary.overall_score ?? 0
   const viewType    = lanSites?.view_type || 'country'
   const tableData   = lanSites?.data || []
+  const sitesLoading = lanSites === null
+
 
   // Sort table data
   const sorted = [...tableData].sort((a, b) => {
@@ -441,6 +443,13 @@ export default function LANHealthTile({
           maxHeight:     260,
           overflowY:     'auto',
         }}>
+    {sitesLoading ? (
+    <div style={{ padding: 24, textAlign: 'center',
+                  color: 'rgba(0,0,0,0.35)', fontSize: 12 }}
+         role="status" aria-live="polite">
+      Loading...
+    </div>
+  ) : (  
           <table
             style={{ width: '100%', borderCollapse: 'collapse', fontSize: 12 }}
             aria-label={viewType === 'country' ? 'Country health table' : 'Node health table'}
@@ -583,6 +592,7 @@ export default function LANHealthTile({
               ))}
             </tbody>
           </table>
+         )}
         </div>
 
         {/* ------ Two-column: alerts + trend --------------------------------------------------------------------------------------------------------- */}
