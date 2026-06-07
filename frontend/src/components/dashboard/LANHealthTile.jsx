@@ -147,12 +147,12 @@ function AlertFeed({ alerts }) {
     )
   }
 
-  const sevColor = { critical: C.red, warning: C.amber, info: C.blue, none: C.muted }
+const sevColor = { critical: C.red, warning: C.amber, info: C.blue, none: C.muted }
 const start   = page * PAGE_SIZE
 const top     = alerts.slice(start, start + PAGE_SIZE)
 const totalPages = Math.ceil(alerts.length / PAGE_SIZE)
 
-  return (
+  return (<>
     <div
       role="list"
       aria-label="LAN active alerts"
@@ -250,7 +250,7 @@ const totalPages = Math.ceil(alerts.length / PAGE_SIZE)
         </button>
       </div>
     )}
-  )
+  </>)
 }
 function LanTrendChart({ trend }) {
   if (!trend || trend.length < 2) {
