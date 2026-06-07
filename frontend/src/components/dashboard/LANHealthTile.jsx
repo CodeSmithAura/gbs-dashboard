@@ -432,7 +432,9 @@ export default function LANHealthTile({
         </div>
 
         {/* ------ Site / node table ------------------------------------------------------------------------------------------------------------------------------------ */}
-        <div style={{
+        <div
+          key={`${viewType}-${lanScope || 'all'}`} 
+        style={{
           border:        `1px solid ${C.border}`,
           borderRadius:  8,
           overflow:      'hidden',
