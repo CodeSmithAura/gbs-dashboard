@@ -142,16 +142,17 @@ def get_latest_country_snapshots(db: Session) -> List[dict]:
     Used for global view (all countries) -- returns ~30 rows.
     """
     result = db.execute(text("""
-        SELECT cs.*
-        FROM dbo.lan_country_snapshots cs
-        INNER JOIN (
-            SELECT country, MAX(ingested_at) AS max_ia
+        SELECT *
+        FROM (
+            SELECT *,
+                ROW_NUMBER() OVER (
+                    PARTITION BY country
+                    ORDER BY ingested_at DESC, id DESC
+                ) AS rn
             FROM dbo.lan_country_snapshots
-            GROUP BY country
-        ) latest
-            ON  cs.country    = latest.country
-            AND cs.ingested_at = latest.max_ia
-        ORDER BY cs.country
+        ) ranked
+        WHERE rn = 1
+        ORDER BY country
     """))
     return [dict(row) for row in result.mappings()]
 
@@ -173,18 +174,18 @@ def get_latest_nodes_by_countries(
 
     result = db.execute(
         text(f"""
-            SELECT lm.*
-            FROM dbo.lan_metrics lm
-            INNER JOIN (
-                SELECT node_id, MAX(ingested_at) AS max_ia
+            SELECT *
+            FROM (
+                SELECT *,
+                    ROW_NUMBER() OVER (
+                        PARTITION BY node_id
+                        ORDER BY ingested_at DESC, id DESC
+                    ) AS rn
                 FROM dbo.lan_metrics
                 WHERE country IN ({placeholders})
-                GROUP BY node_id
-            ) latest
-                ON  lm.node_id    = latest.node_id
-                AND lm.ingested_at = latest.max_ia
-            WHERE lm.country IN ({placeholders})
-            ORDER BY lm.country, lm.node_name
+            ) ranked
+            WHERE rn = 1
+            ORDER BY country, node_name
         """),
         {**params, **{f"c{i}": c for i, c in enumerate(countries)}},
     )
