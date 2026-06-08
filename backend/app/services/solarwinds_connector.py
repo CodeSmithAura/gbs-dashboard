@@ -79,6 +79,7 @@ SELECT TOP {limit}
        ao.AlertActive.Acknowledged         AS acknowledged
 FROM Orion.AlertObjects ao
 WHERE ao.AlertActive.AlertActiveID > 0
+    AND ao.AlertConfigurations.ObjectType = 'Node'
 ORDER BY ao.AlertConfigurations.Severity DESC,
          ao.AlertActive.TriggeredDateTime DESC
 """
