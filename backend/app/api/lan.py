@@ -202,14 +202,7 @@ def lan_alerts(
     alerts: List[LANAlertItem] = state["alert_items"]
 
     if scope == "all":
-        node_names = {
-            n.node_name.lower()
-            for n in state["nodes"]
-        }
-        return [
-            a for a in alerts
-            if a.node_name.lower() in node_names
-        ]
+        return alerts
 
     countries, _ = resolve_scope_countries(db, scope)
     if countries is None:
@@ -223,7 +216,7 @@ def lan_alerts(
     }
     return [
         a for a in alerts
-        if node_country.get(a.node_name, "") in countries
+        if node_country.get(a.related_node_id, "") in countries
     ]
 
 
