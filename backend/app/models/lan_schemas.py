@@ -204,6 +204,7 @@ class LANAlertItem(BaseModel):
     severity_code:   int
     severity:        Literal["none", "info", "warning", "critical"]
     node_name:       str
+    related_node_id: Optional[int] = None 
     description:     str
     triggered_at:    str
     acknowledged:    bool

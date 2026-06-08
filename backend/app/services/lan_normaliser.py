@@ -317,6 +317,7 @@ def build_alert_items(
             severity_code=a.severity,
             severity=_map_alert_severity(a.severity),
             node_name=a.node_name,
+            related_node_id=a.related_node_id,
             description=a.description,
             triggered_at=a.triggered_at,
             acknowledged=a.acknowledged,
