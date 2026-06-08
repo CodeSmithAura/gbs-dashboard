@@ -210,13 +210,25 @@ def lan_alerts(
 
     # Filter alerts whose node appears in the scoped country set
     # node_name -> country lookup from in-memory node state
-    node_country: dict = {
+    # Primary lookup: node_id -> country (integer match, reliable)
+    node_id_to_country: dict = {
+        n.node_id: n.country
+        for n in state["nodes"]
+    }
+    # Fallback lookup: node_name -> country (string match, for alerts with no RelatedNodeId)
+    node_name_to_country: dict = {
         n.node_name: n.country
         for n in state["nodes"]
     }
+
+    def _alert_country(a) -> str:
+        if a.related_node_id is not None:
+            return node_id_to_country.get(a.related_node_id, "")
+        return node_name_to_country.get(a.node_name, "")
+
     return [
         a for a in alerts
-        if node_country.get(a.related_node_id, "") in countries
+        if _alert_country(a) in countries
     ]
 
 
