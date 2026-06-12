@@ -238,6 +238,8 @@ class _ArubaTokenManager:
             # Update refresh token if a new one is issued
             if "refresh_token" in payload:
                 self._refresh_token = payload["refresh_token"]
+                self._persist_refresh_token(payload["refresh_token"])
+
 
             logger.info(
                 f"Aruba: token refreshed successfully, "
@@ -252,6 +254,29 @@ class _ArubaTokenManager:
             raise RuntimeError(
                 f"Aruba token refresh error: {type(exc).__name__}"
             ) from None
+    def _persist_refresh_token(self, new_token: str) -> None:
+        """
+        Write the new refresh token back to .env so it survives restarts.
+        Aruba refresh tokens are single-use -- the new token must be saved
+        immediately or it is lost on the next uvicorn restart.
+        """
+        try:
+            env_path = Path(__file__).parent.parent.parent / ".env"
+            if not env_path.exists():
+                logger.warning("Aruba: .env not found, refresh token not persisted")
+                return
+            content = env_path.read_text(encoding="utf-8")
+            import re
+            content = re.sub(
+                r"^ARUBA_REFRESH_TOKEN=.*$",
+                f"ARUBA_REFRESH_TOKEN={new_token}",
+                content,
+                flags=re.MULTILINE,
+            )
+            env_path.write_text(content, encoding="utf-8")
+            logger.info("Aruba: new refresh token persisted to .env")
+        except Exception as exc:
+            logger.warning(f"Aruba: could not persist refresh token: {exc}")
 
 
 # ------ Aruba API connector (live) ---------------------------------------------------------------------------------------------------------------------------------------------------
