@@ -39,6 +39,8 @@ import httpx
 from app.core.config import settings
 from app.models.schemas import ArubaRawRecord
 
+import os
+
 logger = logging.getLogger(__name__)
 
 
@@ -255,18 +257,22 @@ class _ArubaTokenManager:
                 f"Aruba token refresh error: {type(exc).__name__}"
             ) from None
     def _persist_refresh_token(self, new_token: str) -> None:
-        """
-        Write the new refresh token back to .env so it survives restarts.
-        Aruba refresh tokens are single-use -- the new token must be saved
-        immediately or it is lost on the next uvicorn restart.
-        """
         try:
-            env_path = Path(__file__).parent.parent.parent / ".env"
-            if not env_path.exists():
+            from app.core.config import settings
+            import re
+            env_path = Path(settings.ENV_FILE_PATH) if settings.ENV_FILE_PATH else None
+            if not env_path or not env_path.exists():
+                # Fallback: search upward from this file
+                candidate = Path(__file__).resolve().parent
+                for _ in range(6):
+                    if (candidate / ".env").exists():
+                        env_path = candidate / ".env"
+                        break
+                    candidate = candidate.parent
+            if not env_path or not env_path.exists():
                 logger.warning("Aruba: .env not found, refresh token not persisted")
                 return
             content = env_path.read_text(encoding="utf-8")
-            import re
             content = re.sub(
                 r"^ARUBA_REFRESH_TOKEN=.*$",
                 f"ARUBA_REFRESH_TOKEN={new_token}",
@@ -274,10 +280,9 @@ class _ArubaTokenManager:
                 flags=re.MULTILINE,
             )
             env_path.write_text(content, encoding="utf-8")
-            logger.info("Aruba: new refresh token persisted to .env")
+            logger.info(f"Aruba: new refresh token persisted to {env_path}")
         except Exception as exc:
             logger.warning(f"Aruba: could not persist refresh token: {exc}")
-
 
 # ------ Aruba API connector (live) ---------------------------------------------------------------------------------------------------------------------------------------------------
 

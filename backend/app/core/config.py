@@ -43,6 +43,7 @@ class Settings(BaseSettings):
     # Refresh token flow (current): set ARUBA_REFRESH_TOKEN
     # Client credentials flow (Option 2): set ARUBA_CLIENT_SECRET, leave ARUBA_REFRESH_TOKEN blank
     ARUBA_REFRESH_TOKEN: str = ""
+    ENV_FILE_PATH: str = ""
 
     POLL_INTERVAL_SECONDS: int = 60
     DEMO_INTERVAL_SECONDS: int = 30
