@@ -285,7 +285,7 @@ class _ArubaTokenManager:
             logger.warning(f"Aruba: could not persist refresh token: {exc}")
 
 # ------ Aruba API connector (live) ---------------------------------------------------------------------------------------------------------------------------------------------------
-    _TOKEN_MANAGER = None
+_TOKEN_MANAGER = None
 
 class ArubaAPIConnector(BaseConnector):
     """
