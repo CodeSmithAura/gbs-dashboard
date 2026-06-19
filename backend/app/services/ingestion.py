@@ -248,13 +248,25 @@ class _ArubaTokenManager:
                 f"expires in {expires_in // 60} minutes"
             )
         except httpx.HTTPStatusError as exc:
+            body = ""
+            try:
+                body = exc.response.text
+            except Exception:
+                pass
+            logger.error(
+                f"Aruba token refresh failed: HTTP {exc.response.status_code} "
+                f"body={repr(body)}"
+            )
             raise RuntimeError(
-                f"Aruba token refresh failed: HTTP {exc.response.status_code}. "
-                f"Check ARUBA_CLIENT_ID and ARUBA_REFRESH_TOKEN in .env."
+                f"Aruba token refresh failed: HTTP {exc.response.status_code}"
             ) from None
         except Exception as exc:
+            import traceback
+            logger.error(
+                f"Aruba token refresh error:\n{traceback.format_exc()}"
+            )
             raise RuntimeError(
-                f"Aruba token refresh error: {type(exc).__name__}"
+                f"Aruba token refresh error: {type(exc).__name__}: {exc}"
             ) from None
     def _persist_refresh_token(self, new_token: str) -> None:
         try:

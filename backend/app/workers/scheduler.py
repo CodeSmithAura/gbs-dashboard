@@ -73,10 +73,12 @@ def run_ingestion_cycle():
             f"overall score={summary.overall_score}, status={summary.status}"
         )
 
-    except Exception as e:
-        _state["error"] = str(e)
-        logger.error(f"Ingestion cycle failed: {e}", exc_info=True)
-
+    except Exception as exc:
+        import traceback
+        _state["error"] = str(exc)
+        logger.error(
+             f"Ingestion cycle failed:\n{traceback.format_exc()}"
+    )
 
 async def polling_loop():
     """Async loop -- fires every POLL_INTERVAL_SECONDS."""
