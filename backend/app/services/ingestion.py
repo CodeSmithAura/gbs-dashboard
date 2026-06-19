@@ -285,6 +285,7 @@ class _ArubaTokenManager:
             logger.warning(f"Aruba: could not persist refresh token: {exc}")
 
 # ------ Aruba API connector (live) ---------------------------------------------------------------------------------------------------------------------------------------------------
+    _TOKEN_MANAGER = None
 
 class ArubaAPIConnector(BaseConnector):
     """
@@ -306,8 +307,12 @@ class ArubaAPIConnector(BaseConnector):
 
     _PAGE_LIMIT = 1000
 
+
     def __init__(self):
-        self._token_mgr = _ArubaTokenManager()
+        global _TOKEN_MANAGER
+        if _TOKEN_MANAGER is None:
+            _TOKEN_MANAGER = _ArubaTokenManager()
+        self._token_mgr = _TOKEN_MANAGER
         self._base_url  = settings.ARUBA_BASE_URL.rstrip("/")
         self._customer_id = settings.ARUBA_CUSTOMER_ID
 

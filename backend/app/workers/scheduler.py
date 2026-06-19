@@ -27,13 +27,13 @@ _state = {
 def get_state() -> dict:
     return _state
 
+_connector = get_connector()
 
 def run_ingestion_cycle():
     """Execute one full ingest -> normalise -> persist cycle."""
     logger.info("Ingestion cycle starting...")
     try:
-        connector = get_connector()
-        raw = connector.fetch()
+        raw = _connector.fetch()
 
         if not raw:
             _state["error"] = "No records returned from data source"
