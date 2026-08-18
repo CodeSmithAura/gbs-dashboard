@@ -325,10 +325,22 @@ class ArubaAPIConnector(BaseConnector):
     Fetches wireless health data from HPE Aruba Central REST API.
 
     Endpoints used:
-      GET /monitoring/v2/aps              -- AP inventory and status
-      GET /monitoring/v2/clients/count    -- connected client count per site
-      GET /aiops/v2/sites/health          -- composite site health score
-      GET /monitoring/v2/alerts           -- active wireless alerts
+      GET /monitoring/v2/aps          -- AP inventory and status
+      GET /monitoring/v2/clients      -- connected clients (grouped to
+                                          per-site counts client-side --
+                                          there is no site-count endpoint)
+      GET /central/v1/notifications   -- active alerts ("List Notification
+                                          API"; NOT /monitoring/v2/alerts,
+                                          which does not exist)
+      GET /aiops/v2/sites/health      -- best-effort composite site health
+                                          score. This path does not exist on
+                                          Aruba's real API (their AIOps API
+                                          is per-AP/global insights, not a
+                                          bulk per-site score) -- kept as a
+                                          best-effort call that fails soft;
+                                          normaliser falls back to AP ratio.
+                                          Needs a redesign if real site-level
+                                          health scoring is required later.
 
     Each Aruba site becomes one ArubaRawRecord -- same model as FileConnector.
     Field names match the CSV schema exactly so normaliser is unchanged.
@@ -391,14 +403,29 @@ class ArubaAPIConnector(BaseConnector):
     def _fetch_all_pages(
         self, client: httpx.Client, path: str, key: str
     ) -> List[dict]:
-        """Fetch all pages from a paginated Aruba endpoint."""
+        """
+        Fetch all pages from a paginated Aruba endpoint.
+
+        If the expected top-level `key` isn't present in the response on
+        the first page, this logs the keys that ARE present instead of
+        silently returning an empty list -- Aruba's exact response envelope
+        per endpoint isn't confirmed from docs alone, so this is the
+        fastest way to spot a wrong `key` guess from the logs.
+        """
         results = []
         offset  = 0
+        first_page = True
         while True:
             data  = self._get(client, path, {
                 "limit":  self._PAGE_LIMIT,
                 "offset": offset,
             })
+            if first_page and key not in data:
+                logger.warning(
+                    f"Aruba API: {path} response has no '{key}' key -- "
+                    f"top-level keys present: {list(data.keys())}"
+                )
+            first_page = False
             items = data.get(key, [])
             results.extend(items)
             total = data.get("total", len(results))
@@ -433,19 +460,26 @@ class ArubaAPIConnector(BaseConnector):
         logger.info(f"Aruba API: fetched {len(aps)} APs")
         return aps
 
-    def _fetch_clients(self, client: httpx.Client) -> dict:
-        """Fetch client count per site. Returns dict keyed by site_id."""
+    def _fetch_clients(self, client: httpx.Client) -> List[dict]:
+        """
+        Fetch connected clients. There is no per-site client-count
+        endpoint on Aruba's real API (the previous /monitoring/v2/clients
+        /count?group_by=site call 404s -- that combination doesn't exist).
+        Instead fetch the raw client list from /monitoring/v2/clients, the
+        same way APs are fetched, and let _merge_to_records() group them
+        by site client-side.
+        Best-effort like the other enrichment calls -- a failure here
+        shouldn't abort the whole fetch cycle (AP data is still valid).
+        """
         try:
-            data = self._get(client, "/monitoring/v2/clients/count",
-                             {"group_by": "site"})
-            # Response: {"sites": [{"site_id": "...", "client_count": N}]}
-            return {
-                item["site_id"]: item.get("client_count", 0)
-                for item in data.get("sites", [])
-            }
+            clients = self._fetch_all_pages(
+                client, "/monitoring/v2/clients", "clients"
+            )
+            logger.info(f"Aruba API: fetched {len(clients)} clients")
+            return clients
         except Exception as exc:
-            logger.warning(f"Aruba API: client count fetch failed: {exc}")
-            return {}
+            logger.warning(f"Aruba API: client fetch failed: {exc}")
+            return []
 
     def _fetch_site_health(self, client: httpx.Client) -> dict:
         """
@@ -468,13 +502,30 @@ class ArubaAPIConnector(BaseConnector):
             return {}
 
     def _fetch_alerts(self, client: httpx.Client) -> List[dict]:
-        """Fetch active wireless alerts."""
+        """
+        Fetch active alerts via the "List Notification API"
+        (GET /central/v1/notifications) -- /monitoring/v2/alerts does not
+        exist on Aruba's real API (that's what 404'd before).
+        """
         try:
             data = self._get(
-                client, "/monitoring/v2/alerts",
+                client, "/central/v1/notifications",
                 {"state": "Open", "limit": 100}
             )
-            return data.get("alerts", [])
+            # Response envelope isn't confirmed from docs -- try the
+            # documented "List Notification API" shape first, then fall
+            # back to the old guess, and log what's actually there if
+            # neither key is present so a wrong guess is easy to spot.
+            for key in ("notifications", "alerts"):
+                if key in data:
+                    return data[key]
+            if data:
+                logger.warning(
+                    "Aruba API: /central/v1/notifications response has "
+                    f"neither 'notifications' nor 'alerts' key -- "
+                    f"top-level keys present: {list(data.keys())}"
+                )
+            return []
         except Exception as exc:
             logger.warning(f"Aruba API: alerts fetch failed: {exc}")
             return []
@@ -482,20 +533,29 @@ class ArubaAPIConnector(BaseConnector):
     def _merge_to_records(
         self,
         aps:     List[dict],
-        clients: dict,
+        clients: List[dict],
         health:  dict,
         alerts:  List[dict],
     ) -> List[ArubaRawRecord]:
         """
         Merge AP, client, health, and alert data into ArubaRawRecord objects.
-        Groups APs by site_id and aggregates to site-level totals.
-        Field names match the CSV schema -- normaliser is unchanged.
+        Groups APs and clients by site_id and aggregates to site-level
+        totals. Field names match the CSV schema -- normaliser is unchanged.
         """
         # Group APs by site
         sites: dict = {}
         for ap in aps:
             sid = ap.get("site_id") or ap.get("swarm_id") or "unknown"
             sites.setdefault(sid, []).append(ap)
+
+        # Group clients by site -- there's no per-site count endpoint, so
+        # count them the same way APs are grouped. Field name for the site
+        # identifier on a client record isn't confirmed from docs; falls
+        # back the same way AP grouping does.
+        client_counts: dict = {}
+        for c in clients:
+            sid = c.get("site_id") or c.get("swarm_id") or "unknown"
+            client_counts[sid] = client_counts.get(sid, 0) + 1
 
         # Build alert summary per site
         site_alerts: dict = {}
@@ -519,7 +579,7 @@ class ArubaAPIConnector(BaseConnector):
                 site_health_data.get("health_score", 0) or 0
             )
 
-            client_count   = clients.get(site_id, 0)
+            client_count   = client_counts.get(site_id, 0)
             site_alert_list = site_alerts.get(site_id, [])
 
             # Determine alert severity from site alert list
