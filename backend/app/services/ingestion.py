@@ -10,13 +10,23 @@ Switching between them: change DATA_SOURCE_TYPE in .env
   api  -> ArubaAPIConnector
 
 Token management (ArubaAPIConnector):
-  - On startup: exchanges refresh token for a new access token
-  - Every 90 minutes: proactively refreshes before expiry
-  - On 401 response: immediately refreshes and retries once
-  - Refresh token itself expires after 14 days (Aruba default)
-    -> Network team regenerates from Aruba Central portal
-  - Future Option 2 (client_credentials): set ARUBA_CLIENT_SECRET
-    and the connector switches to client_credentials grant automatically
+  - Uses the OAuth 2.0 refresh_token grant exclusively. Aruba Central's
+    /oauth2/token endpoint only supports authorization_code (one-time,
+    interactive) and refresh_token (renewal) -- it has no client_credentials
+    grant, so there is no fully-unattended alternative to bootstrap from.
+  - One-time manual bootstrap: a human generates the first access/refresh
+    token pair via the Central UI (System Apps & Tokens) and sets
+    ARUBA_REFRESH_TOKEN in .env.
+  - After that it's fully automatic: every refresh call both renews the
+    access token and rotates in a new refresh token. Aruba only revokes a
+    refresh token if it goes unused for 15 consecutive days, so refreshing
+    well inside that window (every 90 minutes, proactively, plus
+    immediately on any 401) keeps the connector authenticated indefinitely
+    without further manual steps.
+  - Each newly-issued refresh token is persisted back to .env so a service
+    restart picks up the latest one instead of the one that was rotated out.
+  - If the service is ever down for more than 15 days, Aruba revokes the
+    token and the one-time manual bootstrap must be repeated.
 
 Security:
   - Tokens stored in memory only, never written to disk or logs
@@ -125,17 +135,19 @@ class FileConnector(BaseConnector):
 
 class _ArubaTokenManager:
     """
-    Manages Aruba Central OAuth 2.0 tokens.
+    Manages Aruba Central OAuth 2.0 tokens via the refresh_token grant.
 
-    Flow A (refresh_token -- current):
-      Uses ARUBA_REFRESH_TOKEN to obtain access tokens.
-      Access token valid for ~2 hours. Refreshes every 90 minutes proactively.
-      Refresh token valid for 14 days -- Network team regenerates from portal.
-
-    Flow B (client_credentials -- future Option 2):
-      Activated automatically when ARUBA_CLIENT_SECRET is set AND
-      ARUBA_REFRESH_TOKEN is blank.
-      Fully automatic -- no manual token management needed.
+    This is the only grant Aruba Central's /oauth2/token endpoint supports
+    for renewal (there is no client_credentials grant on this API -- see
+    module docstring). ARUBA_REFRESH_TOKEN must be seeded once via a manual
+    authorization_code exchange in the Central UI (System Apps & Tokens);
+    from then on this class refreshes automatically:
+      - Access token valid for ~2 hours; refreshed every 90 minutes
+        proactively, and immediately on any 401.
+      - Each refresh rotates in a new refresh token, which is persisted to
+        .env so the chain survives restarts.
+      - Aruba revokes the refresh token only after 15 days of no use --
+        refreshing this often never comes close to that window.
 
     Thread safety: _lock protects token state for concurrent fetch calls.
     """
@@ -147,20 +159,42 @@ class _ArubaTokenManager:
         self._access_token:    Optional[str]      = None
         self._token_expiry:    Optional[datetime]  = None
         self._refresh_token:   Optional[str]       = (
-            settings.ARUBA_REFRESH_TOKEN or None
+            self._real_value(settings.ARUBA_REFRESH_TOKEN)
         )
         self._lock = threading.Lock()
+
+        if settings.ARUBA_REFRESH_TOKEN and not self._refresh_token:
+            logger.warning(
+                "Aruba: ARUBA_REFRESH_TOKEN looks like a placeholder "
+                f"({settings.ARUBA_REFRESH_TOKEN!r}) and is being treated "
+                "as unset. Paste the real refresh token issued by Aruba "
+                "Central (System Apps & Tokens), or the connector will "
+                "have no token to refresh with."
+            )
+
+    @staticmethod
+    def _real_value(value: Optional[str]) -> Optional[str]:
+        """
+        Returns value if it looks like a real configured secret, else None.
+        Treats blank/whitespace and template placeholders like
+        '<refresh_token_from_portal>' or 'your-client-secret' as unset, so a
+        forgotten placeholder in .env can't silently select the wrong OAuth
+        grant type.
+        """
+        if not value:
+            return None
+        v = value.strip()
+        if not v:
+            return None
+        if v.startswith("<") and v.endswith(">"):
+            return None
+        if v.lower().startswith("your-"):
+            return None
+        return value
 
     @property
     def _token_endpoint(self) -> str:
         return f"{settings.ARUBA_BASE_URL}/oauth2/token"
-
-    def _use_client_credentials(self) -> bool:
-        """True if we should use client_credentials flow instead of refresh."""
-        return (
-            bool(settings.ARUBA_CLIENT_SECRET)
-            and not bool(settings.ARUBA_REFRESH_TOKEN)
-        )
 
     def get_access_token(self) -> str:
         """
@@ -173,7 +207,7 @@ class _ArubaTokenManager:
             if not self._access_token:
                 raise RuntimeError(
                     "Aruba access token unavailable. "
-                    "Check ARUBA_REFRESH_TOKEN or ARUBA_CLIENT_SECRET in .env."
+                    "Check ARUBA_REFRESH_TOKEN in .env."
                 )
             return self._access_token
 
@@ -188,28 +222,15 @@ class _ArubaTokenManager:
         ))
 
     def _refresh(self) -> None:
-        if self._use_client_credentials():
-            self._refresh_client_credentials()
-        else:
-            self._refresh_with_token()
-
-    def _refresh_client_credentials(self) -> None:
-        """Option 2: client_credentials grant -- fully automatic."""
-        logger.info("Aruba: refreshing token via client_credentials flow")
-        data = {
-            "client_id":     settings.ARUBA_CLIENT_ID,
-            "client_secret": settings.ARUBA_CLIENT_SECRET,
-            "grant_type":    "client_credentials",
-        }
-        self._execute_token_request(data)
-
-    def _refresh_with_token(self) -> None:
-        """Option 1: refresh_token grant -- requires 14-day refresh token."""
+        """
+        Refresh via the refresh_token grant -- the only renewal grant
+        Aruba Central's /oauth2/token endpoint supports.
+        """
         if not self._refresh_token:
             raise RuntimeError(
-                "No Aruba refresh token available. "
-                "Set ARUBA_REFRESH_TOKEN in .env or provide "
-                "ARUBA_CLIENT_SECRET for client_credentials flow."
+                "No Aruba refresh token available. Set ARUBA_REFRESH_TOKEN "
+                "in .env with a token generated via the Central UI "
+                "(System Apps & Tokens)."
             )
         logger.info("Aruba: refreshing access token via refresh_token flow")
         data = {
