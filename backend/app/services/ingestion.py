@@ -29,7 +29,10 @@ Token management (ArubaAPIConnector):
     token and the one-time manual bootstrap must be repeated.
 
 Security:
-  - Tokens stored in memory only, never written to disk or logs
+  - Access token stored in memory only, never written to disk or logs.
+    The refresh token IS persisted to plaintext .env on every rotation
+    (see _persist_refresh_token) -- tracked as a known gap in
+    docs/STATUS.md ("Credential storage"), not yet remediated.
   - All credential errors sanitised before logging
   - SSL verification on all Aruba API calls
 """
@@ -351,6 +354,7 @@ class ArubaAPIConnector(BaseConnector):
     """
 
     _PAGE_LIMIT = 1000
+    _MAX_PAGES  = 50  # safety cap -- 50k records at _PAGE_LIMIT=1000
 
 
     def __init__(self):
@@ -401,37 +405,59 @@ class ArubaAPIConnector(BaseConnector):
         raise RuntimeError("Aruba API: failed after token refresh retry.")
 
     def _fetch_all_pages(
-        self, client: httpx.Client, path: str, key: str
+        self, client: httpx.Client, path: str, key,
+        extra_params: dict = None,
     ) -> List[dict]:
         """
         Fetch all pages from a paginated Aruba endpoint.
 
-        If the expected top-level `key` isn't present in the response on
-        the first page, this logs the keys that ARE present instead of
-        silently returning an empty list -- Aruba's exact response envelope
-        per endpoint isn't confirmed from docs alone, so this is the
-        fastest way to spot a wrong `key` guess from the logs.
+        `key` may be a single field name or a tuple of candidate field
+        names tried in order -- used where the response envelope isn't
+        confirmed from docs alone (e.g. notifications vs alerts). If none
+        of the candidates are present on the first page, this logs the
+        keys that ARE present instead of silently returning an empty list,
+        so a wrong `key` guess is easy to spot from the logs.
+
+        extra_params: static query params merged in on every page (e.g.
+        {"state": "Open"}) -- offset/limit are always added by this method.
+
+        Stops after _MAX_PAGES pages as a safety cap against a runaway
+        `total`/offset from the API, logging a warning so a truncated
+        result is visible rather than silent.
         """
+        keys = (key,) if isinstance(key, str) else tuple(key)
         results = []
-        offset  = 0
+        offset = 0
+        resolved_key = None
         first_page = True
-        while True:
-            data  = self._get(client, path, {
+        for page in range(self._MAX_PAGES):
+            data = self._get(client, path, {
                 "limit":  self._PAGE_LIMIT,
                 "offset": offset,
+                **(extra_params or {}),
             })
-            if first_page and key not in data:
-                logger.warning(
-                    f"Aruba API: {path} response has no '{key}' key -- "
-                    f"top-level keys present: {list(data.keys())}"
-                )
+            if resolved_key is None:
+                resolved_key = next((k for k in keys if k in data), None)
+                if resolved_key is None:
+                    if first_page:
+                        logger.warning(
+                            f"Aruba API: {path} response has none of {keys} "
+                            f"-- top-level keys present: {list(data.keys())}"
+                        )
+                    break
             first_page = False
-            items = data.get(key, [])
+            items = data.get(resolved_key, [])
             results.extend(items)
             total = data.get("total", len(results))
             offset += len(items)
             if offset >= total or not items:
                 break
+        else:
+            logger.warning(
+                f"Aruba API: {path} hit the {self._MAX_PAGES}-page safety "
+                f"cap ({len(results)} records fetched) -- result may be "
+                f"truncated."
+            )
         return results
 
     def fetch(self) -> List[ArubaRawRecord]:
@@ -506,26 +532,18 @@ class ArubaAPIConnector(BaseConnector):
         Fetch active alerts via the "List Notification API"
         (GET /central/v1/notifications) -- /monitoring/v2/alerts does not
         exist on Aruba's real API (that's what 404'd before).
+
+        Paginated the same way as APs/clients via _fetch_all_pages -- a
+        flat limit=100 call silently truncated alerts past the first page,
+        which skews alert_severity/alert_count (and therefore composite
+        score) on any site with more than 100 open alerts.
         """
         try:
-            data = self._get(
+            return self._fetch_all_pages(
                 client, "/central/v1/notifications",
-                {"state": "Open", "limit": 100}
+                ("notifications", "alerts"),
+                extra_params={"state": "Open"},
             )
-            # Response envelope isn't confirmed from docs -- try the
-            # documented "List Notification API" shape first, then fall
-            # back to the old guess, and log what's actually there if
-            # neither key is present so a wrong guess is easy to spot.
-            for key in ("notifications", "alerts"):
-                if key in data:
-                    return data[key]
-            if data:
-                logger.warning(
-                    "Aruba API: /central/v1/notifications response has "
-                    f"neither 'notifications' nor 'alerts' key -- "
-                    f"top-level keys present: {list(data.keys())}"
-                )
-            return []
         except Exception as exc:
             logger.warning(f"Aruba API: alerts fetch failed: {exc}")
             return []
