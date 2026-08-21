@@ -1,0 +1,119 @@
+GBS SERVICE HEALTH DASHBOARD
+SolarWinds LAN Health Pillar
+Analysis & Design Summary --- Business Review
+============================================
+Prepared by: BMI Technology | Infrastructure Architecture Team
+April 2026 | For Business Approval
+
+
+BACKGROUND
+----------
+HPE Aruba Central API access is not currently available. The client
+has confirmed that SolarWinds Observability Self-Hosted (version
+2025.1.1) is deployed and monitoring the organisation's LAN network.
+This document summarises the analysis and proposed design for adding
+SolarWinds LAN data as a new pillar in the GBS Service Health Dashboard.
+
+
+WHAT SOLARWINDS ADDS TO THE DASHBOARD
+--------------------------------------
+The GBS dashboard currently shows wireless health (from a data file
+pending Aruba API access). SolarWinds provides visibility into the
+wired LAN infrastructure underneath the wireless layer.
+
+When a GBS user cannot connect, the issue could be at either layer --
+wireless or wired. With both pillars visible in one screen, the
+support team can identify the root cause immediately without logging
+into multiple systems.
+
+SolarWinds is NOT a replacement for the wireless pillar. It is an
+additional, complementary view.
+
+
+WHAT WAS CONFIRMED DURING ANALYSIS
+------------------------------------
+The SolarWinds environment was queried directly during analysis:
+
+  - 700+ LAN devices (nodes) are monitored
+  - Devices span 30 country locations
+  - 100 active alerts are present at any given time
+  - 11 devices are currently offline
+  - Each device has one monitored network interface
+  - Devices have a Country property that can be used for filtering
+  - 50 devices have no country assigned (data quality gap)
+
+These numbers confirm SolarWinds has sufficient data to produce
+a meaningful LAN health view for the dashboard.
+
+
+THE CHALLENGE -- TOO MANY DEVICES TO DISPLAY
+---------------------------------------------
+700 devices across 30 countries cannot be shown as individual rows
+on a dashboard. The design solves this in two levels:
+
+  Level 1 -- Global View (default):
+  The dashboard shows one summary row per country -- 30 rows.
+  Each row shows that country's device count, availability
+  percentage, packet loss, and active alerts. The overall LAN
+  health score is computed across all 700 devices.
+
+  Level 2 -- Country View (on selection):
+  A Country selector in the LAN pillar header allows the user
+  to filter down to a specific country or region group, showing
+  individual devices for that selection only.
+
+
+COUNTRY SELECTOR DESIGN
+------------------------
+The selector offers three levels of choice:
+
+  All            -- global view across all 30 countries
+  Region groups  -- e.g. Asia Pacific, EMEA, Americas
+                    (configured by the client team)
+  Individual     -- any single country, with device count shown
+
+Region groups are fully configurable by the client directly in the
+database -- no technical change required to add, rename, or
+reorganise groups. Example groups proposed:
+
+  Asia Pacific : covers relevant Asia Pacific countries
+  EMEA         : covers relevant Europe, Middle East, Africa countries
+  Americas     : covers relevant Americas countries
+
+The 50 unassigned devices are shown as an "Unclassified" group --
+making the gap visible rather than hiding it, and prompting the
+SolarWinds team to correct the missing data.
+
+
+HEALTH SCORING
+--------------
+Each device receives a LAN Health Score (0-100) based on three factors:
+
+  Device availability    -- is the device up, degraded, or down?
+  Packet loss            -- is data reaching the device reliably?
+  Interface utilisation  -- is the network link under stress?
+  Alert penalty          -- deducted for active critical or warning alerts
+
+Country and overall scores are weighted by device count -- a country
+with 250 devices has proportionally more influence on the global
+score than a country with 10 devices.
+
+
+WHAT DOES NOT CHANGE
+---------------------
+The existing dashboard pillars -- Wireless, AVD, Applications, and
+Printing -- are completely unchanged. The SolarWinds pillar is added
+alongside them, not in place of any existing pillar.
+
+
+PENDING BUSINESS DECISIONS
+---------------------------
+  1. Confirm the region group names and which countries belong to each
+  2. Agree Green / Amber / Red thresholds for LAN health score
+  3. Confirm the SolarWinds read-only account can be provisioned
+
+
+-----------------------------------------------------------------------
+Reference: GBS-SOW-ARUBA-POC-v1.0
+Prepared by: BMI Technology -- Infrastructure Architecture Team
+-----------------------------------------------------------------------

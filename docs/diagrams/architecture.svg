@@ -1,0 +1,157 @@
+<svg viewBox="0 0 880 560" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2E75B6"/>
+    </marker>
+    <marker id="arr2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#17A589"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="880" height="560" fill="#F8FAFC" rx="0"/>
+
+  <!-- Title -->
+  <text x="440" y="34" text-anchor="middle" font-size="16" font-weight="bold" fill="#1F3864">GBS Service Health Dashboard — Phase 1 Architecture</text>
+  <text x="440" y="54" text-anchor="middle" font-size="11" fill="#888">File-Based POC · Docker Compose · Developer + Customer Environments</text>
+
+  <!-- ══ LAYER LABELS (left rail) ══ -->
+  <text x="18" y="120" font-size="9" fill="#94A3B8" font-weight="bold" transform="rotate(-90,18,120)">DATA SOURCE</text>
+  <text x="18" y="230" font-size="9" fill="#94A3B8" font-weight="bold" transform="rotate(-90,18,230)">INGESTION</text>
+  <text x="18" y="340" font-size="9" fill="#94A3B8" font-weight="bold" transform="rotate(-90,18,340)">STORAGE</text>
+  <text x="18" y="455" font-size="9" fill="#94A3B8" font-weight="bold" transform="rotate(-90,18,455)">PRESENTATION</text>
+
+  <!-- ══ PHASE 1 CONTAINER ══ -->
+  <rect x="36" y="68" width="808" height="104" rx="8" fill="none" stroke="#D6E4F0" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="50" y="84" font-size="9" fill="#2E75B6" font-weight="bold">LAYER 0 — DATA SOURCE</text>
+
+  <!-- CSV File -->
+  <rect x="60" y="92" width="148" height="64" rx="6" fill="#E1F5EE" stroke="#17A589" stroke-width="1.5"/>
+  <text x="134" y="116" text-anchor="middle" font-size="11" font-weight="bold" fill="#0E6655">aruba_health.csv</text>
+  <text x="134" y="131" text-anchor="middle" font-size="10" fill="#0E6655">2,016 rows · 7 days</text>
+  <text x="134" y="146" text-anchor="middle" font-size="9" fill="#3B7A6A">12 sites × 24h × 7d</text>
+
+  <!-- JSON File -->
+  <rect x="224" y="92" width="148" height="64" rx="6" fill="#E1F5EE" stroke="#17A589" stroke-width="1.5"/>
+  <text x="298" y="116" text-anchor="middle" font-size="11" font-weight="bold" fill="#0E6655">aruba_health.json</text>
+  <text x="298" y="131" text-anchor="middle" font-size="10" fill="#0E6655">Same schema</text>
+  <text x="298" y="146" text-anchor="middle" font-size="9" fill="#3B7A6A">Switchable via env var</text>
+
+  <!-- Phase 2 stub -->
+  <rect x="388" y="92" width="200" height="64" rx="6" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="488" y="114" text-anchor="middle" font-size="10" fill="#94A3B8" font-style="italic">Phase 2 (not active)</text>
+  <text x="488" y="130" text-anchor="middle" font-size="11" font-weight="bold" fill="#94A3B8">Aruba Central REST API</text>
+  <text x="488" y="146" text-anchor="middle" font-size="9" fill="#94A3B8">OAuth 2.0 · HTTPS · SaaS</text>
+
+  <!-- Connector swap label -->
+  <text x="608" y="120" font-size="9" fill="#64748B">Single env var</text>
+  <text x="608" y="133" font-size="9" fill="#64748B">swap activates</text>
+  <text x="608" y="146" font-size="9" fill="#64748B">Phase 2</text>
+
+  <!-- ══ LAYER 1 CONTAINER ══ -->
+  <rect x="36" y="184" width="808" height="96" rx="8" fill="none" stroke="#D6E4F0" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="50" y="200" font-size="9" fill="#2E75B6" font-weight="bold">LAYER 1 — INGESTION &amp; NORMALISATION</text>
+
+  <!-- FileConnector -->
+  <rect x="60" y="208" width="148" height="60" rx="6" fill="#EBF3FB" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="134" y="228" text-anchor="middle" font-size="10" font-weight="bold" fill="#1F3864">FileConnector</text>
+  <text x="134" y="242" text-anchor="middle" font-size="9" fill="#2E75B6">services/ingestion.py</text>
+  <text x="134" y="256" text-anchor="middle" font-size="9" fill="#2E75B6">Reads CSV or JSON</text>
+
+  <!-- Normaliser -->
+  <rect x="224" y="208" width="148" height="60" rx="6" fill="#EBF3FB" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="298" y="228" text-anchor="middle" font-size="10" font-weight="bold" fill="#1F3864">Normaliser</text>
+  <text x="298" y="242" text-anchor="middle" font-size="9" fill="#2E75B6">services/normaliser.py</text>
+  <text x="298" y="256" text-anchor="middle" font-size="9" fill="#2E75B6">Score · Status · Alerts</text>
+
+  <!-- Scheduler -->
+  <rect x="388" y="208" width="148" height="60" rx="6" fill="#EBF3FB" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="462" y="228" text-anchor="middle" font-size="10" font-weight="bold" fill="#1F3864">asyncio Loop</text>
+  <text x="462" y="242" text-anchor="middle" font-size="9" fill="#2E75B6">workers/scheduler.py</text>
+  <text x="462" y="256" text-anchor="middle" font-size="9" fill="#2E75B6">60s poll · in-memory state</text>
+
+  <!-- DB Writer -->
+  <rect x="552" y="208" width="148" height="60" rx="6" fill="#EBF3FB" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="626" y="228" text-anchor="middle" font-size="10" font-weight="bold" fill="#1F3864">DB Writer</text>
+  <text x="626" y="242" text-anchor="middle" font-size="9" fill="#2E75B6">services/db_writer.py</text>
+  <text x="626" y="256" text-anchor="middle" font-size="9" fill="#2E75B6">Persist + trend query</text>
+
+  <!-- ══ LAYER 2 CONTAINER ══ -->
+  <rect x="36" y="292" width="808" height="80" rx="8" fill="none" stroke="#D6E4F0" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="50" y="308" font-size="9" fill="#2E75B6" font-weight="bold">LAYER 2 — DATA STORE</text>
+
+  <!-- TimescaleDB -->
+  <rect x="60" y="314" width="200" height="48" rx="6" fill="#1F3864" stroke="#1F3864" stroke-width="1.5"/>
+  <text x="160" y="334" text-anchor="middle" font-size="10" font-weight="bold" fill="white">TimescaleDB</text>
+  <text x="160" y="350" text-anchor="middle" font-size="9" fill="#B0C4DE">wireless_metrics hypertable · 90d retention</text>
+
+  <!-- PostgreSQL -->
+  <rect x="276" y="314" width="200" height="48" rx="6" fill="#1F3864" stroke="#1F3864" stroke-width="1.5"/>
+  <text x="376" y="334" text-anchor="middle" font-size="10" font-weight="bold" fill="white">PostgreSQL</text>
+  <text x="376" y="350" text-anchor="middle" font-size="9" fill="#B0C4DE">dashboard_config · thresholds</text>
+
+  <!-- ══ LAYER 3 CONTAINER ══ -->
+  <rect x="36" y="384" width="808" height="120" rx="8" fill="none" stroke="#D6E4F0" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="50" y="400" font-size="9" fill="#2E75B6" font-weight="bold">LAYER 3 — PRESENTATION</text>
+
+  <!-- FastAPI BFF -->
+  <rect x="60" y="408" width="200" height="84" rx="6" fill="#EBF3FB" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="160" y="428" text-anchor="middle" font-size="10" font-weight="bold" fill="#1F3864">FastAPI BFF</text>
+  <text x="160" y="442" text-anchor="middle" font-size="9" fill="#2E75B6">app/api/wireless.py · :8000</text>
+  <text x="160" y="456" text-anchor="middle" font-size="9" fill="#475569">/summary  /sites  /alerts</text>
+  <text x="160" y="470" text-anchor="middle" font-size="9" fill="#475569">/trend  /ingest/trigger</text>
+  <text x="160" y="484" text-anchor="middle" font-size="9" fill="#475569">/health  /docs</text>
+
+  <!-- React Dashboard -->
+  <rect x="276" y="408" width="200" height="84" rx="6" fill="#1F3864" stroke="#1F3864" stroke-width="1.5"/>
+  <text x="376" y="428" text-anchor="middle" font-size="10" font-weight="bold" fill="white">React Dashboard</text>
+  <text x="376" y="442" text-anchor="middle" font-size="9" fill="#B0C4DE">Vite dev server · :3000</text>
+  <text x="376" y="458" text-anchor="middle" font-size="9" fill="#93C5FD">ScoreGauge · KpiCard</text>
+  <text x="376" y="472" text-anchor="middle" font-size="9" fill="#93C5FD">SiteTable · AlertFeed</text>
+  <text x="376" y="486" text-anchor="middle" font-size="9" fill="#93C5FD">TrendChart · PocBanner</text>
+
+  <!-- Browser -->
+  <rect x="492" y="420" width="160" height="60" rx="6" fill="#F0FDF4" stroke="#16A34A" stroke-width="1.5"/>
+  <text x="572" y="444" text-anchor="middle" font-size="10" font-weight="bold" fill="#166534">Browser</text>
+  <text x="572" y="458" text-anchor="middle" font-size="9" fill="#166534">http://localhost:3000</text>
+  <text x="572" y="472" text-anchor="middle" font-size="9" fill="#16A34A">Customer / Developer</text>
+
+  <!-- ══ ARROWS ══ -->
+  <!-- CSV → FileConnector -->
+  <line x1="134" y1="156" x2="134" y2="206" stroke="#17A589" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <!-- JSON → FileConnector (angled) -->
+  <line x1="298" y1="156" x2="160" y2="206" stroke="#17A589" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <!-- FileConnector → Normaliser -->
+  <line x1="208" y1="238" x2="222" y2="238" stroke="#2E75B6" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Normaliser → Scheduler -->
+  <line x1="372" y1="238" x2="386" y2="238" stroke="#2E75B6" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Scheduler → DB Writer -->
+  <line x1="536" y1="238" x2="550" y2="238" stroke="#2E75B6" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- DB Writer → TimescaleDB -->
+  <line x1="626" y1="268" x2="220" y2="320" stroke="#2E75B6" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Scheduler (in-memory) → FastAPI BFF (via state) -->
+  <line x1="462" y1="268" x2="200" y2="408" stroke="#2E75B6" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+  <text x="310" y="350" font-size="8" fill="#94A3B8" transform="rotate(-42,310,350)">in-memory state</text>
+  <!-- TimescaleDB → FastAPI BFF -->
+  <line x1="160" y1="362" x2="160" y2="406" stroke="#2E75B6" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- PostgreSQL → FastAPI BFF -->
+  <line x1="376" y1="362" x2="200" y2="430" stroke="#2E75B6" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- FastAPI BFF → React -->
+  <line x1="260" y1="450" x2="274" y2="450" stroke="#2E75B6" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="267" y="444" text-anchor="middle" font-size="8" fill="#2E75B6">REST</text>
+  <!-- React → Browser -->
+  <line x1="476" y1="450" x2="490" y2="450" stroke="#16A34A" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <!-- ══ ENVIRONMENT BADGES (bottom) ══ -->
+  <rect x="60" y="516" width="120" height="24" rx="4" fill="#TEAL_LIGHT" stroke="#17A589" stroke-width="1"/>
+  <rect x="60" y="516" width="120" height="24" rx="4" fill="#E1F5EE" stroke="#17A589" stroke-width="1"/>
+  <text x="120" y="532" text-anchor="middle" font-size="9" font-weight="bold" fill="#0E6655">DEV: bind mount ./data</text>
+
+  <rect x="196" y="516" width="148" height="24" rx="4" fill="#EBF3FB" stroke="#2E75B6" stroke-width="1"/>
+  <text x="270" y="532" text-anchor="middle" font-size="9" font-weight="bold" fill="#1F3864">CUST: named volume gbs_data</text>
+
+  <rect x="360" y="516" width="140" height="24" rx="4" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="430" y="532" text-anchor="middle" font-size="9" fill="#64748B" font-style="italic">Phase 2: Aruba API</text>
+
+  <text x="660" y="530" font-size="9" fill="#94A3B8">GBS-SOW-ARUBA-POC-v1.0 · April 2026</text>
+</svg>

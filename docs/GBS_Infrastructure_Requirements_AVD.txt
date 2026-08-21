@@ -1,0 +1,344 @@
+GBS SERVICE HEALTH DASHBOARD
+Infrastructure & Software Requirements
+Customer Deployment — Phase 1 POC
+Azure Virtual Desktop Environment
+=======================================
+Prepared by: BMI Technology | Infrastructure Architecture Team
+Version: v1.1 | April 2026
+Supersedes: GBS_Infrastructure_Requirements.txt (v1.0)
+
+
+OVERVIEW
+--------
+The client environment is Azure Virtual Desktop (AVD). The GBS Service
+Health Dashboard will be deployed inside an AVD session host VM rather
+than on a physical or local machine. This document replaces v1.0 and
+covers the specific requirements, constraints, and considerations for
+running the dashboard inside AVD.
+
+The application architecture is unchanged — three Docker containers
+(TimescaleDB, FastAPI, React) running on a single host. Only the host
+itself changes from a local machine to an AVD session host.
+
+
+=======================================================================
+1. AVD SESSION HOST REQUIREMENTS
+=======================================================================
+
+The dashboard must be deployed on an AVD Session Host VM — not on a
+personal session or thin client. The session host is the Azure VM
+that users connect to via AVD.
+
+RECOMMENDED VM SIZE
+-------------------
+  Azure VM SKU      Cores   RAM     Notes
+  ------------      -----   ---     -----
+  Standard_D4s_v5   4       16 GB   Recommended — comfortable headroom
+  Standard_D2s_v5   2       8 GB    Minimum — acceptable for POC
+  Standard_B4ms      4       16 GB   Burstable — acceptable for demo use
+
+  Avoid Standard_B2s (2 vCPU / 4 GB) — insufficient RAM for
+  TimescaleDB + FastAPI + React running concurrently.
+
+OPERATING SYSTEM
+----------------
+  Windows 11 Enterprise multi-session (recommended for AVD)
+  Windows 10 Enterprise multi-session
+  Windows Server 2022 (also supported)
+
+  All three support Docker Desktop with WSL2 backend.
+
+DISK
+----
+  OS disk:   128 GB minimum (Standard SSD — Premium SSD preferred)
+  Data disk: Not required — Docker volumes use the OS disk.
+             Ensure at least 20 GB free space on C: after OS and
+             software installation.
+
+REGION
+------
+  Deploy the session host VM in the same Azure region as the
+  organisation's AVD host pool to minimise latency for users
+  accessing the dashboard through their AVD session.
+
+
+=======================================================================
+2. SOFTWARE REQUIREMENTS ON THE SESSION HOST VM
+=======================================================================
+
+MANDATORY
+---------
+  Software              Installation method         Notes
+  --------              -------------------         -----
+  WSL2                  Windows feature             Required by Docker Desktop
+                        (Windows Subsystem          on Windows. Must be
+                        for Linux v2)               installed before Docker.
+                        Enable via PowerShell:
+                        wsl --install
+
+  Docker Desktop        MSI installer               Version 4.x or later.
+  for Windows           (provided in delivery       Requires WSL2 backend
+                        package or download         (not Hyper-V) on AVD
+                        from docker.com)            multi-session hosts.
+
+  Web Browser           Pre-installed on            Chrome or Edge.
+                        Windows 11 AVD image        Used to open
+                                                    http://localhost:3000
+                                                    inside the AVD session.
+
+  PowerShell 5.1+       Pre-installed on            Required for the
+                        Windows 10/11               update_timestamps.ps1
+                                                    and simulate_realtime.ps1
+                                                    scripts.
+
+IMPORTANT — DOCKER DESKTOP ON AVD MULTI-SESSION
+-------------------------------------------------
+  AVD multi-session hosts run multiple user sessions simultaneously.
+  Docker Desktop must be installed at the SYSTEM level (not per-user)
+  so it is available regardless of which user session is active.
+
+  Install Docker Desktop using the system-wide flag:
+
+    Start-Process "Docker Desktop Installer.exe" -ArgumentList `
+      "install", "--quiet", "--accept-license", `
+      "--backend=wsl-2" -Wait
+
+  Do NOT install Docker Desktop as a regular per-user application —
+  it will not be visible to other sessions or to the deployment
+  service account.
+
+  Confirm Docker is running from the deployment session:
+    docker --version
+    docker compose version
+
+
+=======================================================================
+3. AZURE NETWORKING & SECURITY REQUIREMENTS
+=======================================================================
+
+VIRTUAL NETWORK
+---------------
+  The session host VM must be in a Virtual Network (VNet) with:
+  - Outbound internet access (for Docker Desktop download — one time only)
+  - No inbound public IP required for POC
+
+  For Phase 2 (live Aruba API), outbound HTTPS to
+  api.central.arubanetworks.com must be permitted from the VNet.
+
+NETWORK SECURITY GROUP (NSG)
+-----------------------------
+  The following NSG rules are required on the session host subnet:
+
+  Rule        Direction   Port    Protocol   Source              Purpose
+  ----        ---------   ----    --------   ------              -------
+  AllowRDP    Inbound     3389    TCP        AVD gateway IPs     Remote access
+                                             (managed by Azure)
+  AllowHTTP   Inbound     3000    TCP        VNet subnet CIDR    Dashboard access
+                                             (or specific IPs)   from AVD sessions
+  DenyAll     Inbound     *       *          Any                 Default deny
+
+  Port 3000 inbound is only needed if users will access the dashboard
+  from a DIFFERENT session host than the one running Docker. If the
+  dashboard and the user browser run on the SAME session host,
+  localhost:3000 works without any NSG change.
+
+  Port 8000 (FastAPI) does NOT need to be opened to users — it is
+  accessed internally by the Vite proxy inside Docker.
+  Port 5432 (TimescaleDB) does NOT need to be opened — internal only.
+
+RECOMMENDED DEPLOYMENT TOPOLOGY
+---------------------------------
+  Option A — Single Session Host (simplest, recommended for POC)
+  ---------------------------------------------------------------
+  Docker runs on one dedicated session host VM. Users open a browser
+  inside their AVD session and navigate to the IP of that host:
+
+    http://<session-host-private-ip>:3000
+
+  The Vite proxy in the frontend container forwards API calls to the
+  backend container using Docker internal DNS — no change needed.
+  NSG must allow port 3000 from the AVD subnet.
+
+  Option B — Same Session Host as User Session
+  --------------------------------------------
+  Docker and the user browser run on the same session host VM.
+  Users navigate to http://localhost:3000 inside their session.
+  No NSG change needed — all traffic is loopback.
+  Simpler but ties the dashboard to a single session host's capacity.
+
+AZURE FIREWALL / PROXY
+-----------------------
+  If the AVD environment routes outbound traffic through an Azure
+  Firewall or corporate proxy:
+
+  - Allow outbound HTTPS to hub.docker.com and
+    registry-1.docker.io (for Docker image pulls — one time only
+    if images are not pre-loaded from USB/file share)
+  - No other outbound rules needed for Phase 1 POC operation
+
+  For Phase 2 (live Aruba API):
+  - Allow outbound HTTPS to api.central.arubanetworks.com
+
+
+=======================================================================
+4. AZURE IDENTITY & ACCESS
+=======================================================================
+
+SERVICE ACCOUNT
+---------------
+  A dedicated Azure AD / Entra ID service account is recommended for
+  deploying and operating the Docker environment:
+
+    Account type:   Standard user (not global admin)
+    AVD role:       Session Host User on the target host pool
+    Local role:     Local Administrator on the session host VM
+                    (required to install Docker Desktop system-wide
+                    and manage Docker volumes)
+
+  Do NOT use a personal admin account for day-to-day operation.
+
+RBAC ON SESSION HOST VM
+------------------------
+  The deploying user or service account needs:
+    Virtual Machine Contributor   (to RDP into the session host)
+    Or: Direct RDP via AVD connection
+
+  No Azure subscription-level permissions are needed beyond VM access.
+
+DOCKER DESKTOP LICENSING
+-------------------------
+  Docker Desktop on an Azure VM is subject to the same licensing
+  as on-premises:
+  - Free for organisations under 250 employees / $10M revenue
+  - Paid subscription required for larger organisations
+
+  Alternative (avoid licensing concern entirely):
+  Install Docker Engine directly on a Windows Server 2022 session
+  host using the Mirantis Docker Engine for Windows — or deploy on
+  a Linux VM (Ubuntu 22.04) as a session host, where Docker Engine
+  is always free.
+
+
+=======================================================================
+5. FILE DELIVERY IN AVD ENVIRONMENT
+=======================================================================
+
+Since there is no USB port on a virtual desktop, the delivery package
+is transferred using one of the following methods:
+
+  Method                  Steps
+  ------                  -----
+  Azure Blob Storage      Upload delivery files to a storage account blob
+                          container. RDP into session host and download
+                          via browser or AzCopy.
+                          azcopy copy "https://<account>.blob.core.windows.net
+                          /gbs-poc/*" "C:\CustomProjects\gbs-poc\" --recursive
+
+  Azure File Share        Mount an Azure File Share as a network drive
+                          on the session host (\\<account>.file.core.windows.net
+                          \gbs-poc). Copy files directly.
+                          No AzCopy needed — standard file copy.
+
+  OneDrive / SharePoint   Share the delivery folder via OneDrive.
+                          Log into the AVD session, open OneDrive,
+                          and sync the folder to the session host.
+
+  Direct RDP file copy    During an RDP session, enable clipboard/drive
+                          redirection in the RDP client settings.
+                          Paste files directly from the local machine
+                          into the AVD session.
+
+RECOMMENDED: Azure File Share — simplest for IT teams already using
+Azure Storage. Files persist in the share and can be updated without
+re-delivering to the VM.
+
+
+=======================================================================
+6. CSV DATA FILE IN AVD
+=======================================================================
+
+The dashboard reads data from a CSV file on the Docker named volume
+(gbs_data). In an AVD environment, updating the CSV works as follows:
+
+  Step 1:  Place the new CSV in the Azure File Share or OneDrive
+  Step 2:  RDP into the session host (or open a PowerShell session)
+  Step 3:  Run the docker volume copy command:
+
+    docker run --rm `
+      -v gbs_data:/data `
+      -v "C:\path\to\new_file.csv":/src/new_file.csv `
+      alpine cp /src/new_file.csv /data/aruba_health.csv
+
+  Step 4:  Trigger ingest:
+    curl -X POST http://localhost:8000/api/v1/wireless/ingest/trigger
+
+  For ongoing use, the update_timestamps.ps1 script handles both the
+  timestamp rebase and the volume copy in one command.
+
+
+=======================================================================
+7. UPDATED PRE-DEPLOYMENT CHECKLIST
+=======================================================================
+
+Customer IT team must confirm before BMI deployment session:
+
+  AZURE ENVIRONMENT
+  [ ] AVD session host VM provisioned (Standard_D4s_v5 or equivalent)
+  [ ] VM OS: Windows 11 Enterprise multi-session or Windows Server 2022
+  [ ] At least 20 GB free disk space on C: drive of session host VM
+  [ ] RDP access to session host VM available for BMI deployer
+  [ ] NSG rule allowing port 3000 inbound from AVD subnet (Option A)
+      OR confirm single-host topology (Option B — localhost only)
+  [ ] Outbound internet access from session host VM confirmed
+      (for Docker Desktop download — one time)
+
+  SOFTWARE
+  [ ] WSL2 installed and enabled on session host VM
+      (run: wsl --install in elevated PowerShell, then reboot)
+  [ ] Docker Desktop installed system-wide on session host VM
+      (verify: docker --version returns a version number)
+  [ ] Docker Desktop is running (whale icon in system tray,
+      or docker ps returns no errors)
+  [ ] Web browser available inside the AVD session (Chrome or Edge)
+  [ ] PowerShell 5.1+ available (pre-installed on Windows 10/11)
+
+  FILE DELIVERY
+  [ ] Delivery method agreed (Azure Blob / File Share / OneDrive / RDP)
+  [ ] BMI has access to upload delivery files to agreed location
+  [ ] Service account credentials shared with BMI deployer
+
+  LICENSING
+  [ ] Docker Desktop licence confirmed (or Linux VM alternative agreed)
+
+
+=======================================================================
+8. PHASE 2 ADDITIONAL REQUIREMENTS IN AVD (FOR PLANNING)
+=======================================================================
+
+  Requirement               AVD-specific consideration
+  -----------               --------------------------
+  Outbound HTTPS to         NSG outbound rule or Azure Firewall
+  Aruba Central API         application rule to allow
+                            api.central.arubanetworks.com:443
+                            from the session host subnet
+
+  API credential storage    Azure Key Vault is the natural choice
+                            in an Azure environment — already
+                            supported by the Phase 2 connector design
+
+  Persistent operation      Consider moving Docker to a dedicated
+                            Azure VM (not a shared session host) for
+                            production Phase 2 deployment — avoids
+                            the dashboard going offline when the
+                            session host is patched or rebooted
+
+  High availability         Azure VM with availability zone placement
+                            + Azure Managed Disk with ZRS replication
+                            for the TimescaleDB pgdata volume
+
+
+-----------------------------------------------------------------------
+For questions regarding these requirements, contact:
+BMI Technology - Infrastructure Architecture Team
+Reference: GBS-SOW-ARUBA-POC-v1.0
+-----------------------------------------------------------------------

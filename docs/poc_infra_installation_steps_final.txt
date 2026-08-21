@@ -1,0 +1,423 @@
+## GBS Service Health Dashboard — Environment Setup
+### Windows Server + MS SQL + IIS (No Docker)
+
+---
+
+```
+PREREQUISITES CONFIRMED
+-----------------------
+- RDP access to VM via AVD session
+- IIS installed with URL Rewrite 2.1 and ARR 3.0
+- ARR proxy enabled at server level
+- MS SQL on separate VM, SQL Server Authentication enabled
+- gbs_app login created, gbs_health database initialised via init.sql
+- Port 3000 open inbound from AVD subnet
+```
+
+---
+
+### STEP 1 — Install Python 3.12
+
+```
+1. Download: https://www.python.org/downloads/release/python-31210/
+   Pick: Windows installer (64-bit)
+
+2. Run installer
+   CHECK: Add Python to PATH
+   CHECK: Install for all users (requires admin)
+
+3. Verify (new PowerShell window):
+   python --version
+   pip --version
+```
+
+---
+
+### STEP 2 — Install Node.js 22 LTS
+
+```
+1. Download: https://nodejs.org/en/download
+   Pick: Windows Installer (.msi) 64-bit — 22.x LTS
+
+2. Run installer, accept all defaults
+
+3. Verify:
+   node --version
+   npm --version
+```
+
+---
+
+### STEP 3 — Install Git
+
+```
+1. Download: https://git-scm.com/download/win
+
+2. Run installer, accept all defaults
+
+3. Verify:
+   git --version
+```
+
+---
+
+### STEP 4 — Install VS Code
+
+```
+1. Download: https://code.visualstudio.com/
+
+2. Run installer
+   CHECK: Add to PATH
+
+3. Install extensions inside VS Code:
+   - Python
+   - Pylance
+   - ESLint
+```
+
+---
+
+### STEP 5 — Install Microsoft ODBC Driver 18
+
+```
+1. Download: https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server
+   Pick: msodbcsql18.msi (Windows x64)
+
+2. Run installer, accept all defaults
+
+3. Verify:
+   python -c "import pyodbc; print(pyodbc.drivers())"
+   Output must include: ODBC Driver 18 for SQL Server
+```
+
+---
+
+### STEP 6 — Install Postman
+
+```
+1. Download: https://www.postman.com/downloads/
+
+2. Run installer
+```
+
+---
+
+### STEP 7 — Get the Source Code
+
+```
+Open PowerShell and run:
+
+   mkdir C:\Users\karthikr\gbs
+   cd C:\Users\karthikr\gbs
+   git clone <repository-url> gbs-poc
+   cd gbs-poc
+```
+
+---
+
+### STEP 8 — Create Python Virtual Environment
+
+```
+cd C:\Users\karthikr\gbs\gbs-poc\backend
+
+py -3.12 -m venv venv
+
+venv\Scripts\activate
+
+pip install -r requirements.txt
+
+Verify:
+   pip show sqlalchemy
+   pip show pyodbc
+```
+
+---
+
+### STEP 9 — Configure Environment
+
+```
+1. Create the .env file inside backend\:
+   Copy .env from the project (already has correct structure)
+   Path: C:\Users\karthikr\gbs\gbs-poc\backend\.env
+
+2. Fill in these values (provided by SQL team):
+   DB_HOST=<MSSQL_SERVER_IP>
+   DB_PORT=1433
+   DB_NAME=gbs_health
+   DB_USER=gbs_app
+   DB_PASSWORD=<PASSWORD>
+   DB_DRIVER=ODBC Driver 18 for SQL Server
+
+3. Fill in these paths (match your installation):
+   DATA_SOURCE_PATH=C:/Users/karthikr/gbs/gbs-poc/data/aruba_health.csv
+   DEMO_SAMPLES_PATH=C:/Users/karthikr/gbs/gbs-poc/data/realtimesamples
+
+4. Restrict .env file permissions:
+   icacls "C:\Users\karthikr\gbs\gbs-poc\backend\.env" /inheritance:r /grant:r "karthikr:(R,W)"
+```
+
+---
+
+### STEP 10 — Test Database Connection
+
+```
+cd C:\Users\karthikr\gbs\gbs-poc\backend
+venv\Scripts\activate
+
+python -c "
+import pyodbc
+conn = pyodbc.connect(
+    'DRIVER={ODBC Driver 18 for SQL Server};'
+    'SERVER=<DB_HOST>,1433;'
+    'DATABASE=gbs_health;'
+    'UID=gbs_app;'
+    'PWD=<PASSWORD>;'
+    'TrustServerCertificate=yes;'
+    'Encrypt=yes;'
+)
+print('Connection successful')
+conn.close()
+"
+
+Expected output: Connection successful
+If it fails: verify DB_HOST, DB_USER, DB_PASSWORD with SQL team
+```
+
+---
+
+### STEP 11 — Test Config Reads .env
+
+```
+cd C:\Users\karthikr\gbs\gbs-poc\backend
+venv\Scripts\activate
+
+python -c "from app.core.config import settings; print(settings.DB_HOST)"
+
+Expected output: your DB host value (not an error)
+If ValidationError appears: .env is missing or in wrong folder
+   Correct location: C:\Users\karthikr\gbs\gbs-poc\backend\.env
+```
+
+---
+
+### STEP 12 — Initialise Database
+
+```
+1. Open SQL Server Management Studio (SSMS)
+   Connect using DBA / gbs_admin account
+
+2. Open: C:\Users\karthikr\gbs\gbs-poc\infra\init.sql
+
+3. Execute (F5)
+
+4. Verify tables exist:
+   USE gbs_health;
+   SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES;
+   Expected: wireless_metrics, dashboard_config
+```
+
+---
+
+### STEP 13 — Start Backend (Test Run)
+
+```
+cd C:\Users\karthikr\gbs\gbs-poc\backend
+venv\Scripts\activate
+
+uvicorn app.main:app --host 127.0.0.1 --port 8000
+
+Expected log output:
+   INFO: Started server process
+   INFO: Polling loop started
+   INFO: Ingestion cycle complete
+
+Test in new PowerShell window:
+   curl http://localhost:8000/health
+   Expected: JSON with status: ok
+```
+
+---
+
+### STEP 14 — Update CSV Timestamps
+
+```
+Open new PowerShell window:
+
+cd C:\Users\karthikr\gbs\gbs-poc
+
+powershell.exe -ExecutionPolicy Bypass -File .\update_timestamps.ps1
+
+Expected output:
+   OK  Updated 2016 rows in aruba_health_7day.csv
+   OK  Copied to active file: aruba_health.csv
+   OK  Updated 10 snapshot files
+```
+
+---
+
+### STEP 15 — Trigger First Ingest
+
+```
+curl -X POST http://localhost:8000/api/v1/wireless/ingest/trigger
+
+Expected: JSON with last_ingested_at timestamp
+Then check backend logs — should show:
+   Ingestion cycle complete: 12 sites, overall score=XX, status=green
+```
+
+---
+
+### STEP 16 — Build Frontend
+
+```
+Open new PowerShell window:
+
+cd C:\Users\karthikr\gbs\gbs-poc\frontend
+
+npm install
+
+npm run build
+
+Expected: dist\ folder created inside frontend\
+Verify: dir dist\index.html exists
+```
+
+---
+
+### STEP 17 — Place web.config
+
+```
+Copy web.config into the dist\ folder:
+
+copy C:\Users\karthikr\gbs\gbs-poc\web.config `
+     C:\Users\karthikr\gbs\gbs-poc\frontend\dist\web.config
+
+Verify both files are present in dist\:
+   dir C:\Users\karthikr\gbs\gbs-poc\frontend\dist\
+   Must show: index.html and web.config
+```
+
+---
+
+### STEP 18 — Configure IIS Site
+
+```
+1. Open IIS Manager
+
+2. Add Website:
+   Site name  : gbs-dashboard
+   Physical path: C:\Users\karthikr\gbs\gbs-poc\frontend\dist
+   Binding    : HTTP, port 3000, all unassigned IPs
+
+3. Set Application Pool:
+   Open Application Pools
+   Find pool assigned to gbs-dashboard
+   Right-click > Basic Settings
+   Set .NET CLR version: No Managed Code
+   Click OK
+   Right-click > Start (if not already running)
+
+4. Grant IIS permissions on dist\:
+   icacls "C:\Users\karthikr\gbs\gbs-poc\frontend\dist" /grant "IIS_IUSRS:(OI)(CI)R" /grant "IUSR:(OI)(CI)R" /T
+```
+
+---
+
+### STEP 19 — Enable ARR Proxy
+
+```
+In IIS Manager:
+   Click the server node (machine name, top level)
+   Double-click: Application Request Routing Cache
+   Click: Server Proxy Settings (right panel)
+   Check: Enable proxy
+   Click: Apply
+
+Or via PowerShell (Administrator):
+   Set-WebConfigurationProperty `
+       -pspath 'MACHINE/WEBROOT/APPHOST' `
+       -filter 'system.webServer/proxy' `
+       -name 'enabled' `
+       -value 'true'
+
+Then:
+   iisreset
+```
+
+---
+
+### STEP 20 — End-to-End Verification
+
+```
+Test each layer in order:
+
+1. Backend direct:
+   curl http://localhost:8000/health
+   Expected: { "status": "ok" }
+
+2. Backend via IIS proxy:
+   curl http://localhost:3000/health
+   Expected: { "status": "ok" }
+
+3. API via IIS proxy:
+   curl http://localhost:3000/api/v1/wireless/summary
+   Expected: JSON with overall_score and status fields
+
+4. Dashboard:
+   Open browser: http://localhost:3000
+   Expected: GBS dashboard loads with data in all tiles
+```
+
+---
+
+### STEP 21 — Register Backend as Scheduled Task (Auto-start)
+
+```
+Open PowerShell as Administrator:
+
+cd C:\Users\karthikr\gbs\gbs-poc
+
+powershell.exe -ExecutionPolicy Bypass -File .\infra\windows\setup_task.ps1
+
+Expected output:
+   Task registered: GBS-Dashboard-Backend
+   Task state: Running
+   Backend health: OK
+
+Verify auto-start:
+   Get-ScheduledTask -TaskName "GBS-Dashboard-Backend"
+   Status should show: Ready
+```
+
+---
+
+### COMMON COMMANDS FOR DAILY USE
+
+```
+Start backend manually (if not using scheduled task):
+   cd C:\Users\karthikr\gbs\gbs-poc\backend
+   venv\Scripts\activate
+   uvicorn app.main:app --host 127.0.0.1 --port 8000
+
+Stop backend scheduled task:
+   Stop-ScheduledTask -TaskName "GBS-Dashboard-Backend"
+
+Start backend scheduled task:
+   Start-ScheduledTask -TaskName "GBS-Dashboard-Backend"
+
+Trigger data refresh:
+   curl -X POST http://localhost:8000/api/v1/wireless/ingest/trigger
+
+Rebuild frontend after code change:
+   cd C:\Users\karthikr\gbs\gbs-poc\frontend
+   npm run build
+   copy web.config dist\web.config
+
+Update CSV timestamps before demo:
+   cd C:\Users\karthikr\gbs\gbs-poc
+   powershell.exe -ExecutionPolicy Bypass -File .\update_timestamps.ps1
+
+Run demo simulation:
+   cd C:\Users\karthikr\gbs\gbs-poc
+   powershell.exe -ExecutionPolicy Bypass -File .\simulate_realtime.ps1 -IntervalSeconds 30
+```

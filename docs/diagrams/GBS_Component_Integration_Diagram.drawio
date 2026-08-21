@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="gbs-architecture" name="Component and Integration Diagram">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="client" value="Client" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7E6;strokeColor=#B8860B;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=13;fontStyle=1;fontColor=#B8860B;container=1;collapsible=0;dropTarget=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="260" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="presentation" value="Presentation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F4EA;strokeColor=#2E7D32;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=13;fontStyle=1;fontColor=#2E7D32;container=1;collapsible=0;dropTarget=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="220" width="260" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="apilayer" value="API Layer -- FastAPI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FB;strokeColor=#1F5FA8;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=13;fontStyle=1;fontColor=#1F5FA8;container=1;collapsible=0;dropTarget=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="420" width="260" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="bgproc" value="Background Processing -- asyncio workers (in-process)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCFCFC;strokeColor=#B23A48;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=13;fontStyle=1;fontColor=#B23A48;container=1;collapsible=0;dropTarget=0;" vertex="1" parent="1">
+          <mxGeometry x="380" y="40" width="600" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="extsources" value="External Data Sources" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCFCFC;strokeColor=#999999;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=13;fontStyle=1;fontColor=#666666;container=1;collapsible=0;dropTarget=0;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="40" width="520" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="datastore" value="Data Store" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E8FD;strokeColor=#6A3FA0;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=13;fontStyle=1;fontColor=#6A3FA0;container=1;collapsible=0;dropTarget=0;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="320" width="520" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="browser" value="Browser (User)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF7E6;strokeColor=#B8860B;fontSize=12;" vertex="1" parent="client">
+          <mxGeometry x="30" y="50" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend" value="React SPA&#10;Dashboard + 30s auto-refresh&#10;(served by IIS in prod, Vite in dev)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F4EA;strokeColor=#2E7D32;fontSize=12;" vertex="1" parent="presentation">
+          <mxGeometry x="20" y="40" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="api" value="REST API&#10;/api/v1/wireless . /api/v1/lan&#10;/api/v1/demo . /health" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FB;strokeColor=#1F5FA8;fontSize=12;" vertex="1" parent="apilayer">
+          <mxGeometry x="20" y="40" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wworker" value="Wireless Worker&#10;fetch -&gt; validate -&gt; score -&gt; persist&#10;(every 60s / dev 10s)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEEEE;strokeColor=#B23A48;fontSize=12;" vertex="1" parent="bgproc">
+          <mxGeometry x="40" y="50" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lworker" value="LAN Worker&#10;fetch -&gt; validate -&gt; score -&gt;&#10;aggregate -&gt; persist  (every 60s)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEEEE;strokeColor=#B23A48;fontSize=12;" vertex="1" parent="bgproc">
+          <mxGeometry x="320" y="50" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="demorunner" value="Demo Runner&#10;cycles scripted snapshots,&#10;triggers Wireless Worker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEEEE;strokeColor=#B23A48;fontSize=12;dashed=1;" vertex="1" parent="bgproc">
+          <mxGeometry x="40" y="200" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="wsource" value="Wireless data source&#10;CSV/JSON file today --&#10;HPE Aruba Central API in Phase 2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontSize=11;" vertex="1" parent="extsources">
+          <mxGeometry x="30" y="50" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="solarwinds" value="SolarWinds Orion&#10;SWIS REST API (SWQL)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontSize=11;" vertex="1" parent="extsources">
+          <mxGeometry x="270" y="50" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="mssql" value="MS SQL Server&#10;wireless_metrics . lan_metrics&#10;lan_country_snapshots&#10;sw_country_groups . dashboard_config" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E8FD;strokeColor=#6A3FA0;fontSize=12;" vertex="1" parent="datastore">
+          <mxGeometry x="30" y="40" width="460" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="HTTPS" style="html=1;fontSize=10;fontColor=#444444;strokeColor=#666666;endArrow=block;endFill=1;rounded=0;" edge="1" parent="1" source="browser" target="frontend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="fetch() JSON&#10;REST proxy /api/* /health" style="html=1;fontSize=10;fontColor=#444444;strokeColor=#666666;endArrow=block;endFill=1;rounded=0;" edge="1" parent="1" source="frontend" target="api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="fetch()" style="html=1;fontSize=10;fontColor=#444444;strokeColor=#666666;endArrow=block;endFill=1;rounded=0;" edge="1" parent="1" source="wworker" target="wsource">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="bulk insert" style="html=1;fontSize=10;fontColor=#444444;strokeColor=#666666;endArrow=block;endFill=1;rounded=0;" edge="1" parent="1" source="wworker" target="mssql">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="SWQL query" style="html=1;fontSize=10;fontColor=#444444;strokeColor=#666666;endArrow=block;endFill=1;rounded=0;" edge="1" parent="1" source="lworker" target="solarwinds">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="bulk insert" style="html=1;fontSize=10;fontColor=#444444;strokeColor=#666666;endArrow=block;endFill=1;rounded=0;" edge="1" parent="1" source="lworker" target="mssql">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="in-memory state (&lt;1ms)" style="html=1;fontSize=10;fontColor=#444444;strokeColor=#666666;endArrow=block;endFill=1;rounded=0;dashed=1;" edge="1" parent="1" source="wworker" target="api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="in-memory state (&lt;1ms)" style="html=1;fontSize=10;fontColor=#444444;strokeColor=#666666;endArrow=block;endFill=1;rounded=0;dashed=1;" edge="1" parent="1" source="lworker" target="api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="trend &amp; scoped queries" style="html=1;fontSize=10;fontColor=#444444;strokeColor=#666666;endArrow=block;endFill=1;rounded=0;dashed=1;" edge="1" parent="1" source="api" target="mssql">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="overwrite snapshot" style="html=1;fontSize=10;fontColor=#444444;strokeColor=#666666;endArrow=block;endFill=1;rounded=0;" edge="1" parent="1" source="demorunner" target="wsource">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="trigger ingest cycle" style="html=1;fontSize=10;fontColor=#444444;strokeColor=#666666;endArrow=block;endFill=1;rounded=0;dashed=1;" edge="1" parent="1" source="demorunner" target="wworker">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
